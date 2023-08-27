@@ -1,510 +1,1507 @@
 <div class="sheet">
-    <input id="hero-thorn" class="hero-list-item-value" name="attr_hero" type="radio" value="thorn" checked />
-    <input id="hero-mairen" class="hero-list-item-value" name="attr_hero" type="radio" value="mairen" />
+    <input
+      id="hero-thorn"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="thorn"
+      checked
+    />
+    <input
+      id="hero-mairen"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="mairen"
+    />
+    <input
+      id="hero-pasco"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="pasco"
+    />
+    <input
+      id="hero-chada"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="chada"
+    />
+    <input
+      id="hero-liphardus"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="liphardus"
+    />
+    <input
+      id="hero-eara"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="eara"
+    />
+    <input
+      id="hero-kram"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="kram"
+    />
+    <input
+      id="hero-brigha"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="brigha"
+    />
+    <input
+      id="hero-kheelan"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="kheelan"
+    />
+    <input
+      id="hero-kheela"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="kheela"
+    />
+    <input
+      id="hero-fenn"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="fenn"
+    />
+    <input
+      id="hero-fennah"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="fennah"
+    />
+    <input
+      id="hero-arbon"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="arbon"
+    />
+    <input
+      id="hero-talvora"
+      class="hero-list-item-value"
+      name="attr_hero"
+      type="radio"
+      value="talvora"
+    />
 
     <div class="item-list hero-list">
-        <label for="hero-thorn">
-                Thorn, Guerrier des Plaines d'Andor
-            </label>
-        <label for="hero-mairen">
-                Mairen, Guerrière des Plaines d'Andor
-            </label>
+      <label for="hero-thorn">
+        Thorn, Guerrier des Plaines d'Andor
+      </label>
+      <label for="hero-mairen">
+        Mairen, Guerrière des Plaines d'Andor
+      </label>
+      <label for="hero-pasco">
+        Pasco, Archer du Bois de la Vigilance
+      </label>
+      <label for="hero-chada">
+        Chada, Archère du Bois de la Vigilance
+      </label>
+      <label for="hero-liphardus">
+        Liphardus, Magicien du Nord
+      </label>
+      <label for="hero-eara">
+        Eara, Magicienne du Nord
+      </label>
+      <label for="hero-kram">
+        Kram, Nain de la Mine-Sans-Fond
+      </label>
+      <label for="hero-brigha">
+        Brigha, Naine de la Mine-Sans-Fond
+      </label>
+      <label for="hero-kheelan">
+        Kheelan, Gardien de la Vallée
+      </label>
+      <label for="hero-kheela">
+        Kheela, Gardienne de la Vallée
+      </label>
+      <label for="hero-fenn">
+        Fenn, Rôdeur des Forêts Australes
+      </label>
+      <label for="hero-fennah">
+        Fennah, Rôdeuse des Forêts Australes
+      </label>
+      <label for="hero-arbon">
+        Arbon, Sentinelle des Archives
+      </label>
+      <label for="hero-talvora">
+        Talvora, Sentinelle des Archives
+      </label>
     </div>
 
     <div class="preview"></div>
 
-    <div class="character">
-        <div class="inventory">
-            <div class="element">
-                <div>Casque</div>
-                <input type="checkbox" name="attr_helm" />
-                <img class="item helm"
-                    src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-helm.png" />
-            </div>
-
-            <div class="element">
-                <div>Main gauche</div>
-
-                <div class="item-list offhand-list">
-                    <div>
-                        <input id="offhand-empty" name="attr_offhand" type="radio" value="" checked />
-                        <label for="offhand-empty"></label>
-                    </div>
-
-                    <div>
-                        <input id="offhand-shield" name="attr_offhand" type="radio" value="shield" />
-                        <label for="offhand-shield">Bouclier</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield.png" />
-                    </div>
-
-                    <div>
-                        <input id="offhand-shield-broken" name="attr_offhand" type="radio" value="shield-broken" />
-                        <label for="offhand-shield-broken">Bouclier endommagé</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield-broken.png" />
-                    </div>
-
-                    <div>
-                        <input id="offhand-bow" name="attr_offhand" type="radio" value="bow" />
-                        <label for="offhand-bow">Arc</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-bow.png" />
-                    </div>
-
-                    <div>
-                        <input id="offhand-falcon" name="attr_offhand" type="radio" value="falcon" />
-                        <label for="offhand-falcon">Faucon</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon.png" />
-                    </div>
-
-                    <div>
-                        <input id="offhand-falcon-gone" name="attr_offhand" type="radio" value="falcon-gone" />
-                        <label for="offhand-falcon-gone">Faucon envolé</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon-gone.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="element">
-                <div>Inventaire 1</div>
-
-                <div class="item-list inventory-1-list">
-                    <div>
-                        <input id="inventory-1-empty" name="attr_inventory_1" type="radio" value="" checked />
-                        <label for="inventory-1-empty"></label>
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-gourd" name="attr_inventory_1" type="radio" value="gourd" />
-                        <label for="inventory-1-gourd">Gourde</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-gourd-used" name="attr_inventory_1" type="radio" value="gourd-used" />
-                        <label for="inventory-1-gourd-used">Gourde entamée</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-spyglass" name="attr_inventory_1" type="radio" value="spyglass" />
-                        <label for="inventory-1-spyglass">Longue-vue</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-witch-potion" name="attr_inventory_1" type="radio"
-                            value="witch-potion" />
-                        <label for="inventory-1-witch-potion">Potion de la sorcière</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-witch-potion-used" name="attr_inventory_1" type="radio"
-                            value="witch-potion-used" />
-                        <label for="inventory-1-witch-potion-used">Potion de la sorcière entamée</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-poison" name="attr_inventory_1" type="radio" value="poison" />
-                        <label for="inventory-1-poison">Poison</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-poison-used" name="attr_inventory_1" type="radio" value="poison-used" />
-                        <label for="inventory-1-poison-used">Poison entamé</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-rune-yellow" name="attr_inventory_1" type="radio" value="rune-yellow" />
-                        <label for="inventory-1-rune-yellow">Rune jaune</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-rune-blue" name="attr_inventory_1" type="radio" value="rune-blue" />
-                        <label for="inventory-1-rune-blue">Rune bleue</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-1-rune-green" name="attr_inventory_1" type="radio" value="rune-green" />
-                        <label for="inventory-1-rune-green">Rune verte</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="element">
-                <div>Inventaire 2</div>
-
-                <div class="item-list inventory-2-list">
-                    <div>
-                        <input id="inventory-2-empty" name="attr_inventory_2" type="radio" value="" checked />
-                        <label for="inventory-2-empty"></label>
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-gourd" name="attr_inventory_2" type="radio" value="gourd" />
-                        <label for="inventory-2-gourd">Gourde</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-gourd-used" name="attr_inventory_2" type="radio" value="gourd-used" />
-                        <label for="inventory-2-gourd-used">Gourde entamée</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-spyglass" name="attr_inventory_2" type="radio" value="spyglass" />
-                        <label for="inventory-2-spyglass">Longue-vue</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-witch-potion" name="attr_inventory_2" type="radio"
-                            value="witch-potion" />
-                        <label for="inventory-2-witch-potion">Potion de la sorcière</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-witch-potion-used" name="attr_inventory_2" type="radio"
-                            value="witch-potion-used" />
-                        <label for="inventory-2-witch-potion-used">Potion de la sorcière entamée</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-poison" name="attr_inventory_2" type="radio" value="poison" />
-                        <label for="inventory-2-poison">Poison</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-poison-used" name="attr_inventory_2" type="radio" value="poison-used" />
-                        <label for="inventory-2-poison-used">Poison entamé</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-rune-yellow" name="attr_inventory_2" type="radio" value="rune-yellow" />
-                        <label for="inventory-2-rune-yellow">Rune jaune</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-rune-blue" name="attr_inventory_2" type="radio" value="rune-blue" />
-                        <label for="inventory-2-rune-blue">Rune bleue</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-2-rune-green" name="attr_inventory_2" type="radio" value="rune-green" />
-                        <label for="inventory-2-rune-green">Rune verte</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="element">
-                <div>Inventaire 3</div>
-
-                <div class="item-list inventory-3-list">
-                    <div>
-                        <input id="inventory-3-empty" name="attr_inventory_3" type="radio" value="" checked />
-                        <label for="inventory-3-empty"></label>
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-gourd" name="attr_inventory_3" type="radio" value="gourd" />
-                        <label for="inventory-3-gourd">Gourde</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-gourd-used" name="attr_inventory_3" type="radio" value="gourd-used" />
-                        <label for="inventory-3-gourd-used">Gourde entamée</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-spyglass" name="attr_inventory_3" type="radio" value="spyglass" />
-                        <label for="inventory-3-spyglass">Longue-vue</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-witch-potion" name="attr_inventory_3" type="radio"
-                            value="witch-potion" />
-                        <label for="inventory-3-witch-potion">Potion de la sorcière</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-witch-potion-used" name="attr_inventory_3" type="radio"
-                            value="witch-potion-used" />
-                        <label for="inventory-3-witch-potion-used">Potion de la sorcière entamée</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-poison" name="attr_inventory_3" type="radio" value="poison" />
-                        <label for="inventory-3-poison">Poison</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-poison-used" name="attr_inventory_3" type="radio" value="poison-used" />
-                        <label for="inventory-3-poison-used">Poison entamé</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-rune-yellow" name="attr_inventory_3" type="radio" value="rune-yellow" />
-                        <label for="inventory-3-rune-yellow">Rune jaune</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-rune-blue" name="attr_inventory_3" type="radio" value="rune-blue" />
-                        <label for="inventory-3-rune-blue">Rune bleue</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png" />
-                    </div>
-
-                    <div>
-                        <input id="inventory-3-rune-green" name="attr_inventory_3" type="radio" value="rune-green" />
-                        <label for="inventory-3-rune-green">Rune verte</label>
-                        <img class="item"
-                            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="stats">
-            <div class="element strength-element">
-                <div>Force</div>
-
-                <div class="stat-grid">
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-1" type="radio" name="attr_strength" value="1" checked>
-                        <label for="stat-grid-value-strength-1">1</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-2" type="radio" name="attr_strength" value="2">
-                        <label for="stat-grid-value-strength-2">2</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-3" type="radio" name="attr_strength" value="3">
-                        <label for="stat-grid-value-strength-3">3</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-4" type="radio" name="attr_strength" value="4">
-                        <label for="stat-grid-value-strength-4">4</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-5" type="radio" name="attr_strength" value="5">
-                        <label for="stat-grid-value-strength-5">5</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-6" type="radio" name="attr_strength" value="6">
-                        <label for="stat-grid-value-strength-6">6</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-7" type="radio" name="attr_strength" value="7">
-                        <label for="stat-grid-value-strength-7">7</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-8" type="radio" name="attr_strength" value="8">
-                        <label for="stat-grid-value-strength-8">8</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-9" type="radio" name="attr_strength" value="9">
-                        <label for="stat-grid-value-strength-9">9</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-10" type="radio" name="attr_strength" value="10">
-                        <label for="stat-grid-value-strength-10">10</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-11" type="radio" name="attr_strength" value="11">
-                        <label for="stat-grid-value-strength-11">11</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-12" type="radio" name="attr_strength" value="12">
-                        <label for="stat-grid-value-strength-12">12</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-13" type="radio" name="attr_strength" value="13">
-                        <label for="stat-grid-value-strength-13">13</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-strength-14" type="radio" name="attr_strength" value="14">
-                        <label for="stat-grid-value-strength-14">14</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="element will-element">
-                <div>Volonté</div>
-
-                <div class="stat-grid">
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-0" type="radio" name="attr_will" value="0">
-                        <label for="stat-grid-value-will-0">0</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-1" type="radio" name="attr_will" value="1">
-                        <label for="stat-grid-value-will-1">1</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-2" type="radio" name="attr_will" value="2">
-                        <label for="stat-grid-value-will-2">2</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-3" type="radio" name="attr_will" value="3">
-                        <label for="stat-grid-value-will-3">3</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-4" type="radio" name="attr_will" value="4">
-                        <label for="stat-grid-value-will-4">4</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-5" type="radio" name="attr_will" value="5">
-                        <label for="stat-grid-value-will-5">5</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-6" type="radio" name="attr_will" value="6">
-                        <label for="stat-grid-value-will-6">6</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-7" type="radio" name="attr_will" value="7" checked>
-                        <label for="stat-grid-value-will-7">7</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-8" type="radio" name="attr_will" value="8">
-                        <label for="stat-grid-value-will-8">8</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-9" type="radio" name="attr_will" value="9">
-                        <label for="stat-grid-value-will-9">9</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-10" type="radio" name="attr_will" value="10">
-                        <label for="stat-grid-value-will-10">10</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-11" type="radio" name="attr_will" value="11">
-                        <label for="stat-grid-value-will-11">11</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-12" type="radio" name="attr_will" value="12">
-                        <label for="stat-grid-value-will-12">12</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-13" type="radio" name="attr_will" value="13">
-                        <label for="stat-grid-value-will-13">13</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-14" type="radio" name="attr_will" value="14">
-                        <label for="stat-grid-value-will-14">14</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-15" type="radio" name="attr_will" value="15">
-                        <label for="stat-grid-value-will-15">15</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-16" type="radio" name="attr_will" value="16">
-                        <label for="stat-grid-value-will-16">16</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-17" type="radio" name="attr_will" value="17">
-                        <label for="stat-grid-value-will-17">17</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-18" type="radio" name="attr_will" value="18">
-                        <label for="stat-grid-value-will-18">18</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-19" type="radio" name="attr_will" value="19">
-                        <label for="stat-grid-value-will-19">19</label>
-                    </div>
-
-                    <div class="stat-grid-value">
-                        <input id="stat-grid-value-will-20" type="radio" name="attr_will" value="20">
-                        <label for="stat-grid-value-will-20">20</label>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="ranger-inventory">
+      <label>
+        <input name="attr_ranger_crow" type="checkbox" value="crow" checked />
+        <img
+          src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow.png"
+        />
+        <img
+          src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow-used.png"
+        />
+      </label>
+
+      <label>
+        <input
+          name="attr_ranger_knife"
+          type="checkbox"
+          value="knife"
+          checked
+        />
+        <img
+          src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife.png"
+        />
+        <img
+          src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife-used.png"
+        />
+      </label>
+
+      <label>
+        <input name="attr_ranger_horn" type="checkbox" value="horn" checked />
+        <img
+          src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn.png"
+        />
+        <img
+          src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn-used.png"
+        />
+      </label>
     </div>
-</div>
+
+    <div class="character">
+      <div class="inventory">
+        <div class="element">
+          <div class="label">Casque</div>
+          <input type="checkbox" name="attr_helm" />
+          <img
+            class="item helm"
+            src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-helm.png"
+          />
+        </div>
+
+        <div class="element">
+          <div class="label">Main gauche</div>
+
+          <div class="item-list offhand-list">
+            <div>
+              <input
+                id="offhand-empty"
+                name="attr_offhand"
+                type="radio"
+                value=""
+                checked
+              />
+              <label for="offhand-empty"></label>
+            </div>
+
+            <div>
+              <input
+                id="offhand-shield"
+                name="attr_offhand"
+                type="radio"
+                value="shield"
+              />
+              <label for="offhand-shield">Bouclier</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="offhand-shield-broken"
+                name="attr_offhand"
+                type="radio"
+                value="shield-broken"
+              />
+              <label for="offhand-shield-broken">Bouclier endommagé</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield-broken.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="offhand-brotherly-shield"
+                name="attr_offhand"
+                type="radio"
+                value="brotherly-shield"
+              />
+              <label for="offhand-brotherly-shield"
+                >Bouclier de la fraternité</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-brotherly-shield.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="offhand-bow"
+                name="attr_offhand"
+                type="radio"
+                value="bow"
+              />
+              <label for="offhand-bow">Arc</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-bow.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="offhand-falcon"
+                name="attr_offhand"
+                type="radio"
+                value="falcon"
+              />
+              <label for="offhand-falcon">Faucon</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="offhand-falcon-gone"
+                name="attr_offhand"
+                type="radio"
+                value="falcon-gone"
+              />
+              <label for="offhand-falcon-gone">Faucon envolé</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon-gone.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="label">Inventaire 1</div>
+
+          <div class="item-list inventory-1-list">
+            <div>
+              <input
+                id="inventory-1-empty"
+                name="attr_inventory_1"
+                type="radio"
+                value=""
+                checked
+              />
+              <label for="inventory-1-empty"></label>
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-gourd"
+                name="attr_inventory_1"
+                type="radio"
+                value="gourd"
+              />
+              <label for="inventory-1-gourd">Gourde</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-gourd-used"
+                name="attr_inventory_1"
+                type="radio"
+                value="gourd-used"
+              />
+              <label for="inventory-1-gourd-used">Gourde entamée</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-spyglass"
+                name="attr_inventory_1"
+                type="radio"
+                value="spyglass"
+              />
+              <label for="inventory-1-spyglass">Longue-vue</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-witch-potion"
+                name="attr_inventory_1"
+                type="radio"
+                value="witch-potion"
+              />
+              <label for="inventory-1-witch-potion"
+                >Potion de la sorcière</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-witch-potion-used"
+                name="attr_inventory_1"
+                type="radio"
+                value="witch-potion-used"
+              />
+              <label for="inventory-1-witch-potion-used"
+                >Potion de la sorcière entamée</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-poison"
+                name="attr_inventory_1"
+                type="radio"
+                value="poison"
+              />
+              <label for="inventory-1-poison">Poison</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-poison-used"
+                name="attr_inventory_1"
+                type="radio"
+                value="poison-used"
+              />
+              <label for="inventory-1-poison-used">Poison entamé</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-rune-yellow"
+                name="attr_inventory_1"
+                type="radio"
+                value="rune-yellow"
+              />
+              <label for="inventory-1-rune-yellow">Rune jaune</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-rune-blue"
+                name="attr_inventory_1"
+                type="radio"
+                value="rune-blue"
+              />
+              <label for="inventory-1-rune-blue">Rune bleue</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-rune-green"
+                name="attr_inventory_1"
+                type="radio"
+                value="rune-green"
+              />
+              <label for="inventory-1-rune-green">Rune verte</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-herb-3"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-herb-3"
+              />
+              <label for="inventory-1-token-herb-3">Herbe (3)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-herb-4"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-herb-4"
+              />
+              <label for="inventory-1-token-herb-4">Herbe (4)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-scroll-7"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-scroll-7"
+              />
+              <label for="inventory-1-token-scroll-7">Parchemin (7)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-scroll-8"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-scroll-8"
+              />
+              <label for="inventory-1-token-scroll-8">Parchemin (8)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-scroll-10"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-scroll-10"
+              />
+              <label for="inventory-1-token-scroll-10">Parchemin (10)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-scroll-11"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-scroll-11"
+              />
+              <label for="inventory-1-token-scroll-11">Parchemin (11)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-scroll-14"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-scroll-14"
+              />
+              <label for="inventory-1-token-scroll-14">Parchemin (14)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-1-token-scroll-17"
+                name="attr_inventory_1"
+                type="radio"
+                value="token-scroll-17"
+              />
+              <label for="inventory-1-token-scroll-17">Parchemin (17)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="label">Inventaire 2</div>
+
+          <div class="item-list inventory-2-list">
+            <div>
+              <input
+                id="inventory-2-empty"
+                name="attr_inventory_2"
+                type="radio"
+                value=""
+                checked
+              />
+              <label for="inventory-2-empty"></label>
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-gourd"
+                name="attr_inventory_2"
+                type="radio"
+                value="gourd"
+              />
+              <label for="inventory-2-gourd">Gourde</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-gourd-used"
+                name="attr_inventory_2"
+                type="radio"
+                value="gourd-used"
+              />
+              <label for="inventory-2-gourd-used">Gourde entamée</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-spyglass"
+                name="attr_inventory_2"
+                type="radio"
+                value="spyglass"
+              />
+              <label for="inventory-2-spyglass">Longue-vue</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-witch-potion"
+                name="attr_inventory_2"
+                type="radio"
+                value="witch-potion"
+              />
+              <label for="inventory-2-witch-potion"
+                >Potion de la sorcière</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-witch-potion-used"
+                name="attr_inventory_2"
+                type="radio"
+                value="witch-potion-used"
+              />
+              <label for="inventory-2-witch-potion-used"
+                >Potion de la sorcière entamée</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-poison"
+                name="attr_inventory_2"
+                type="radio"
+                value="poison"
+              />
+              <label for="inventory-2-poison">Poison</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-poison-used"
+                name="attr_inventory_2"
+                type="radio"
+                value="poison-used"
+              />
+              <label for="inventory-2-poison-used">Poison entamé</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-rune-yellow"
+                name="attr_inventory_2"
+                type="radio"
+                value="rune-yellow"
+              />
+              <label for="inventory-2-rune-yellow">Rune jaune</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-rune-blue"
+                name="attr_inventory_2"
+                type="radio"
+                value="rune-blue"
+              />
+              <label for="inventory-2-rune-blue">Rune bleue</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-rune-green"
+                name="attr_inventory_2"
+                type="radio"
+                value="rune-green"
+              />
+              <label for="inventory-2-rune-green">Rune verte</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-herb-3"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-herb-3"
+              />
+              <label for="inventory-2-token-herb-3">Herbe (3)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-herb-4"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-herb-4"
+              />
+              <label for="inventory-2-token-herb-4">Herbe (4)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-scroll-7"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-scroll-7"
+              />
+              <label for="inventory-2-token-scroll-7">Parchemin (7)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-scroll-8"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-scroll-8"
+              />
+              <label for="inventory-2-token-scroll-8">Parchemin (8)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-scroll-10"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-scroll-10"
+              />
+              <label for="inventory-2-token-scroll-10">Parchemin (10)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-scroll-11"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-scroll-11"
+              />
+              <label for="inventory-2-token-scroll-11">Parchemin (11)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-scroll-14"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-scroll-14"
+              />
+              <label for="inventory-2-token-scroll-14">Parchemin (14)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-2-token-scroll-17"
+                name="attr_inventory_2"
+                type="radio"
+                value="token-scroll-17"
+              />
+              <label for="inventory-2-token-scroll-17">Parchemin (17)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="element">
+          <div class="label">Inventaire 3</div>
+
+          <div class="item-list inventory-3-list">
+            <div>
+              <input
+                id="inventory-3-empty"
+                name="attr_inventory_3"
+                type="radio"
+                value=""
+                checked
+              />
+              <label for="inventory-3-empty"></label>
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-gourd"
+                name="attr_inventory_3"
+                type="radio"
+                value="gourd"
+              />
+              <label for="inventory-3-gourd">Gourde</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-gourd-used"
+                name="attr_inventory_3"
+                type="radio"
+                value="gourd-used"
+              />
+              <label for="inventory-3-gourd-used">Gourde entamée</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-spyglass"
+                name="attr_inventory_3"
+                type="radio"
+                value="spyglass"
+              />
+              <label for="inventory-3-spyglass">Longue-vue</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-witch-potion"
+                name="attr_inventory_3"
+                type="radio"
+                value="witch-potion"
+              />
+              <label for="inventory-3-witch-potion"
+                >Potion de la sorcière</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-witch-potion-used"
+                name="attr_inventory_3"
+                type="radio"
+                value="witch-potion-used"
+              />
+              <label for="inventory-3-witch-potion-used"
+                >Potion de la sorcière entamée</label
+              >
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-poison"
+                name="attr_inventory_3"
+                type="radio"
+                value="poison"
+              />
+              <label for="inventory-3-poison">Poison</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-poison-used"
+                name="attr_inventory_3"
+                type="radio"
+                value="poison-used"
+              />
+              <label for="inventory-3-poison-used">Poison entamé</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-rune-yellow"
+                name="attr_inventory_3"
+                type="radio"
+                value="rune-yellow"
+              />
+              <label for="inventory-3-rune-yellow">Rune jaune</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-rune-blue"
+                name="attr_inventory_3"
+                type="radio"
+                value="rune-blue"
+              />
+              <label for="inventory-3-rune-blue">Rune bleue</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-rune-green"
+                name="attr_inventory_3"
+                type="radio"
+                value="rune-green"
+              />
+              <label for="inventory-3-rune-green">Rune verte</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-herb-3"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-herb-3"
+              />
+              <label for="inventory-3-token-herb-3">Herbe (3)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-herb-4"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-herb-4"
+              />
+              <label for="inventory-3-token-herb-4">Herbe (4)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-scroll-7"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-scroll-7"
+              />
+              <label for="inventory-3-token-scroll-7">Parchemin (7)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-scroll-8"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-scroll-8"
+              />
+              <label for="inventory-3-token-scroll-8">Parchemin (8)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-scroll-10"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-scroll-10"
+              />
+              <label for="inventory-3-token-scroll-10">Parchemin (10)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-scroll-11"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-scroll-11"
+              />
+              <label for="inventory-3-token-scroll-11">Parchemin (11)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-scroll-14"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-scroll-14"
+              />
+              <label for="inventory-3-token-scroll-14">Parchemin (14)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png"
+              />
+            </div>
+
+            <div>
+              <input
+                id="inventory-3-token-scroll-17"
+                name="attr_inventory_3"
+                type="radio"
+                value="token-scroll-17"
+              />
+              <label for="inventory-3-token-scroll-17">Parchemin (17)</label>
+              <img
+                class="item"
+                src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="element strength-element">
+          <img src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength.png">
+
+          <div class="stat-grid">
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-1"
+                type="radio"
+                name="attr_strength"
+                value="1"
+                checked
+              />
+              <label for="stat-grid-value-strength-1">1</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-2"
+                type="radio"
+                name="attr_strength"
+                value="2"
+              />
+              <label for="stat-grid-value-strength-2">2</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-3"
+                type="radio"
+                name="attr_strength"
+                value="3"
+              />
+              <label for="stat-grid-value-strength-3">3</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-4"
+                type="radio"
+                name="attr_strength"
+                value="4"
+              />
+              <label for="stat-grid-value-strength-4">4</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-5"
+                type="radio"
+                name="attr_strength"
+                value="5"
+              />
+              <label for="stat-grid-value-strength-5">5</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-6"
+                type="radio"
+                name="attr_strength"
+                value="6"
+              />
+              <label for="stat-grid-value-strength-6">6</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-7"
+                type="radio"
+                name="attr_strength"
+                value="7"
+              />
+              <label for="stat-grid-value-strength-7">7</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-8"
+                type="radio"
+                name="attr_strength"
+                value="8"
+              />
+              <label for="stat-grid-value-strength-8">8</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-9"
+                type="radio"
+                name="attr_strength"
+                value="9"
+              />
+              <label for="stat-grid-value-strength-9">9</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-10"
+                type="radio"
+                name="attr_strength"
+                value="10"
+              />
+              <label for="stat-grid-value-strength-10">10</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-11"
+                type="radio"
+                name="attr_strength"
+                value="11"
+              />
+              <label for="stat-grid-value-strength-11">11</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-12"
+                type="radio"
+                name="attr_strength"
+                value="12"
+              />
+              <label for="stat-grid-value-strength-12">12</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-13"
+                type="radio"
+                name="attr_strength"
+                value="13"
+              />
+              <label for="stat-grid-value-strength-13">13</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-strength-14"
+                type="radio"
+                name="attr_strength"
+                value="14"
+              />
+              <label for="stat-grid-value-strength-14">14</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="element will-element">
+          <div class="dice-list">
+            <div class="dice-deck">
+              <div class="dice"></div>
+              <div class="dice"></div>
+              <div class="dice"></div>
+            </div>
+
+            <div class="dice-deck">
+              <div class="dice"></div>
+              <div class="dice"></div>
+              <div class="dice"></div>
+              <div class="dice"></div>
+            </div>
+
+            <div class="dice-deck">
+              <div class="dice"></div>
+              <div class="dice"></div>
+              <div class="dice"></div>
+              <div class="dice"></div>
+              <div class="dice"></div>
+            </div>
+          </div>
+
+          <div class="stat-grid">
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-0"
+                type="radio"
+                name="attr_will"
+                value="0"
+              />
+              <label for="stat-grid-value-will-0">0</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-1"
+                type="radio"
+                name="attr_will"
+                value="1"
+              />
+              <label for="stat-grid-value-will-1">1</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-2"
+                type="radio"
+                name="attr_will"
+                value="2"
+              />
+              <label for="stat-grid-value-will-2">2</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-3"
+                type="radio"
+                name="attr_will"
+                value="3"
+              />
+              <label for="stat-grid-value-will-3">3</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-4"
+                type="radio"
+                name="attr_will"
+                value="4"
+              />
+              <label for="stat-grid-value-will-4">4</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-5"
+                type="radio"
+                name="attr_will"
+                value="5"
+              />
+              <label for="stat-grid-value-will-5">5</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-6"
+                type="radio"
+                name="attr_will"
+                value="6"
+              />
+              <label for="stat-grid-value-will-6">6</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-7"
+                type="radio"
+                name="attr_will"
+                value="7"
+                checked
+              />
+              <label for="stat-grid-value-will-7">7</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-8"
+                type="radio"
+                name="attr_will"
+                value="8"
+              />
+              <label for="stat-grid-value-will-8">8</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-9"
+                type="radio"
+                name="attr_will"
+                value="9"
+              />
+              <label for="stat-grid-value-will-9">9</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-10"
+                type="radio"
+                name="attr_will"
+                value="10"
+              />
+              <label for="stat-grid-value-will-10">10</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-11"
+                type="radio"
+                name="attr_will"
+                value="11"
+              />
+              <label for="stat-grid-value-will-11">11</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-12"
+                type="radio"
+                name="attr_will"
+                value="12"
+              />
+              <label for="stat-grid-value-will-12">12</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-13"
+                type="radio"
+                name="attr_will"
+                value="13"
+              />
+              <label for="stat-grid-value-will-13">13</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-14"
+                type="radio"
+                name="attr_will"
+                value="14"
+              />
+              <label for="stat-grid-value-will-14">14</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-15"
+                type="radio"
+                name="attr_will"
+                value="15"
+              />
+              <label for="stat-grid-value-will-15">15</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-16"
+                type="radio"
+                name="attr_will"
+                value="16"
+              />
+              <label for="stat-grid-value-will-16">16</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-17"
+                type="radio"
+                name="attr_will"
+                value="17"
+              />
+              <label for="stat-grid-value-will-17">17</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-18"
+                type="radio"
+                name="attr_will"
+                value="18"
+              />
+              <label for="stat-grid-value-will-18">18</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-19"
+                type="radio"
+                name="attr_will"
+                value="19"
+              />
+              <label for="stat-grid-value-will-19">19</label>
+            </div>
+
+            <div class="stat-grid-value">
+              <input
+                id="stat-grid-value-will-20"
+                type="radio"
+                name="attr_will"
+                value="20"
+              />
+              <label for="stat-grid-value-will-20">20</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

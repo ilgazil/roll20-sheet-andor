@@ -40,6 +40,53 @@ label {
     background-position: center;
 }
 
+.ranger-inventory {
+    display: none;
+    position: absolute;
+    left: 325px;
+}
+
+.ranger-inventory label {
+    position: relative;
+}
+
+.ranger-inventory label:nth-child(1) {
+    top: -9px;
+}
+
+.ranger-inventory label:nth-child(2) {
+    top: 8px;
+}
+
+.ranger-inventory label:nth-child(3) {
+    top: 27px;
+}
+
+.ranger-inventory label input {
+    display: none;
+}
+
+.ranger-inventory label input:checked+img {
+    display: block;
+}
+
+.ranger-inventory label input:checked+img+img {
+    display: none;
+}
+
+.ranger-inventory label input:not(:checked)+img {
+    display: none;
+}
+
+.ranger-inventory label input:not(:checked)+img+img {
+    display: block;
+}
+
+.ranger-inventory label img {
+    width: 137px;
+    height: 84px;
+}
+
 .character {
     display: flex;
     flex-direction: column;
@@ -66,10 +113,9 @@ label {
 .element>* {
     display: flex;
     align-items: center;
-    height: 24px;
 }
 
-.element>*:first-child {
+.element>*.label {
     height: 28px;
     width: 90px;
 }
@@ -89,7 +135,13 @@ label {
 }
 
 .element.strength-element {
+    align-items: center;
     height: 60px;
+}
+
+.element.strength-element img {
+    height: 48px;
+    margin: 0 24px;
 }
 
 .element.strength-element .stat-grid-value label {
@@ -102,13 +154,43 @@ label {
     height: 90px;
 }
 
-.element.will-element .stat-grid-value label {
-    background-size: contain;
+.element.will-element .dice-list {
+    flex: none;
+    display: flex;
+    flex-direction: column;
 }
 
-.element.strength-element>div:first-child,
-.element.will-element>div:first-child {
-    width: 55px;
+.element.will-element .dice-list .dice-deck {
+    flex: none;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.element.will-element .dice-list .dice-deck .dice {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.element.will-element .stat-grid {
+    flex: none;
+}
+
+.element.will-element .stat-grid-value label {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.element.will-element .stat-grid-value:first-child label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-health-0.png");
+    background-position-y: 3px;
+    color: transparent;
+}
+
+.element.will-element .stat-grid-value:first-child input:checked~label {
+    background-position-y: 0;
 }
 
 .hero-list {
@@ -123,7 +205,7 @@ label {
 }
 
 .hero-list:hover {
-    height: 40px;
+    height: 280px;
 }
 
 .hero-list:hover label {
@@ -173,13 +255,13 @@ label {
 }
 
 .item-list.offhand-list:hover {
-    height: 120px;
+    height: 140px;
 }
 
 .item-list.inventory-1-list:hover,
 .item-list.inventory-2-list:hover,
 .item-list.inventory-3-list:hover {
-    height: 220px;
+    height: 380px;
 }
 
 .item-list>div {
@@ -203,19 +285,6 @@ label {
 .item-list.inventory-2-list .item,
 .item-list.inventory-3-list .item {
     height: 86px;
-    left: 246px;
-}
-
-.item-list.inventory-1-list .item {
-    top: 44px;
-}
-
-.item-list.inventory-2-list .item {
-    top: 144px;
-}
-
-.item-list.inventory-3-list .item {
-    top: 245px;
 }
 
 input:checked~.item {
@@ -263,6 +332,10 @@ input:checked~.item {
     cursor: pointer;
 }
 
+.hero-list-item-value[value=thorn]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-thorn.png");
+}
+
 .hero-list-item-value[value=thorn]:checked~.hero-list label[for=hero-thorn] {
     display: block;
 }
@@ -270,6 +343,10 @@ input:checked~.item {
 .hero-list-item-value[value=thorn]:checked~.hero-list:hover label[for=hero-thorn] {
     display: block;
     font-weight: bold;
+}
+
+.hero-list-item-value[value=mairen]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-mairen.png");
 }
 
 .hero-list-item-value[value=mairen]:checked~.hero-list label[for=hero-mairen] {
@@ -281,28 +358,406 @@ input:checked~.item {
     font-weight: bold;
 }
 
-.hero-list-item-value[value=thorn]:checked~.preview {
-    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-character-thorn.png");
+.hero-list-item-value[value=pasco]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-pasco.png");
+}
+
+.hero-list-item-value[value=pasco]:checked~.hero-list label[for=hero-pasco] {
+    display: block;
+}
+
+.hero-list-item-value[value=pasco]:checked~.hero-list:hover label[for=hero-pasco] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=chada]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-chada.png");
+}
+
+.hero-list-item-value[value=chada]:checked~.hero-list label[for=hero-chada] {
+    display: block;
+}
+
+.hero-list-item-value[value=chada]:checked~.hero-list:hover label[for=hero-chada] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-liphardus.png");
+}
+
+.hero-list-item-value[value=liphardus]:checked~.hero-list label[for=hero-liphardus] {
+    display: block;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.hero-list:hover label[for=hero-liphardus] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=eara]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-eara.png");
+}
+
+.hero-list-item-value[value=eara]:checked~.hero-list label[for=hero-eara] {
+    display: block;
+}
+
+.hero-list-item-value[value=eara]:checked~.hero-list:hover label[for=hero-eara] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=kram]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kram.png");
+}
+
+.hero-list-item-value[value=kram]:checked~.hero-list label[for=hero-kram] {
+    display: block;
+}
+
+.hero-list-item-value[value=kram]:checked~.hero-list:hover label[for=hero-kram] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=brigha]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-brigha.png");
+}
+
+.hero-list-item-value[value=brigha]:checked~.hero-list label[for=hero-brigha] {
+    display: block;
+}
+
+.hero-list-item-value[value=brigha]:checked~.hero-list:hover label[for=hero-brigha] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kheelan.png");
+}
+
+.hero-list-item-value[value=kheelan]:checked~.hero-list label[for=hero-kheelan] {
+    display: block;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.hero-list:hover label[for=hero-kheelan] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=kheela]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kheela.png");
+}
+
+.hero-list-item-value[value=kheela]:checked~.hero-list label[for=hero-kheela] {
+    display: block;
+}
+
+.hero-list-item-value[value=kheela]:checked~.hero-list:hover label[for=hero-kheela] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=fenn]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-fenn.png");
+}
+
+.hero-list-item-value[value=fenn]:checked~.hero-list label[for=hero-fenn] {
+    display: block;
+}
+
+.hero-list-item-value[value=fenn]:checked~.hero-list:hover label[for=hero-fenn] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=fennah]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-fennah.png");
+}
+
+.hero-list-item-value[value=fennah]:checked~.hero-list label[for=hero-fennah] {
+    display: block;
+}
+
+.hero-list-item-value[value=fennah]:checked~.hero-list:hover label[for=hero-fennah] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=arbon]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-arbon.png");
+}
+
+.hero-list-item-value[value=arbon]:checked~.hero-list label[for=hero-arbon] {
+    display: block;
+}
+
+.hero-list-item-value[value=arbon]:checked~.hero-list:hover label[for=hero-arbon] {
+    display: block;
+    font-weight: bold;
+}
+
+.hero-list-item-value[value=talvora]:checked~.preview {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-talvora.png");
+}
+
+.hero-list-item-value[value=talvora]:checked~.hero-list label[for=hero-talvora] {
+    display: block;
+}
+
+.hero-list-item-value[value=talvora]:checked~.hero-list:hover label[for=hero-talvora] {
+    display: block;
+    font-weight: bold;
 }
 
 .hero-list-item-value[value=thorn]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
-    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-strength-warrior.png");
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png");
 }
 
 .hero-list-item-value[value=thorn]:checked~.character .element.will-element .stat-grid-value input:checked~label {
-    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-will-warrior.png");
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png");
 }
 
-.hero-list-item-value[value=mairen]:checked~.preview {
-    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-character-mairen.png");
+.hero-list-item-value[value=thorn]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-warrior.png");
+}
+
+.hero-list-item-value[value=thorn]:checked~.character .dice-list .dice:first-child {
+    display: none;
 }
 
 .hero-list-item-value[value=mairen]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
-    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-strength-warrior.png");
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png");
 }
 
 .hero-list-item-value[value=mairen]:checked~.character .element.will-element .stat-grid-value input:checked~label {
-    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-will-warrior.png");
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png");
+}
+
+.hero-list-item-value[value=mairen]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-warrior.png");
+}
+
+.hero-list-item-value[value=mairen]:checked~.character .dice-list .dice:first-child {
+    display: none;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png");
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png");
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-archer.png");
+}
+
+.hero-list-item-value[value=chada]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png");
+}
+
+.hero-list-item-value[value=chada]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png");
+}
+
+.hero-list-item-value[value=chada]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-archer.png");
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png");
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png");
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-wizard.png");
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .dice-list .dice:not(:first-child) {
+    display: none;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png");
+}
+
+.hero-list-item-value[value=eara]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png");
+}
+
+.hero-list-item-value[value=eara]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-wizard.png");
+}
+
+.hero-list-item-value[value=eara]:checked~.character .dice-list .dice:not(:first-child) {
+    display: none;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png");
+}
+
+.hero-list-item-value[value=kram]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png");
+}
+
+.hero-list-item-value[value=kram]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-dwarf.png");
+}
+
+.hero-list-item-value[value=kram]:checked~.character .dice-list .dice:nth-child(1),
+.hero-list-item-value[value=kram]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png");
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png");
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-dwarf.png");
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .dice-list .dice:nth-child(1),
+.hero-list-item-value[value=brigha]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png");
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png");
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-guardian.png");
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .dice-list .dice:not(:first-child) {
+    display: none;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png");
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png");
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-guardian.png");
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .dice-list .dice:not(:first-child) {
+    display: none;
+}
+
+.hero-list-item-value[value=fenn]:checked~.preview {
+    width: 460px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.ranger-inventory {
+    display: block;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png");
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png");
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-ranger.png");
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .dice-list .dice:nth-child(1),
+.hero-list-item-value[value=fenn]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(3) {
+    display: none;
+}
+
+.hero-list-item-value[value=fennah]:checked~.preview {
+    width: 460px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.ranger-inventory {
+    display: block;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png");
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png");
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-ranger.png");
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .dice-list .dice:nth-child(1),
+.hero-list-item-value[value=fennah]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(3) {
+    display: none;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png");
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png");
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-sentinel.png");
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .dice-list .dice:nth-child(1),
+.hero-list-item-value[value=arbon]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png");
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png");
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .dice-list .dice {
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-sentinel.png");
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .dice-list .dice:nth-child(1),
+.hero-list-item-value[value=talvora]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
 }
 
 .hero-list-item-value[value=thorn]:checked~.character .item.helm {
@@ -315,6 +770,24 @@ input:checked~.item {
     top: 124px;
 }
 
+.hero-list-item-value[value=thorn]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=thorn]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=thorn]:checked~.character .item-list.inventory-3-list .item {
+    left: 246px;
+}
+
+.hero-list-item-value[value=thorn]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=thorn]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=thorn]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
 .hero-list-item-value[value=mairen]:checked~.character .item.helm {
     top: 53px;
     left: 82px;
@@ -323,4 +796,358 @@ input:checked~.item {
 .hero-list-item-value[value=mairen]:checked~.character .offhand-list .item {
     left: 140px;
     top: 125px;
+}
+
+.hero-list-item-value[value=mairen]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=mairen]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=mairen]:checked~.character .item-list.inventory-3-list .item {
+    left: 246px;
+}
+
+.hero-list-item-value[value=mairen]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=mairen]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=mairen]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .item.helm {
+    top: 53px;
+    left: 75px;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .offhand-list .item {
+    left: 141px;
+    top: 127px;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=pasco]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=pasco]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=pasco]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=chada]:checked~.character .item.helm {
+    top: 62px;
+    left: 76px;
+}
+
+.hero-list-item-value[value=chada]:checked~.character .offhand-list .item {
+    left: 125px;
+    top: 127px;
+}
+
+.hero-list-item-value[value=chada]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=chada]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=chada]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=chada]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=chada]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=chada]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .item.helm {
+    top: 49px;
+    left: 85px;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .offhand-list .item {
+    left: 148px;
+    top: 125px;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=liphardus]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=liphardus]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=liphardus]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .item.helm {
+    top: 62px;
+    left: 76px;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .offhand-list .item {
+    left: 136px;
+    top: 125px;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=eara]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=eara]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .item.helm {
+    top: 75px;
+    left: 77px;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .offhand-list .item {
+    left: 148px;
+    top: 125px;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=kram]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=kram]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=kram]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .item.helm {
+    top: 72px;
+    left: 76px;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .offhand-list .item {
+    left: 147px;
+    top: 125px;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=brigha]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=brigha]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .item.helm {
+    top: 39px;
+    left: 81px;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .offhand-list .item {
+    left: 148px;
+    top: 125px;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=kheelan]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=kheelan]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=kheelan]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .item.helm {
+    top: 38px;
+    left: 81px;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .offhand-list .item {
+    left: 147px;
+    top: 125px;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=kheela]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=kheela]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .item-list.inventory-1-list .item {
+    top: 44px;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .item-list.inventory-2-list .item {
+    top: 144px;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .item.helm {
+    top: 46px;
+    left: 86px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .offhand-list .item {
+    left: 147px;
+    top: 126px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=fenn]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=fenn]:checked~.character .item-list.inventory-3-list .item {
+    left: 240px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .item-list.inventory-1-list .item {
+    top: 45px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .item-list.inventory-2-list .item {
+    top: 146px;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .item-list.inventory-3-list .item {
+    top: 247px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .item.helm {
+    top: 53px;
+    left: 86px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .offhand-list .item {
+    left: 137px;
+    top: 126px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=fennah]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=fennah]:checked~.character .item-list.inventory-3-list .item {
+    left: 240px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .item-list.inventory-1-list .item {
+    top: 45px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .item-list.inventory-2-list .item {
+    top: 146px;
+}
+
+.hero-list-item-value[value=fennah]:checked~.character .item-list.inventory-3-list .item {
+    top: 247px;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .item.helm {
+    top: 39px;
+    left: 96px;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .offhand-list .item {
+    left: 148px;
+    top: 126px;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=arbon]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=arbon]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .item-list.inventory-1-list .item {
+    top: 45px;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .item-list.inventory-2-list .item {
+    top: 145px;
+}
+
+.hero-list-item-value[value=arbon]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .item.helm {
+    top: 42px;
+    left: 97px;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .offhand-list .item {
+    left: 148px;
+    top: 126px;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .item-list.inventory-1-list .item,
+.hero-list-item-value[value=talvora]:checked~.character .item-list.inventory-2-list .item,
+.hero-list-item-value[value=talvora]:checked~.character .item-list.inventory-3-list .item {
+    left: 245px;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .item-list.inventory-1-list .item {
+    top: 45px;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .item-list.inventory-2-list .item {
+    top: 145px;
+}
+
+.hero-list-item-value[value=talvora]:checked~.character .item-list.inventory-3-list .item {
+    top: 245px;
 }
