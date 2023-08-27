@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/sheet-background.png");
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .preview {
@@ -31,6 +36,10 @@
     border-radius: 4px;
 }
 
+*:focus {
+    outline: none;
+}
+
 .element {
     display: flex;
     gap: 4px;
@@ -48,6 +57,12 @@
     width: 90px;
 }
 
+.element input {
+    background-color: transparent;
+    border: 1px solid grey;
+    margin: 0;
+}
+
 .element input:not([type="checkbox"]) {
     height: 20px;
 }
@@ -62,13 +77,13 @@
     flex-direction: column;
     align-items: flex-start;
     border: 1px solid gray;
-    background-color: white;
     border-radius: 2px;
     height: 24px;
 }
 
 .item-list:hover {
     z-index: 1;
+    background-color: white;
 }
 
 .item-list.offhand-list:hover {
