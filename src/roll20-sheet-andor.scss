@@ -1,0 +1,333 @@
+@function asset($name) {
+  @return "https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/"+$name;
+}
+
+@mixin hero($names...) {
+  @each $name in $names {
+    .hero-list-item-value[value="#{$name}"]:checked~ {
+      @content($name);
+    }
+  }
+}
+
+body {
+  .sheetform {
+    --dark-secondarytext: black;
+  }
+
+  .ui-dialog .charsheet {
+    padding: 0;
+
+    label {
+      font-weight: normal;
+      font-size: unset;
+      margin-bottom: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+label {
+  color: var(--dark-secondarytext);
+}
+
+.sheet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  background-image: url(asset("background-sheet.png"));
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preview {
+  flex: none;
+  margin-top: 24px;
+  width: 320px;
+  height: 320px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+
+  .inventory,
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 4px;
+  }
+}
+
+.element {
+  display: flex;
+  gap: 4px;
+  height: 28px;
+
+  &>* {
+    display: flex;
+    align-items: center;
+    height: 24px;
+
+    &:first-child {
+      height: 28px;
+      width: 90px;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: 1px solid grey;
+    margin: 0;
+
+    &:not([type="checkbox"]) {
+      height: 20px;
+    }
+
+    &[type="number"] {
+      width: 45px;
+    }
+  }
+
+  &.strength-element {
+    height: 60px;
+
+    .stat-grid-value label {
+      background-size: 75%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.will-element {
+    height: 90px;
+
+    .stat-grid-value label {
+      background-size: contain;
+    }
+  }
+
+  &.strength-element,
+  &.will-element {
+    >div:first-child {
+      width: 55px;
+    }
+  }
+}
+
+.hero-list {
+  position: absolute;
+  top: 0;
+  margin-top: 8px;
+  width: 320px;
+
+  &-item-value {
+    display: none;
+  }
+
+  &:hover {
+    height: 40px;
+
+    label {
+      display: block;
+    }
+  }
+
+  label {
+    display: none;
+    overflow: clip;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.item-list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid gray;
+  border-radius: 2px;
+  height: 24px;
+
+  &:hover {
+    z-index: 1;
+    background-color: white;
+
+    input:not(:checked)~label {
+      display: block;
+    }
+  }
+
+  &:not(:hover) input:checked~label {
+    font-weight: normal;
+  }
+
+  input {
+    display: none;
+
+    &:not(:checked)~label {
+      display: none;
+    }
+
+    &:checked~label {
+      font-weight: bold;
+    }
+  }
+
+  &.offhand-list:hover {
+    height: 120px;
+  }
+
+  &.inventory-1-list:hover,
+  &.inventory-2-list:hover,
+  &.inventory-3-list:hover {
+    height: 220px;
+  }
+
+  &>div {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    width: 100%;
+  }
+
+  label {
+    height: 18px;
+    width: 100%;
+    padding: 1px 2px;
+  }
+
+  &.offhand-list .item {
+    height: 207px;
+  }
+
+  &.inventory-1-list .item,
+  &.inventory-2-list .item,
+  &.inventory-3-list .item {
+    height: 86px;
+    left: 246px;
+  }
+
+  &.inventory-1-list .item {
+    top: 44px;
+  }
+
+  &.inventory-2-list .item {
+    top: 144px;
+  }
+
+  &.inventory-3-list .item {
+    top: 245px;
+  }
+}
+
+input:checked~.item {
+  display: block;
+}
+
+.item {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+
+  &.helm {
+    width: 66px;
+    height: 45px;
+  }
+}
+
+.stat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 210px;
+
+  .stat-grid-value {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 0;
+
+    input {
+      display: none;
+
+      &:checked~label {
+        --dark-secondarytext: white;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+@include hero(thorn, mairen) using ($hero) {
+  .hero-list label[for="hero-#{$hero}"] {
+    display: block;
+  }
+
+  .hero-list:hover label[for="hero-#{$hero}"] {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+@include hero(thorn, mairen) using ($hero) {
+  .preview {
+    background-image: url(asset("background-character-#{$hero}.png"));
+  }
+
+  .character .element.strength-element .stat-grid-value input:checked~label {
+    background-image: url(asset("token-strength-warrior.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked~label {
+    background-image: url(asset("token-will-warrior.png"));
+  }
+}
+
+@include hero(thorn) using ($hero) {
+  .character {
+    .item.helm {
+      top: 46px;
+      left: 83px;
+    }
+
+    .offhand-list .item {
+      left: 149px;
+      top: 124px;
+    }
+  }
+}
+
+@include hero(mairen) using ($hero) {
+  .character {
+    .item.helm {
+      top: 53px;
+      left: 82px;
+    }
+
+    .offhand-list .item {
+      left: 140px;
+      top: 125px;
+    }
+  }
+}
