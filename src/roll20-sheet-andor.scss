@@ -10,6 +10,22 @@
   }
 }
 
+@mixin preview($slot, $items...) {
+  @each $item in $items {
+    ##{$slot}-#{$item}:checked~.preview-item {
+      @content($item);
+    }
+  }
+}
+
+@mixin merchant($slot, $items...) {
+  @each $item in $items {
+    label[for="#{$slot}-#{$item}"] {
+      @content($item);
+    }
+  }
+}
+
 body {
   .sheetform {
     --dark-secondarytext: black;
@@ -46,12 +62,205 @@ label {
 
 .preview {
   flex: none;
+  position: relative;
   margin-top: 24px;
   width: 320px;
   height: 320px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  input {
+    display: none;
+  }
+
+  >* {
+    position: absolute;
+  }
+
+  .preview-item {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+
+    &:focus {
+      cursor: default;
+
+      .merchant {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        z-index: 1;
+
+        label {
+          display: block;
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .helm {
+    height: 45px;
+    width: 67px;
+
+    label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    input:not(:checked)+label {
+      background-color: white;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+
+    input:checked+label {
+      border-top-right-radius: 45px;
+      border-top-left-radius: 45px;
+      background-image: url(asset('inventory-helm.png'));
+    }
+  }
+
+  .offhand {
+    height: 205px;
+    width: 86px;
+
+    >.preview-item {
+      border-radius: 43px / 103px;
+      background-size: 86px 205px;
+
+      &:focus {
+        width: 180px;
+
+        .merchant {
+          left: 86px;
+
+          .offhand-empty {
+            padding: 10px;
+            width: 40px;
+            height: 80px;
+
+            label {
+              width: 40px;
+              height: 80px;
+              display: block;
+            }
+          }
+
+          >label {
+            width: 60px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    @include preview(offhand, empty) using ($item) {
+      &:not(:focus) {
+        background-color: white;
+        opacity: 0;
+
+        &:hover {
+          opacity: 0.1;
+        }
+      }
+    }
+
+    @include preview(offhand, shield, shield-broken, brotherly-shield, bow, falcon, falcon-gone) using ($item) {
+      background-image: url(asset('inventory-#{$item}.png'));
+    }
+
+    label[for="offhand-empty"] {
+      background-image: url(asset('token-cancel.png'));
+    }
+
+    @include merchant(offhand, shield, shield-broken, brotherly-shield, bow, falcon, falcon-gone) using ($item) {
+      background-image: url(asset('inventory-#{$item}.png'));
+    }
+  }
+
+  .inventory-1,
+  .inventory-2,
+  .inventory-3 {
+    height: 86px;
+    width: 76px;
+
+    >.preview-item {
+      border-radius: 7px;
+      background-size: 76px 86px;
+
+      &:focus {
+        width: 340px;
+
+        .merchant {
+          left: 80px;
+          gap: 8px;
+
+          >label {
+            width: 40px;
+            height: 46px;
+          }
+        }
+      }
+    }
+  }
+
+  .inventory-2 .merchant {
+    top: -33px;
+  }
+
+  .inventory-3 .merchant {
+    top: -66px;
+  }
+
+  @for $i from 1 through 3 {
+    @include preview(inventory-#{$i}, empty) using ($item) {
+      &:not(:focus) {
+        background-color: white;
+        opacity: 0;
+
+        &:hover {
+          opacity: 0.1;
+        }
+      }
+    }
+
+    @include preview(inventory-#{$i}, gourd, gourd-used, spyglass, witch-potion, witch-potion-used, poison, poison-used, rune-yellow, rune-blue, rune-green) using ($item) {
+      background-image: url(asset('inventory-#{$item}.png'));
+    }
+
+    @include preview(inventory-#{$i}, token-herb-3, token-herb-4, token-scroll-7, token-scroll-8, token-scroll-10, token-scroll-11, token-scroll-14, token-scroll-17) using ($item) {
+      background-image: url(asset('#{$item}.png'));
+    }
+
+    label[for="inventory-#{$i}-empty"] {
+      background-image: url(asset('token-cancel.png'));
+    }
+
+    @include merchant(inventory-#{$i}, gourd, gourd-used, spyglass, witch-potion, witch-potion-used, poison, poison-used, rune-yellow, rune-blue, rune-green) using ($item) {
+      background-image: url(asset('inventory-#{$item}.png'));
+    }
+
+    @include merchant(inventory-#{$i}, token-herb-3, token-herb-4, token-scroll-7, token-scroll-8, token-scroll-10, token-scroll-11, token-scroll-14, token-scroll-17) using ($item) {
+      background-image: url(asset('#{$item}.png'));
+    }
+  }
 }
 
 .ranger-inventory {
@@ -59,48 +268,56 @@ label {
   position: absolute;
   left: 325px;
 
-  label {
+  >div {
     position: relative;
 
     &:nth-child(1) {
-      top: -9px;
+      top: -7px;
+
+      input:checked+label {
+        background-image: url(asset("inventory-crow.png"));
+      }
+
+      input:not(:checked)+label {
+        background-image: url(asset("inventory-crow-used.png"));
+      }
     }
 
     &:nth-child(2) {
       top: 8px;
+
+      input:checked+label {
+        background-image: url(asset("inventory-knife.png"));
+      }
+
+      input:not(:checked)+label {
+        background-image: url(asset("inventory-knife-used.png"));
+      }
     }
 
     &:nth-child(3) {
-      top: 27px;
+      top: 26px;
+
+      input:checked+label {
+        background-image: url(asset("inventory-horn.png"));
+      }
+
+      input:not(:checked)+label {
+        background-image: url(asset("inventory-horn-used.png"));
+      }
     }
 
     input {
       display: none;
-
-      &:checked {
-        +img {
-          display: block;
-
-          +img {
-            display: none;
-          }
-        }
-      }
-
-      &:not(:checked) {
-        +img {
-          display: none;
-
-          +img {
-            display: block;
-          }
-        }
-      }
     }
 
-    img {
+    label {
+      display: block;
       width: 137px;
       height: 84px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
     }
   }
 }
@@ -109,7 +326,7 @@ label {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 320px;
+  width: 350px;
 
   .inventory,
   .stats {
@@ -130,11 +347,6 @@ label {
   &>* {
     display: flex;
     align-items: center;
-
-    &.label {
-      height: 28px;
-      width: 90px;
-    }
   }
 
   input {
@@ -155,9 +367,13 @@ label {
     align-items: center;
     height: 60px;
 
-    img {
+    .label {
+      flex-grow: 1;
       height: 48px;
-      margin: 0 24px;
+      background-image: url(asset("misc-strength.png"));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
     .stat-grid-value label {
@@ -171,7 +387,7 @@ label {
     height: 90px;
 
     .dice-list {
-      flex: none;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
 
@@ -271,10 +487,6 @@ label {
     }
   }
 
-  &.offhand-list:hover {
-    height: 140px;
-  }
-
   &.inventory-1-list:hover,
   &.inventory-2-list:hover,
   &.inventory-3-list:hover {
@@ -292,10 +504,6 @@ label {
     height: 18px;
     width: 100%;
     padding: 1px 2px;
-  }
-
-  &.offhand-list .item {
-    height: 207px;
   }
 
   &.inventory-1-list .item,
@@ -505,449 +713,449 @@ input:checked~.item {
 }
 
 @include hero(thorn) using ($hero) {
-  .character {
-    .item.helm {
-      top: 46px;
-      left: 83px;
+  .preview {
+    .helm {
+      top: 14px;
+      left: 74px;
     }
 
-    .offhand-list .item {
-      left: 149px;
-      top: 124px;
+    .offhand {
+      top: 93px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 246px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(mairen) using ($hero) {
-  .character {
-    .item.helm {
-      top: 53px;
-      left: 82px;
+  .preview {
+    .helm {
+      top: 21px;
+      left: 73px;
     }
 
-    .offhand-list .item {
-      left: 140px;
-      top: 125px;
+    .offhand {
+      top: 93px;
+      left: 131px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 246px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(pasco) using ($hero) {
-  .character {
-    .item.helm {
-      top: 53px;
-      left: 75px;
+  .preview {
+    .helm {
+      top: 24px;
+      left: 68px;
     }
 
-    .offhand-list .item {
-      left: 141px;
-      top: 127px;
+    .offhand {
+      top: 97px;
+      left: 133px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(chada) using ($hero) {
-  .character {
-    .item.helm {
-      top: 62px;
-      left: 76px;
+  .preview {
+    .helm {
+      top: 30px;
+      left: 68px;
     }
 
-    .offhand-list .item {
-      left: 125px;
-      top: 127px;
+    .offhand {
+      top: 96px;
+      left: 117px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(liphardus) using ($hero) {
-  .character {
-    .item.helm {
-      top: 49px;
-      left: 85px;
+  .preview {
+    .helm {
+      top: 20px;
+      left: 77px;
     }
 
-    .offhand-list .item {
-      left: 148px;
-      top: 125px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(eara) using ($hero) {
-  .character {
-    .item.helm {
-      top: 62px;
-      left: 76px;
+  .preview {
+    .helm {
+      top: 32px;
+      left: 68px;
     }
 
-    .offhand-list .item {
-      left: 136px;
-      top: 125px;
+    .offhand {
+      top: 95px;
+      left: 127px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(kram) using ($hero) {
-  .character {
-    .item.helm {
-      top: 75px;
-      left: 77px;
+  .preview {
+    .helm {
+      top: 45px;
+      left: 69px;
     }
 
-    .offhand-list .item {
-      left: 148px;
-      top: 125px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(brigha) using ($hero) {
-  .character {
-    .item.helm {
-      top: 72px;
-      left: 76px;
+  .preview {
+    .helm {
+      top: 41px;
+      left: 69px;
     }
 
-    .offhand-list .item {
-      left: 147px;
-      top: 125px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(kheelan) using ($hero) {
-  .character {
-    .item.helm {
-      top: 39px;
-      left: 81px;
+  .preview {
+    .helm {
+      top: 12px;
+      left: 72px;
     }
 
-    .offhand-list .item {
-      left: 148px;
-      top: 125px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(kheela) using ($hero) {
-  .character {
-    .item.helm {
-      top: 38px;
-      left: 81px;
+  .preview {
+    .helm {
+      top: 11px;
+      left: 73px;
     }
 
-    .offhand-list .item {
-      left: 147px;
-      top: 125px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 44px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 144px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(fenn) using ($hero) {
-  .character {
-    .item.helm {
-      top: 46px;
-      left: 86px;
+  .preview {
+    .helm {
+      top: 16px;
+      left: 77px;
     }
 
-    .offhand-list .item {
-      left: 147px;
-      top: 126px;
+    .offhand {
+      top: 96px;
+      left: 139px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 240px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 232px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 45px;
+    .inventory-1 {
+      top: 13px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 146px;
+    .inventory-2 {
+      top: 114px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 247px;
+    .inventory-3 {
+      top: 215px;
     }
   }
 }
 
 @include hero(fennah) using ($hero) {
-  .character {
-    .item.helm {
-      top: 53px;
-      left: 86px;
+  .preview {
+    .helm {
+      top: 20px;
+      left: 77px;
     }
 
-    .offhand-list .item {
-      left: 137px;
-      top: 126px;
+    .offhand {
+      top: 95px;
+      left: 129px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 240px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 45px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 146px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 247px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(arbon) using ($hero) {
-  .character {
-    .item.helm {
-      top: 39px;
-      left: 96px;
+  .preview {
+    .helm {
+      top: 12px;
+      left: 88px;
     }
 
-    .offhand-list .item {
-      left: 148px;
-      top: 126px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 45px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 145px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
 
 @include hero(talvora) using ($hero) {
-  .character {
-    .item.helm {
-      top: 42px;
-      left: 97px;
+  .preview {
+    .helm {
+      top: 11px;
+      left: 89px;
     }
 
-    .offhand-list .item {
-      left: 148px;
-      top: 126px;
+    .offhand {
+      top: 94px;
+      left: 140px;
     }
 
-    .item-list.inventory-1-list .item,
-    .item-list.inventory-2-list .item,
-    .item-list.inventory-3-list .item {
-      left: 245px;
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
     }
 
-    .item-list.inventory-1-list .item {
-      top: 45px;
+    .inventory-1 {
+      top: 12px;
     }
 
-    .item-list.inventory-2-list .item {
-      top: 145px;
+    .inventory-2 {
+      top: 112px;
     }
 
-    .item-list.inventory-3-list .item {
-      top: 245px;
+    .inventory-3 {
+      top: 213px;
     }
   }
 }
