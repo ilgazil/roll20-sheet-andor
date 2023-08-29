@@ -39,6 +39,10 @@ body {
       font-size: unset;
       margin-bottom: 0;
       padding-right: 0;
+
+      &:empty {
+        display: unset;
+      }
     }
   }
 }

@@ -13,6 +13,10 @@ body .ui-dialog .charsheet label {
     padding-right: 0;
 }
 
+body .ui-dialog .charsheet label:empty {
+    display: unset;
+}
+
 label {
     color: var(--dark-secondarytext);
 }
