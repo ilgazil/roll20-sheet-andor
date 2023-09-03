@@ -729,6 +729,7 @@ label {
 
 .ranger-inventory>div {
     position: relative;
+    cursor: pointer;
 }
 
 .ranger-inventory>div:nth-child(1) {
@@ -1016,6 +1017,64 @@ input:checked~.item {
     cursor: pointer;
 }
 
+.day-timeline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-timeline.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.day-timeline label {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 46px;
+    cursor: pointer;
+}
+
+.day-timeline label:not(:first-child) {
+    width: 23px;
+    height: 24px;
+}
+
+.day-timeline label:nth-child(2),
+.day-timeline label:nth-child(3),
+.day-timeline label:nth-child(5),
+.day-timeline label:nth-child(6),
+.day-timeline label:nth-child(7),
+.day-timeline label:nth-child(8),
+.day-timeline label:nth-child(10),
+.day-timeline label:nth-child(11) {
+    margin-left: 6px;
+}
+
+.day-timeline label:nth-child(2),
+.day-timeline label:nth-child(4),
+.day-timeline label:nth-child(7),
+.day-timeline label:nth-child(10) {
+    margin-left: 7px;
+}
+
+.day-timeline label:nth-child(9) {
+    margin-left: 16px;
+}
+
+.day-timeline input {
+    display: none;
+}
+
+.day-timeline div {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .hero-list-item-value[value=thorn]:checked~.preview {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-thorn.png");
 }
@@ -1202,7 +1261,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png");
 }
 
-.hero-list-item-value[value=thorn]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=thorn]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=thorn]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png");
 }
 
@@ -1218,7 +1278,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png");
 }
 
-.hero-list-item-value[value=mairen]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=mairen]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=mairen]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png");
 }
 
@@ -1234,7 +1295,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png");
 }
 
-.hero-list-item-value[value=pasco]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=pasco]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=pasco]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png");
 }
 
@@ -1246,7 +1308,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png");
 }
 
-.hero-list-item-value[value=chada]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=chada]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=chada]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png");
 }
 
@@ -1258,7 +1321,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png");
 }
 
-.hero-list-item-value[value=liphardus]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=liphardus]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=liphardus]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png");
 }
 
@@ -1274,7 +1338,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png");
 }
 
-.hero-list-item-value[value=eara]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=eara]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=eara]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png");
 }
 
@@ -1290,7 +1355,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png");
 }
 
-.hero-list-item-value[value=kram]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=kram]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=kram]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png");
 }
 
@@ -1307,7 +1373,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png");
 }
 
-.hero-list-item-value[value=brigha]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=brigha]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=brigha]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png");
 }
 
@@ -1324,7 +1391,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png");
 }
 
-.hero-list-item-value[value=kheelan]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=kheelan]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=kheelan]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png");
 }
 
@@ -1340,7 +1408,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png");
 }
 
-.hero-list-item-value[value=kheela]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=kheela]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=kheela]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png");
 }
 
@@ -1364,7 +1433,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png");
 }
 
-.hero-list-item-value[value=fenn]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=fenn]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=fenn]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png");
 }
 
@@ -1393,7 +1463,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png");
 }
 
-.hero-list-item-value[value=fennah]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=fennah]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=fennah]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png");
 }
 
@@ -1414,7 +1485,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png");
 }
 
-.hero-list-item-value[value=arbon]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=arbon]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=arbon]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png");
 }
 
@@ -1431,7 +1503,8 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png");
 }
 
-.hero-list-item-value[value=talvora]:checked~.character .element.will-element .stat-grid-value input:checked~label {
+.hero-list-item-value[value=talvora]:checked~.character .element.will-element .stat-grid-value input:checked~label,
+.hero-list-item-value[value=talvora]:checked~.character .day-timeline input:checked+div {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png");
 }
 

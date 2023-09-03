@@ -39,10 +39,10 @@ body {
       font-size: unset;
       margin-bottom: 0;
       padding-right: 0;
+    }
 
-      &:empty {
-        display: unset;
-      }
+    .label:empty {
+      display: unset;
     }
   }
 }
@@ -274,6 +274,7 @@ label {
 
   >div {
     position: relative;
+    cursor: pointer;
 
     &:nth-child(1) {
       top: -7px;
@@ -562,6 +563,64 @@ input:checked~.item {
   }
 }
 
+.day-timeline {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background-image: url(asset("background-timeline.png"));
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  label {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 46px;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      width: 23px;
+      height: 24px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(10),
+    &:nth-child(11) {
+      margin-left: 6px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10) {
+      margin-left: 7px;
+    }
+
+    &:nth-child(9) {
+      margin-left: 16px;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  div {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 @include hero(thorn, mairen, pasco, chada, liphardus, eara, kram, brigha, kheelan, kheela, fenn, fennah, arbon, talvora) using ($hero) {
   .preview {
     background-image: url(asset("character-#{$hero}.png"));
@@ -582,7 +641,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-warrior.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-warrior.png"));
   }
 
@@ -600,7 +660,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-archer.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-archer.png"));
   }
 
@@ -614,7 +675,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-wizard.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-wizard.png"));
   }
 
@@ -632,7 +694,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-dwarf.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-dwarf.png"));
   }
 
@@ -651,7 +714,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-guardian.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-guardian.png"));
   }
 
@@ -677,7 +741,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-ranger.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-ranger.png"));
   }
 
@@ -702,7 +767,8 @@ input:checked~.item {
     background-image: url(asset("misc-strength-sentinel.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label {
+  .character .element.will-element .stat-grid-value input:checked~label,
+  .character .day-timeline input:checked+div {
     background-image: url(asset("misc-will-sentinel.png"));
   }
 
