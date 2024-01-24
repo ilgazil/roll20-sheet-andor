@@ -1075,6 +1075,29 @@ input:checked~.item {
     background-size: contain;
 }
 
+.gold-pouch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gold-pouch img {
+  height: 50px;
+}
+
+.gold-pouch input {
+  background: transparent;
+  border: none;
+  -moz-appearance: none;
+  width: 64px;
+  text-align: center;
+  font-size: 1.5em;
+
+  &:focus {
+    outline: 0px none transparent;
+  }
+}
+
 .hero-list-item-value[value=thorn]:checked~.preview {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-thorn.png");
 }

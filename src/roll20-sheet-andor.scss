@@ -621,6 +621,29 @@ input:checked~.item {
   }
 }
 
+.gold-pouch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 50px;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    -moz-appearance: none;
+    width: 64px;
+    text-align: center;
+    font-size: 1.5em;
+
+    &:focus {
+      outline: 0px none transparent;
+    }
+  }
+}
+
 @include hero(thorn, mairen, pasco, chada, liphardus, eara, kram, brigha, kheelan, kheela, fenn, fennah, arbon, talvora) using ($hero) {
   .preview {
     background-image: url(asset("character-#{$hero}.png"));
