@@ -1,19 +1,20 @@
 @function asset($name) {
-  @return "https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/"+$name;
+  @return "https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/" +
+    $name;
 }
 
 @mixin hero($names...) {
   @each $name in $names {
-    .hero-list-item-value[value="#{$name}"]:checked~ {
-      @content($name);
+    .hero-list-item-value[value="#{$name}"]:checked ~ {
+      @content ($name);
     }
   }
 }
 
 @mixin preview($slot, $items...) {
   @each $item in $items {
-    ##{$slot}-#{$item}:checked~.preview-item {
-      @content($item);
+    ##{$slot}-#{$item}:checked ~ .preview-item {
+      @content ($item);
     }
   }
 }
@@ -21,7 +22,7 @@
 @mixin merchant($slot, $items...) {
   @each $item in $items {
     label[for="#{$slot}-#{$item}"] {
-      @content($item);
+      @content ($item);
     }
   }
 }
@@ -67,18 +68,18 @@ label {
 .preview {
   flex: none;
   position: relative;
-  margin-top: 24px;
+  margin-top: 26px;
   width: 320px;
   height: 320px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 
   input {
     display: none;
   }
 
-  >* {
+  > * {
     position: absolute;
   }
 
@@ -125,7 +126,7 @@ label {
       background-position: center;
     }
 
-    input:not(:checked)+label {
+    input:not(:checked) + label {
       background-color: white;
       opacity: 0;
 
@@ -134,10 +135,10 @@ label {
       }
     }
 
-    input:checked+label {
+    input:checked + label {
       border-top-right-radius: 45px;
       border-top-left-radius: 45px;
-      background-image: url(asset('inventory-helm.png'));
+      background-image: url(asset("inventory-helm.png"));
     }
   }
 
@@ -145,7 +146,7 @@ label {
     height: 205px;
     width: 86px;
 
-    >.preview-item {
+    > .preview-item {
       border-radius: 43px / 103px;
       background-size: 86px 205px;
 
@@ -167,7 +168,7 @@ label {
             }
           }
 
-          >label {
+          > label {
             width: 60px;
             height: 100px;
           }
@@ -186,16 +187,34 @@ label {
       }
     }
 
-    @include preview(offhand, shield, shield-broken, brotherly-shield, bow, falcon, falcon-gone) using ($item) {
-      background-image: url(asset('inventory-#{$item}.png'));
+    @include preview(
+        offhand,
+        shield,
+        shield-broken,
+        brotherly-shield,
+        bow,
+        falcon,
+        falcon-gone
+      )
+      using ($item) {
+      background-image: url(asset("inventory-#{$item}.png"));
     }
 
     label[for="offhand-empty"] {
-      background-image: url(asset('token-cancel.png'));
+      background-image: url(asset("token-cancel.png"));
     }
 
-    @include merchant(offhand, shield, shield-broken, brotherly-shield, bow, falcon, falcon-gone) using ($item) {
-      background-image: url(asset('inventory-#{$item}.png'));
+    @include merchant(
+        offhand,
+        shield,
+        shield-broken,
+        brotherly-shield,
+        bow,
+        falcon,
+        falcon-gone
+      )
+      using ($item) {
+      background-image: url(asset("inventory-#{$item}.png"));
     }
   }
 
@@ -205,7 +224,7 @@ label {
     height: 86px;
     width: 76px;
 
-    >.preview-item {
+    > .preview-item {
       border-radius: 7px;
       background-size: 76px 86px;
 
@@ -216,7 +235,7 @@ label {
           left: 80px;
           gap: 8px;
 
-          >label {
+          > label {
             width: 40px;
             height: 46px;
           }
@@ -245,24 +264,72 @@ label {
       }
     }
 
-    @include preview(inventory-#{$i}, gourd, gourd-used, spyglass, witch-potion, witch-potion-used, poison, poison-used, rune-yellow, rune-blue, rune-green) using ($item) {
-      background-image: url(asset('inventory-#{$item}.png'));
+    @include preview(
+        inventory-#{$i},
+        gourd,
+        gourd-used,
+        spyglass,
+        witch-potion,
+        witch-potion-used,
+        poison,
+        poison-used,
+        rune-yellow,
+        rune-blue,
+        rune-green
+      )
+      using ($item) {
+      background-image: url(asset("inventory-#{$item}.png"));
     }
 
-    @include preview(inventory-#{$i}, token-herb-3, token-herb-4, token-scroll-7, token-scroll-8, token-scroll-10, token-scroll-11, token-scroll-14, token-scroll-17) using ($item) {
-      background-image: url(asset('#{$item}.png'));
+    @include preview(
+        inventory-#{$i},
+        token-herb-3,
+        token-herb-4,
+        token-scroll-7,
+        token-scroll-8,
+        token-scroll-10,
+        token-scroll-11,
+        token-scroll-14,
+        token-scroll-17
+      )
+      using ($item) {
+      background-image: url(asset("#{$item}.png"));
     }
 
     label[for="inventory-#{$i}-empty"] {
-      background-image: url(asset('token-cancel.png'));
+      background-image: url(asset("token-cancel.png"));
     }
 
-    @include merchant(inventory-#{$i}, gourd, gourd-used, spyglass, witch-potion, witch-potion-used, poison, poison-used, rune-yellow, rune-blue, rune-green) using ($item) {
-      background-image: url(asset('inventory-#{$item}.png'));
+    @include merchant(
+        inventory-#{$i},
+        gourd,
+        gourd-used,
+        spyglass,
+        witch-potion,
+        witch-potion-used,
+        poison,
+        poison-used,
+        rune-yellow,
+        rune-blue,
+        rune-green
+      )
+      using ($item) {
+      background-image: url(asset("inventory-#{$item}.png"));
     }
 
-    @include merchant(inventory-#{$i}, token-herb-3, token-herb-4, token-scroll-7, token-scroll-8, token-scroll-10, token-scroll-11, token-scroll-14, token-scroll-17) using ($item) {
-      background-image: url(asset('#{$item}.png'));
+    @include merchant(
+        inventory-#{$i},
+        token-herb-3,
+        token-herb-4,
+        token-scroll-7,
+        token-scroll-8,
+        token-scroll-10,
+        token-scroll-11,
+        token-scroll-14,
+        token-scroll-17
+      )
+      using ($item) {
+      background-image: url(asset("#{$item}.png"));
     }
   }
 }
@@ -272,18 +339,18 @@ label {
   position: absolute;
   left: 325px;
 
-  >div {
+  > div {
     position: relative;
     cursor: pointer;
 
     &:nth-child(1) {
       top: -7px;
 
-      input:checked+label {
+      input:checked + label {
         background-image: url(asset("inventory-crow.png"));
       }
 
-      input:not(:checked)+label {
+      input:not(:checked) + label {
         background-image: url(asset("inventory-crow-used.png"));
       }
     }
@@ -291,11 +358,11 @@ label {
     &:nth-child(2) {
       top: 8px;
 
-      input:checked+label {
+      input:checked + label {
         background-image: url(asset("inventory-knife.png"));
       }
 
-      input:not(:checked)+label {
+      input:not(:checked) + label {
         background-image: url(asset("inventory-knife-used.png"));
       }
     }
@@ -303,11 +370,11 @@ label {
     &:nth-child(3) {
       top: 26px;
 
-      input:checked+label {
+      input:checked + label {
         background-image: url(asset("inventory-horn.png"));
       }
 
-      input:not(:checked)+label {
+      input:not(:checked) + label {
         background-image: url(asset("inventory-horn-used.png"));
       }
     }
@@ -330,7 +397,7 @@ label {
 .character {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   width: 350px;
 
   .inventory,
@@ -349,7 +416,7 @@ label {
   gap: 4px;
   height: 28px;
 
-  &>* {
+  & > * {
     display: flex;
     align-items: center;
   }
@@ -426,7 +493,7 @@ label {
       color: transparent;
     }
 
-    .stat-grid-value:first-child input:checked~label {
+    .stat-grid-value:first-child input:checked ~ label {
       background-position-y: 0;
     }
   }
@@ -443,7 +510,7 @@ label {
   }
 
   &:hover {
-    height: 280px;
+    height: 320px;
 
     label {
       display: block;
@@ -471,23 +538,23 @@ label {
     z-index: 1;
     background-color: white;
 
-    input:not(:checked)~label {
+    input:not(:checked) ~ label {
       display: block;
     }
   }
 
-  &:not(:hover) input:checked~label {
+  &:not(:hover) input:checked ~ label {
     font-weight: normal;
   }
 
   input {
     display: none;
 
-    &:not(:checked)~label {
+    &:not(:checked) ~ label {
       display: none;
     }
 
-    &:checked~label {
+    &:checked ~ label {
       font-weight: bold;
     }
   }
@@ -498,7 +565,7 @@ label {
     height: 380px;
   }
 
-  &>div {
+  & > div {
     display: flex;
     align-items: center;
     height: 24px;
@@ -518,7 +585,7 @@ label {
   }
 }
 
-input:checked~.item {
+input:checked ~ .item {
   display: block;
 }
 
@@ -547,7 +614,7 @@ input:checked~.item {
     input {
       display: none;
 
-      &:checked~label {
+      &:checked ~ label {
         --dark-secondarytext: white;
       }
     }
@@ -563,61 +630,16 @@ input:checked~.item {
   }
 }
 
-.day-timeline {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 48px;
-  background-image: url(asset("background-timeline.png"));
-  background-repeat: no-repeat;
-  background-size: contain;
+.tarus-will-marker {
+  position: relative;
+  opacity: 0;
 
-  label {
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 46px;
-    cursor: pointer;
-
-    &:not(:first-child) {
-      width: 23px;
-      height: 24px;
-    }
-
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(5),
-    &:nth-child(6),
-    &:nth-child(7),
-    &:nth-child(8),
-    &:nth-child(10),
-    &:nth-child(11) {
-      margin-left: 6px;
-    }
-
-    &:nth-child(2),
-    &:nth-child(4),
-    &:nth-child(7),
-    &:nth-child(10) {
-      margin-left: 7px;
-    }
-
-    &:nth-child(9) {
-      margin-left: 16px;
-    }
-  }
-
-  input {
-    display: none;
-  }
-
-  div {
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  > img {
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 15px;
+    max-width: inherit;
   }
 }
 
@@ -644,7 +666,25 @@ input:checked~.item {
   }
 }
 
-@include hero(thorn, mairen, pasco, chada, liphardus, eara, kram, brigha, kheelan, kheela, fenn, fennah, arbon, talvora) using ($hero) {
+@include hero(
+    thorn,
+    mairen,
+    pasco,
+    chada,
+    liphardus,
+    eara,
+    kram,
+    brigha,
+    kheelan,
+    kheela,
+    fenn,
+    fennah,
+    arbon,
+    talvora,
+    bragor,
+    rhega
+  )
+  using ($hero) {
   .preview {
     background-image: url(asset("character-#{$hero}.png"));
   }
@@ -660,12 +700,11 @@ input:checked~.item {
 }
 
 @include hero(thorn, mairen) using ($hero) {
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-warrior.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-warrior.png"));
   }
 
@@ -679,12 +718,11 @@ input:checked~.item {
 }
 
 @include hero(pasco, chada) using ($hero) {
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-archer.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-archer.png"));
   }
 
@@ -694,12 +732,11 @@ input:checked~.item {
 }
 
 @include hero(liphardus, eara) using ($hero) {
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-wizard.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-wizard.png"));
   }
 
@@ -713,12 +750,11 @@ input:checked~.item {
 }
 
 @include hero(kram, brigha) using ($hero) {
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-dwarf.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-dwarf.png"));
   }
 
@@ -733,12 +769,11 @@ input:checked~.item {
 }
 
 @include hero(kheelan, kheela) using ($hero) {
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-guardian.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-guardian.png"));
   }
 
@@ -760,12 +795,11 @@ input:checked~.item {
     display: block;
   }
 
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-ranger.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-ranger.png"));
   }
 
@@ -786,12 +820,11 @@ input:checked~.item {
 }
 
 @include hero(arbon, talvora) using ($hero) {
-  .character .element.strength-element .stat-grid-value input:checked~label {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-strength-sentinel.png"));
   }
 
-  .character .element.will-element .stat-grid-value input:checked~label,
-  .character .day-timeline input:checked+div {
+  .character .element.will-element .stat-grid-value input:checked ~ label {
     background-image: url(asset("misc-will-sentinel.png"));
   }
 
@@ -802,6 +835,29 @@ input:checked~.item {
     &:nth-child(2) {
       display: none;
     }
+  }
+}
+
+@include hero(bragor, rhega) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(asset("misc-strength-tarus.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(asset("misc-will-tarus.png"));
+  }
+
+  .character .dice-list .dice {
+    background-image: url(asset("misc-dice-tarus.png"));
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .character .tarus-will-marker {
+    opacity: 1;
   }
 }
 
@@ -1237,6 +1293,34 @@ input:checked~.item {
     .inventory-2,
     .inventory-3 {
       left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(bragor, rhega) using ($hero) {
+  .preview {
+    .helm,
+    .offhand {
+      display: none
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .inventory-1 {

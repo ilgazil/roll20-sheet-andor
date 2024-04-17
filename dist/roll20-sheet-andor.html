@@ -13,6 +13,8 @@
     <input id="hero-fennah" class="hero-list-item-value" name="attr_hero" type="radio" value="fennah" />
     <input id="hero-arbon" class="hero-list-item-value" name="attr_hero" type="radio" value="arbon" />
     <input id="hero-talvora" class="hero-list-item-value" name="attr_hero" type="radio" value="talvora" />
+    <input id="hero-bragor" class="hero-list-item-value" name="attr_hero" type="radio" value="bragor" />
+    <input id="hero-rhega" class="hero-list-item-value" name="attr_hero" type="radio" value="rhega" />
 
     <div class="item-list hero-list">
         <label for="hero-thorn">
@@ -56,6 +58,12 @@
         </label>
         <label for="hero-talvora">
             Talvora, Sentinelle des Archives
+        </label>
+        <label for="hero-bragor">
+            Bragor, Tarus de la Vallée de la Tourmente
+        </label>
+        <label for="hero-rhega">
+            Rhega, Tarus de la Vallée de la Tourmente
         </label>
     </div>
 
@@ -458,70 +466,17 @@
                         <label for="stat-grid-value-will-20">20</label>
                     </div>
                 </div>
+
+                <div class="tarus-will-marker">
+                    <img src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-tarus-well-power.png">
+                </div>
             </div>
-        </div>
-
-        <div class="day-timeline">
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="0" checked />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="1" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="2" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="3" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="4" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="5" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="6" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="7" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="8" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="9" />
-                <div></div>
-            </label>
-
-            <label class="timestamp">
-                <input name="attr_tiredless" type="radio" value="10" />
-                <div></div>
-            </label>
         </div>
 
         <div class="gold-pouch">
             <img src="https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-pouch-of-gold.png">
 
-            <input name="attr_gold" type="text" value="10" min="0" max="50" step="1"/>
+            <input name="attr_gold" type="text" value="0" min="0" max="50" step="1"/>
         </div>
     </div>
 </div>
