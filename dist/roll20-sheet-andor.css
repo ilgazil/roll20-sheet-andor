@@ -844,13 +844,14 @@ label {
 }
 
 .element.will-element {
-    height: 90px;
+    height: 120px;
 }
 
 .element.will-element .dice-list {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .element.will-element .dice-list .dice-deck {
@@ -874,11 +875,11 @@ label {
 .element.will-element .stat-grid-value label {
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .element.will-element .stat-grid-value:first-child label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-health-0.png");
-    background-position-y: 3px;
     color: transparent;
 }
 
@@ -1277,6 +1278,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=thorn]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=mairen]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png");
 }
@@ -1293,6 +1298,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=mairen]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=pasco]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png");
 }
@@ -1305,6 +1314,10 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-archer.png");
 }
 
+.hero-list-item-value[value=pasco]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=chada]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png");
 }
@@ -1315,6 +1328,10 @@ input:checked~.item {
 
 .hero-list-item-value[value=chada]:checked~.character .dice-list .dice {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-archer.png");
+}
+
+.hero-list-item-value[value=chada]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
 }
 
 .hero-list-item-value[value=liphardus]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
@@ -1333,6 +1350,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=liphardus]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=eara]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png");
 }
@@ -1346,6 +1367,10 @@ input:checked~.item {
 }
 
 .hero-list-item-value[value=eara]:checked~.character .dice-list .dice:not(:first-child) {
+    display: none;
+}
+
+.hero-list-item-value[value=eara]:checked~.character .dice-list .dice-deck:nth-child(4) {
     display: none;
 }
 
@@ -1366,6 +1391,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=kram]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=brigha]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png");
 }
@@ -1380,6 +1409,10 @@ input:checked~.item {
 
 .hero-list-item-value[value=brigha]:checked~.character .dice-list .dice:nth-child(1),
 .hero-list-item-value[value=brigha]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=brigha]:checked~.character .dice-list .dice-deck:nth-child(4) {
     display: none;
 }
 
@@ -1399,6 +1432,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=kheelan]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=kheela]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png");
 }
@@ -1412,6 +1449,10 @@ input:checked~.item {
 }
 
 .hero-list-item-value[value=kheela]:checked~.character .dice-list .dice:not(:first-child) {
+    display: none;
+}
+
+.hero-list-item-value[value=kheela]:checked~.character .dice-list .dice-deck:nth-child(4) {
     display: none;
 }
 
@@ -1437,6 +1478,10 @@ input:checked~.item {
 
 .hero-list-item-value[value=fenn]:checked~.character .dice-list .dice:nth-child(1),
 .hero-list-item-value[value=fenn]:checked~.character .dice-list .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=fenn]:checked~.character .dice-list .dice-deck:nth-child(4) {
     display: none;
 }
 
@@ -1469,6 +1514,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=fennah]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=fennah]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(3) {
     display: none;
 }
@@ -1490,6 +1539,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=arbon]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=talvora]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png");
 }
@@ -1507,6 +1560,10 @@ input:checked~.item {
     display: none;
 }
 
+.hero-list-item-value[value=talvora]:checked~.character .dice-list .dice-deck:nth-child(4) {
+    display: none;
+}
+
 .hero-list-item-value[value=bragor]:checked~.character .element.strength-element .stat-grid-value input:checked~label {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-tarus.png");
 }
@@ -1519,8 +1576,24 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-tarus.png");
 }
 
-.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice:nth-child(1),
-.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice:nth-child(2) {
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(1) .dice:nth-child(1),
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(1) .dice:nth-child(2),
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(2) .dice:nth-child(1),
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(2) .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(1),
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(2),
+.hero-list-item-value[value=bragor]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(3) {
+    display: none;
+}
+
+.hero-list-item-value[value=bragor]:checked~.character .will-stat-grid .stat-grid-value {
+    width: 42px;
+}
+
+.hero-list-item-value[value=bragor]:checked~.character .will-stat-grid .stat-grid-value:last-child {
     display: none;
 }
 
@@ -1540,8 +1613,24 @@ input:checked~.item {
     background-image: url("https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-dice-tarus.png");
 }
 
-.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice:nth-child(1),
-.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice:nth-child(2) {
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(1) .dice:nth-child(1),
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(1) .dice:nth-child(2),
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(2) .dice:nth-child(1),
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(2) .dice:nth-child(2) {
+    display: none;
+}
+
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(1),
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(2),
+.hero-list-item-value[value=rhega]:checked~.character .dice-list .dice-deck:nth-child(3) .dice:nth-child(3) {
+    display: none;
+}
+
+.hero-list-item-value[value=rhega]:checked~.character .will-stat-grid .stat-grid-value {
+    width: 42px;
+}
+
+.hero-list-item-value[value=rhega]:checked~.character .will-stat-grid .stat-grid-value:last-child {
     display: none;
 }
 
