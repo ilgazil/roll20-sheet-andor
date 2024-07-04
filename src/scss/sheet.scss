@@ -1,0 +1,14 @@
+@use "helpers";
+
+.sheet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  background-image: url(helpers.asset("background-sheet.png"));
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

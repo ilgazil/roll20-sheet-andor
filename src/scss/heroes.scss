@@ -1,0 +1,741 @@
+@use "helpers";
+
+@mixin hero($names...) {
+  @each $name in $names {
+    .hero-list-item-value[value="#{$name}"]:checked ~ {
+      @content ($name);
+    }
+  }
+}
+
+@include hero(
+    thorn,
+    mairen,
+    pasco,
+    chada,
+    liphardus,
+    eara,
+    kram,
+    brigha,
+    kheelan,
+    kheela,
+    fenn,
+    fennah,
+    arbon,
+    talvora,
+    bragor,
+    rhega
+  )
+  using ($hero) {
+  .preview {
+    background-image: url(helpers.asset("character-#{$hero}.png"));
+  }
+
+  .hero-list label[for="hero-#{$hero}"] {
+    display: block;
+  }
+
+  .hero-list:hover label[for="hero-#{$hero}"] {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+@include hero(thorn, mairen) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-warrior.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-warrior.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-warrior.png"));
+
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@include hero(pasco, chada) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-archer.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-archer.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-archer.png"));
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@include hero(liphardus, eara) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-wizard.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-wizard.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-wizard.png"));
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@include hero(kram, brigha) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-dwarf.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-dwarf.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-dwarf.png"));
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@include hero(kheelan, kheela) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-guardian.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-guardian.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-guardian.png"));
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@include hero(fenn, fennah) using ($hero) {
+  .preview {
+    width: 460px;
+  }
+
+  .ranger-inventory {
+    display: block;
+  }
+
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-ranger.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-ranger.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-ranger.png"));
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+
+    .dice-deck:nth-child(3) .dice:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@include hero(arbon, talvora) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-sentinel.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-sentinel.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-sentinel.png"));
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+@include hero(bragor, rhega) using ($hero) {
+  .character .element.strength-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-tarus.png"));
+  }
+
+  .character .element.will-element .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-tarus.png"));
+  }
+
+  .character .dice-list {
+    .dice {
+      background-image: url(helpers.asset("misc-dice-tarus.png"));
+    }
+
+    .dice-deck:nth-child(1),
+    .dice-deck:nth-child(2) {
+      .dice:nth-child(1),
+      .dice:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .dice-deck:nth-child(3) {
+      .dice:nth-child(1),
+      .dice:nth-child(2),
+      .dice:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  .character .will-stat-grid .stat-grid-value {
+    width: 42px;
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  .character .tarus-will-marker {
+    opacity: 1;
+  }
+}
+
+@include hero(thorn) using ($hero) {
+  .preview {
+    .helm {
+      top: 14px;
+      left: 74px;
+    }
+
+    .offhand {
+      top: 93px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(mairen) using ($hero) {
+  .preview {
+    .helm {
+      top: 21px;
+      left: 73px;
+    }
+
+    .offhand {
+      top: 93px;
+      left: 131px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(pasco) using ($hero) {
+  .preview {
+    .helm {
+      top: 24px;
+      left: 68px;
+    }
+
+    .offhand {
+      top: 97px;
+      left: 133px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(chada) using ($hero) {
+  .preview {
+    .helm {
+      top: 30px;
+      left: 68px;
+    }
+
+    .offhand {
+      top: 96px;
+      left: 117px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(liphardus) using ($hero) {
+  .preview {
+    .helm {
+      top: 20px;
+      left: 77px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(eara) using ($hero) {
+  .preview {
+    .helm {
+      top: 32px;
+      left: 68px;
+    }
+
+    .offhand {
+      top: 95px;
+      left: 127px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(kram) using ($hero) {
+  .preview {
+    .helm {
+      top: 45px;
+      left: 69px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(brigha) using ($hero) {
+  .preview {
+    .helm {
+      top: 41px;
+      left: 69px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(kheelan) using ($hero) {
+  .preview {
+    .helm {
+      top: 12px;
+      left: 72px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(kheela) using ($hero) {
+  .preview {
+    .helm {
+      top: 11px;
+      left: 73px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(fenn) using ($hero) {
+  .preview {
+    .helm {
+      top: 16px;
+      left: 77px;
+    }
+
+    .offhand {
+      top: 96px;
+      left: 139px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 232px;
+    }
+
+    .inventory-1 {
+      top: 13px;
+    }
+
+    .inventory-2 {
+      top: 114px;
+    }
+
+    .inventory-3 {
+      top: 215px;
+    }
+  }
+}
+
+@include hero(fennah) using ($hero) {
+  .preview {
+    .helm {
+      top: 20px;
+      left: 77px;
+    }
+
+    .offhand {
+      top: 95px;
+      left: 129px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(arbon) using ($hero) {
+  .preview {
+    .helm {
+      top: 12px;
+      left: 88px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(talvora) using ($hero) {
+  .preview {
+    .helm {
+      top: 11px;
+      left: 89px;
+    }
+
+    .offhand {
+      top: 94px;
+      left: 140px;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}
+
+@include hero(bragor, rhega) using ($hero) {
+  .preview {
+    .helm,
+    .offhand {
+      display: none;
+    }
+
+    .inventory-1,
+    .inventory-2,
+    .inventory-3 {
+      left: 237px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .inventory-1 {
+      top: 12px;
+    }
+
+    .inventory-2 {
+      top: 112px;
+    }
+
+    .inventory-3 {
+      top: 213px;
+    }
+  }
+}

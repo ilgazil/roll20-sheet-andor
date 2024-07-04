@@ -1,0 +1,25 @@
+body {
+    .sheetform {
+      --dark-secondarytext: black;
+    }
+  
+    .ui-dialog .charsheet {
+      padding: 0;
+  
+      label {
+        font-weight: normal;
+        font-size: unset;
+        margin-bottom: 0;
+        padding-right: 0;
+      }
+  
+      .label:empty {
+        display: unset;
+      }
+    }
+  }
+  
+  label {
+    color: var(--dark-secondarytext);
+  }
+  

@@ -1,0 +1,74 @@
+.item-list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 24px;
+  
+    &:hover {
+      z-index: 1;
+      background-color: white;
+  
+      input:not(:checked) ~ label {
+        display: block;
+      }
+    }
+  
+    &:not(:hover) input:checked ~ label {
+      font-weight: normal;
+    }
+  
+    input {
+      display: none;
+  
+      &:not(:checked) ~ label {
+        display: none;
+      }
+  
+      &:checked ~ label {
+        font-weight: bold;
+      }
+    }
+  
+    &.inventory-1-list:hover,
+    &.inventory-2-list:hover,
+    &.inventory-3-list:hover {
+      height: 380px;
+    }
+  
+    & > div {
+      display: flex;
+      align-items: center;
+      height: 24px;
+      width: 100%;
+    }
+  
+    label {
+      height: 18px;
+      width: 100%;
+      padding: 1px 2px;
+    }
+  
+    &.inventory-1-list .item,
+    &.inventory-2-list .item,
+    &.inventory-3-list .item {
+      height: 86px;
+    }
+  }
+
+  input:checked ~ .item {
+    display: block;
+  }
+  
+  .item {
+    display: none;
+    position: absolute;
+    pointer-events: none;
+  
+    &.helm {
+      width: 66px;
+      height: 45px;
+    }
+  }

@@ -1,0 +1,17 @@
+.character {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 350px;
+  
+    .inventory,
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border: 1px solid gray;
+      padding: 4px;
+      border-radius: 4px;
+    }
+  }
+  

@@ -1,0 +1,90 @@
+@use "helpers";
+
+.element {
+  display: flex;
+  gap: 4px;
+  height: 28px;
+
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    background-color: transparent;
+    border: 1px solid grey;
+    margin: 0;
+
+    &:not([type="checkbox"]) {
+      height: 20px;
+    }
+
+    &[type="number"] {
+      width: 45px;
+    }
+  }
+
+  &.strength-element {
+    align-items: center;
+    height: 60px;
+
+    .label {
+      flex-grow: 1;
+      height: 48px;
+      background-image: url(helpers.asset("misc-strength.png"));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .stat-grid-value label {
+      background-size: 75%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.will-element {
+    height: 120px;
+
+    .dice-list {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .dice-deck {
+        flex: none;
+        display: flex;
+        align-items: center;
+        height: 30px;
+
+        .dice {
+          width: 24px;
+          height: 24px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .stat-grid {
+      flex: none;
+    }
+
+    .stat-grid-value label {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .stat-grid-value:first-child label {
+      background-image: url(helpers.asset("misc-health-0.png"));
+      color: transparent;
+    }
+
+    .stat-grid-value:first-child input:checked ~ label {
+      background-position-y: 0;
+    }
+  }
+}

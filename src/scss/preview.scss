@@ -1,0 +1,286 @@
+@use "helpers";
+
+@mixin preview($slot, $items...) {
+  @each $item in $items {
+    ##{$slot}-#{$item}:checked ~ .preview-item {
+      @content ($item);
+    }
+  }
+}
+
+@mixin merchant($slot, $items...) {
+  @each $item in $items {
+    label[for="#{$slot}-#{$item}"] {
+      @content ($item);
+    }
+  }
+}
+
+.preview {
+  flex: none;
+  position: relative;
+  margin-top: 26px;
+  width: 320px;
+  height: 320px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+
+  input {
+    display: none;
+  }
+
+  > * {
+    position: absolute;
+  }
+
+  .preview-item {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+
+    &:focus {
+      cursor: default;
+
+      .merchant {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        z-index: 1;
+
+        label {
+          display: block;
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .helm {
+    height: 45px;
+    width: 67px;
+
+    label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    input:not(:checked) + label {
+      background-color: white;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+
+    input:checked + label {
+      border-top-right-radius: 45px;
+      border-top-left-radius: 45px;
+      background-image: url(helpers.asset("inventory-helm.png"));
+    }
+  }
+
+  .offhand {
+    height: 205px;
+    width: 86px;
+
+    > .preview-item {
+      border-radius: 43px / 103px;
+      background-size: 86px 205px;
+
+      &:focus {
+        width: 180px;
+
+        .merchant {
+          left: 86px;
+
+          .offhand-empty {
+            padding: 10px;
+            width: 40px;
+            height: 80px;
+
+            label {
+              width: 40px;
+              height: 80px;
+              display: block;
+            }
+          }
+
+          > label {
+            width: 60px;
+            height: 100px;
+          }
+        }
+      }
+    }
+
+    @include preview(offhand, empty) using ($item) {
+      &:not(:focus) {
+        background-color: white;
+        opacity: 0;
+
+        &:hover {
+          opacity: 0.1;
+        }
+      }
+    }
+
+    @include preview(
+        offhand,
+        shield,
+        shield-broken,
+        brotherly-shield,
+        bow,
+        falcon,
+        falcon-gone
+      )
+      using ($item) {
+      background-image: url(helpers.asset("inventory-#{$item}.png"));
+    }
+
+    label[for="offhand-empty"] {
+      background-image: url(helpers.asset("token-cancel.png"));
+    }
+
+    @include merchant(
+        offhand,
+        shield,
+        shield-broken,
+        brotherly-shield,
+        bow,
+        falcon,
+        falcon-gone
+      )
+      using ($item) {
+      background-image: url(helpers.asset("inventory-#{$item}.png"));
+    }
+  }
+
+  .inventory-1,
+  .inventory-2,
+  .inventory-3 {
+    height: 86px;
+    width: 76px;
+
+    > .preview-item {
+      border-radius: 7px;
+      background-size: 76px 86px;
+
+      &:focus {
+        width: 340px;
+
+        .merchant {
+          left: 80px;
+          gap: 8px;
+
+          > label {
+            width: 40px;
+            height: 46px;
+          }
+        }
+      }
+    }
+  }
+
+  .inventory-2 .merchant {
+    top: -33px;
+  }
+
+  .inventory-3 .merchant {
+    top: -66px;
+  }
+
+  @for $i from 1 through 3 {
+    @include preview(inventory-#{$i}, empty) using ($item) {
+      &:not(:focus) {
+        background-color: white;
+        opacity: 0;
+
+        &:hover {
+          opacity: 0.1;
+        }
+      }
+    }
+
+    @include preview(
+        inventory-#{$i},
+        gourd,
+        gourd-used,
+        spyglass,
+        witch-potion,
+        witch-potion-used,
+        poison,
+        poison-used,
+        rune-yellow,
+        rune-blue,
+        rune-green
+      )
+      using ($item) {
+      background-image: url(helpers.asset("inventory-#{$item}.png"));
+    }
+
+    @include preview(
+        inventory-#{$i},
+        token-herb-3,
+        token-herb-4,
+        token-scroll-7,
+        token-scroll-8,
+        token-scroll-10,
+        token-scroll-11,
+        token-scroll-14,
+        token-scroll-17
+      )
+      using ($item) {
+      background-image: url(helpers.asset("#{$item}.png"));
+    }
+
+    label[for="inventory-#{$i}-empty"] {
+      background-image: url(helpers.asset("token-cancel.png"));
+    }
+
+    @include merchant(
+        inventory-#{$i},
+        gourd,
+        gourd-used,
+        spyglass,
+        witch-potion,
+        witch-potion-used,
+        poison,
+        poison-used,
+        rune-yellow,
+        rune-blue,
+        rune-green
+      )
+      using ($item) {
+      background-image: url(helpers.asset("inventory-#{$item}.png"));
+    }
+
+    @include merchant(
+        inventory-#{$i},
+        token-herb-3,
+        token-herb-4,
+        token-scroll-7,
+        token-scroll-8,
+        token-scroll-10,
+        token-scroll-11,
+        token-scroll-14,
+        token-scroll-17
+      )
+      using ($item) {
+      background-image: url(helpers.asset("#{$item}.png"));
+    }
+  }
+}

@@ -1,0 +1,4 @@
+@function asset($name) {
+  @return "https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/" +
+    $name;
+}
