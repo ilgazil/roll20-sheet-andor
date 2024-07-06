@@ -1,0 +1,126 @@
+@use "../helpers";
+
+.consumable {
+  input {
+    display: none;
+  }
+
+  > * {
+    position: absolute;
+  }
+
+  .consumable-1,
+  .consumable-2,
+  .consumable-3 {
+    height: 93px;
+    width: 83px;
+
+    > .equipment {
+      border-radius: 7px;
+      background-size: 83px 93px;
+
+      &:focus {
+        width: 340px;
+
+        .shop {
+          left: 94px;
+          gap: 8px;
+
+          > label {
+            width: 40px;
+            height: 46px;
+          }
+        }
+      }
+    }
+  }
+
+  .consumable-2 .shop {
+    top: -33px;
+  }
+
+  .consumable-3 .shop {
+    top: -66px;
+  }
+
+  @for $i from 1 through 3 {
+    @include helpers.equipment(consumable-#{$i}, empty) using ($item) {
+      &:not(:focus) {
+        background-color: white;
+        opacity: 0;
+
+        &:hover {
+          opacity: 0.1;
+        }
+      }
+    }
+
+    @include helpers.equipment(
+        consumable-#{$i},
+        gourd,
+        gourd-used,
+        spyglass,
+        witch-potion,
+        witch-potion-used,
+        poison,
+        poison-used,
+        rune-yellow,
+        rune-blue,
+        rune-green
+      )
+      using ($item) {
+      background-image: url(helpers.asset("inventory-#{$item}.png"));
+    }
+
+    @include helpers.equipment(
+        consumable-#{$i},
+        token-herb-3,
+        token-herb-4,
+        token-scroll-7,
+        token-scroll-8,
+        token-scroll-10,
+        token-scroll-11,
+        token-scroll-14,
+        token-scroll-17
+      )
+      using ($item) {
+      background-image: url(helpers.asset("#{$item}.png"));
+    }
+
+    label[for="consumable-#{$i}-empty"] {
+      background-image: url(helpers.asset("token-cancel.png"));
+    }
+
+    @include helpers.shop(
+        consumable-#{$i},
+        gourd,
+        gourd-used,
+        spyglass,
+        witch-potion,
+        witch-potion-used,
+        poison,
+        poison-used,
+        rune-yellow,
+        rune-blue,
+        rune-green
+      )
+      using ($item) {
+      background-image: url(helpers.asset("inventory-#{$item}.png"));
+    }
+
+    @include helpers.shop(
+        consumable-#{$i},
+        token-herb-3,
+        token-herb-4,
+        token-scroll-7,
+        token-scroll-8,
+        token-scroll-10,
+        token-scroll-11,
+        token-scroll-14,
+        token-scroll-17
+      )
+      using ($item) {
+      background-image: url(helpers.asset("#{$item}.png"));
+    }
+  }
+}

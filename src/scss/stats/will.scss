@@ -1,0 +1,101 @@
+@use "../helpers";
+
+.will-stat-grid {
+  width: 425px;
+  top: 224px;
+  left: 505px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .stat-grid-value {
+    flex-grow: 0;
+    flex: none;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+      margin-left: 3px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(16) {
+      margin-left: 12px;
+    }
+
+    &:nth-child(9) {
+      margin-left: 14px;
+    }
+
+    &:nth-child(3),
+    &:nth-child(17) {
+      margin-left: 17px;
+    }
+
+    &:nth-child(10) {
+      margin-left: 17px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 19px;
+    }
+
+    &:nth-child(11),
+    &:nth-child(18) {
+      margin-left: 21px;
+    }
+
+    &:nth-child(5) {
+      margin-left: 21px;
+    }
+
+    &:nth-child(12),
+    &:nth-child(19) {
+      margin-left: 20px;
+    }
+
+    &:nth-child(6),
+    &:nth-child(13),
+    &:nth-child(20) {
+      margin-left: 27px;
+    }
+
+    &:nth-child(7),
+    &:nth-child(14),
+    &:nth-child(21) {
+      margin-left: 21px;
+    }
+
+    &:nth-child(15) {
+      margin-left: 3px;
+    }
+
+    @for $i from 8 through 14 {
+      &:nth-child(#{$i}) {
+        margin-top: 9px;
+      }
+    }
+
+    @for $i from 15 through 21 {
+      &:nth-child(#{$i}) {
+        margin-top: 15px;
+      }
+    }
+
+    label {
+      background-size: 85%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    input:not(:checked) ~ label {
+      background-color: white;
+      opacity: 0;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+  }
+}

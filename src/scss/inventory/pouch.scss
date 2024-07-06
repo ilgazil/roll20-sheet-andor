@@ -1,0 +1,27 @@
+@use "../helpers";
+
+.pouch {
+  position: absolute;
+  top: 60px;
+  left: 425px;
+
+  input {
+    background-color: transparent;
+    outline: 0 none;
+    border: 0 none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  input[name="attr_gold"] {
+    background-image: url(helpers.asset("token-gold-blank.png"));
+  }
+
+  input[name="attr_diamond"] {
+    background-image: url(helpers.asset("token-diamond-blank.png"));
+  }
+}

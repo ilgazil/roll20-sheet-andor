@@ -1,0 +1,117 @@
+@use "../helpers";
+
+.gear {
+  input {
+    display: none;
+  }
+
+  > * {
+    position: absolute;
+  }
+
+  .helm {
+    height: 45px;
+    width: 67px;
+
+    label {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    input:not(:checked) + label {
+      background-color: white;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+
+    input:checked + label {
+      border-top-right-radius: 45px;
+      border-top-left-radius: 45px;
+      background-image: url(helpers.asset("inventory-helm.png"));
+    }
+  }
+
+  .offhand {
+    height: 223px;
+    width: 93px;
+
+    > .equipment {
+      border-radius: 43px / 103px;
+      background-size: 93px 223px;
+
+      &:focus {
+        width: 180px;
+
+        .shop {
+          left: 86px;
+
+          .offhand-empty {
+            padding: 10px;
+            width: 40px;
+            height: 80px;
+
+            label {
+              width: 40px;
+              height: 80px;
+              display: block;
+            }
+          }
+
+          > label {
+            width: 60px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  @include helpers.equipment(offhand, empty) using ($item) {
+    &:not(:focus) {
+      background-color: white;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  @include helpers.equipment(
+      offhand,
+      shield,
+      shield-broken,
+      brotherly-shield,
+      bow,
+      falcon,
+      falcon-gone
+    )
+    using ($item) {
+    background-image: url(helpers.asset("inventory-#{$item}.png"));
+  }
+
+  label[for="offhand-empty"] {
+    background-image: url(helpers.asset("token-cancel.png"));
+  }
+
+  @include helpers.shop(
+      offhand,
+      shield,
+      shield-broken,
+      brotherly-shield,
+      bow,
+      falcon,
+      falcon-gone
+    )
+    using ($item) {
+    background-image: url(helpers.asset("inventory-#{$item}.png"));
+  }
+}

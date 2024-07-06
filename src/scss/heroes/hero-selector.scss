@@ -1,0 +1,40 @@
+@use "../helpers";
+
+.hero-selector {
+  height: 26px;
+
+  .hero-list {
+    position: absolute;
+    top: 0;
+    margin-top: 8px;
+    width: 320px;
+
+    &:hover {
+      height: 320px;
+
+      label {
+        display: block;
+      }
+    }
+
+    label {
+      display: none;
+      overflow: clip;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+@include helpers.heroes() using ($hero) {
+  .hero-selector {
+    label[for="hero-#{$hero}"] {
+      display: block;
+    }
+
+    .hero-list:hover label[for="hero-#{$hero}"] {
+      display: block;
+      font-weight: bold;
+    }
+  }
+}

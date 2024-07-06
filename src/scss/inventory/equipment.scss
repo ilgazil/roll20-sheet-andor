@@ -1,0 +1,30 @@
+@use "../helpers";
+
+.equipment {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+
+  &:focus {
+    cursor: default;
+
+    .shop {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      align-items: center;
+      z-index: 1;
+
+      label {
+        display: block;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

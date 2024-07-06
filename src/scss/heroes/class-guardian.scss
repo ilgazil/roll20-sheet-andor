@@ -1,0 +1,112 @@
+@use "../helpers";
+
+@include helpers.hero(kheelan, kheela) using ($hero) {
+  .hero-talent {
+    top: 91px;
+    left: 576px;
+    width: 342px;
+    height: 72px;
+    font-size: 0.8em;
+
+    &:hover .hero-talent-guardian {
+      display: inherit;
+    }
+  }
+
+  .strength-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-guardian.png"));
+  }
+
+  .will-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-guardian.png"));
+  }
+}
+
+@include helpers.hero(kheelan) using ($hero) {
+  .gear {
+    .helm {
+      top: 54px;
+      left: 105px;
+    }
+
+    .offhand {
+      top: 148px;
+      left: 178px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 288px;
+    }
+
+    .consumable-1 {
+      top: 54px;
+    }
+
+    .consumable-2 {
+      top: 166px;
+    }
+
+    .consumable-3 {
+      top: 279px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 171px;
+    left: 383px;
+  }
+}
+
+@include helpers.hero(kheela) using ($hero) {
+  .gear {
+    .helm {
+      top: 52px;
+      left: 109px;
+    }
+
+    .offhand {
+      top: 148px;
+      left: 181px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 289px;
+    }
+
+    .consumable-1 {
+      top: 54px;
+    }
+
+    .consumable-2 {
+      top: 166px;
+    }
+
+    .consumable-3 {
+      top: 279px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 171px;
+    left: 386px;
+  }
+
+  .will-stat-grid {
+    top: 225px;
+    left: 507px;
+
+    .stat-grid-value:nth-child(2),
+    .stat-grid-value:nth-child(9),
+    .stat-grid-value:nth-child(16) {
+      margin-left: 14px;
+    }
+  }
+}

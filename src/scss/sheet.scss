@@ -3,12 +3,57 @@
 .sheet {
   position: relative;
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
   padding: 8px;
   background-image: url(helpers.asset("background-sheet.png"));
   background-position-x: right;
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  > input.hero {
+    display: none;
+  }
+
+  .background {
+    width: 940px;
+    height: 357px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .hero-talent {
+    position: absolute;
+
+    div {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border: 1px solid orange;
+      padding: 3px;
+      background-image: url(helpers.asset("background-sheet.png"));
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include helpers.heroes() using ($hero) {
+  .background {
+    background-image: url(helpers.asset("character-#{$hero}.png"));
+  }
+}
+
+@include helpers.hero(bragor, rhega) using ($hero) {
+  .background {
+    height: 431px;
+  }
 }

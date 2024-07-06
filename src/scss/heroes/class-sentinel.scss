@@ -1,0 +1,110 @@
+@use "../helpers";
+
+@include helpers.hero(arbon, talvora) using ($hero) {
+  .hero-talent {
+    top: 90px;
+    left: 561px;
+    width: 368px;
+    height: 68px;
+    font-size: 0.73em;
+
+    &:hover .hero-talent-sentinel {
+      display: inherit;
+    }
+  }
+
+  .strength-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-sentinel.png"));
+  }
+
+  .will-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-sentinel.png"));
+  }
+}
+
+@include helpers.hero(arbon) using ($hero) {
+  .gear {
+    .helm {
+      top: 51px;
+      left: 124px;
+    }
+
+    .offhand {
+      top: 144px;
+      left: 179px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 288px;
+    }
+
+    .consumable-1 {
+      top: 52px;
+    }
+
+    .consumable-2 {
+      top: 164px;
+    }
+
+    .consumable-3 {
+      top: 277px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 167px;
+    left: 383px;
+  }
+
+  .will-stat-grid {
+    top: 221px;
+  }
+}
+
+@include helpers.hero(talvora) using ($hero) {
+  .gear {
+    .helm {
+      top: 52px;
+      left: 129px;
+    }
+
+    .offhand {
+      top: 145px;
+      left: 182px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 292px;
+    }
+
+    .consumable-1 {
+      top: 52px;
+    }
+
+    .consumable-2 {
+      top: 164px;
+    }
+
+    .consumable-3 {
+      top: 277px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 168px;
+    left: 388px;
+  }
+
+  .will-stat-grid {
+    top: 222px;
+    left: 509px;
+  }
+}

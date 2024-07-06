@@ -1,0 +1,114 @@
+@use "../helpers";
+
+@include helpers.hero(liphardus, eara) using ($hero) {
+  .hero-talent {
+    top: 102px;
+    left: 575px;
+    width: 339px;
+    height: 53px;
+    font-size: 0.7em;
+
+    .hero-talent-archer {
+      display: inherit;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 168px;
+
+    .stat-grid-value input:checked ~ label {
+      background-image: url(helpers.asset("misc-strength-wizard.png"));
+    }
+  }
+
+  .will-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-wizard.png"));
+  }
+}
+
+@include helpers.hero(liphardus) using ($hero) {
+  .gear {
+    .helm {
+      top: 59px;
+      left: 113px;
+    }
+
+    .offhand {
+      top: 144px;
+      left: 179px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 288px;
+    }
+
+    .consumable-1 {
+      top: 51px;
+    }
+
+    .consumable-2 {
+      top: 163px;
+    }
+
+    .consumable-3 {
+      top: 276px;
+    }
+  }
+
+  .will-stat-grid {
+    top: 220px;
+
+    &:nth-child(7) {
+      margin-left: 23px;
+    }
+
+    @for $i from 8 through 14 {
+      .stat-grid-value:nth-child(#{$i}) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@include helpers.hero(eara) using ($hero) {
+  .gear {
+    .helm {
+      top: 73px;
+      left: 102px;
+    }
+
+    .offhand {
+      top: 146px;
+      left: 166px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 288px;
+    }
+
+    .consumable-1 {
+      top: 51px;
+    }
+
+    .consumable-2 {
+      top: 163px;
+    }
+
+    .consumable-3 {
+      top: 276px;
+    }
+  }
+
+  .will-stat-grid {
+    top: 222px;
+    left: 506px;
+  }
+}

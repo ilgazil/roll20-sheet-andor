@@ -1,0 +1,30 @@
+.stat-grid {
+  position: absolute;
+
+  .stat-grid-value {
+    z-index: 0;
+
+    input {
+      display: none;
+      background-color: transparent;
+      margin: 0;
+
+      &:not([type="checkbox"]) {
+        height: 20px;
+      }
+
+      &[type="number"] {
+        width: 45px;
+      }
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

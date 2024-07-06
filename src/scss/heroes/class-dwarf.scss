@@ -1,0 +1,109 @@
+@use "../helpers";
+
+@include helpers.hero(kram, brigha) using ($hero) {
+  .hero-talent {
+    top: 102px;
+    left: 600px;
+    width: 268px;
+    height: 53px;
+    font-size: 0.9em;
+
+    &:hover .hero-talent-dwarf {
+      display: inherit;
+    }
+  }
+
+  .strength-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-dwarf.png"));
+  }
+
+  .will-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-dwarf.png"));
+  }
+}
+
+@include helpers.hero(kram) using ($hero) {
+  .gear {
+    .helm {
+      top: 88px;
+      left: 102px;
+    }
+
+    .offhand {
+      top: 144px;
+      left: 179px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 288px;
+    }
+
+    .consumable-1 {
+      top: 51px;
+    }
+
+    .consumable-2 {
+      top: 165px;
+    }
+
+    .consumable-3 {
+      top: 276px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 167px;
+    left: 384px;
+  }
+
+  .will-stat-grid {
+    top: 222px;
+  }
+}
+
+@include helpers.hero(brigha) using ($hero) {
+  .gear {
+    .helm {
+      top: 83px;
+      left: 104px;
+    }
+
+    .offhand {
+      top: 144px;
+      left: 180px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 288px;
+    }
+
+    .consumable-1 {
+      top: 51px;
+    }
+
+    .consumable-2 {
+      top: 165px;
+    }
+
+    .consumable-3 {
+      top: 276px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 168px;
+    left: 385px;
+  }
+
+  .will-stat-grid {
+    left: 507px;
+  }
+}

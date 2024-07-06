@@ -2,3 +2,51 @@
   @return "https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/" +
     $name;
 }
+
+@mixin equipment($slot, $items...) {
+  @each $item in $items {
+    ##{$slot}-#{$item}:checked ~ .equipment {
+      @content ($item);
+    }
+  }
+}
+
+@mixin shop($slot, $items...) {
+  @each $item in $items {
+    label[for="#{$slot}-#{$item}"] {
+      @content ($item);
+    }
+  }
+}
+
+@mixin hero($names...) {
+  @each $name in $names {
+    input.hero[value="#{$name}"]:checked ~ {
+      @content ($name);
+    }
+  }
+}
+
+@mixin heroes() {
+  @include hero(
+      thorn,
+      mairen,
+      pasco,
+      chada,
+      liphardus,
+      eara,
+      kram,
+      brigha,
+      kheelan,
+      kheela,
+      fenn,
+      fennah,
+      arbon,
+      talvora,
+      bragor,
+      rhega
+    )
+    using ($hero) {
+    @content ($hero);
+  }
+}

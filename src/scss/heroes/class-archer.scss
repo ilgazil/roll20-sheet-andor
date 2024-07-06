@@ -1,0 +1,111 @@
+@use "../helpers";
+
+@include helpers.hero(pasco, chada) using ($hero) {
+  .hero-talent {
+    top: 101px;
+    left: 550px;
+    width: 368px;
+    height: 53px;
+    font-size: 0.7em;
+
+    &:hover .hero-talent-archer {
+      display: inherit;
+    }
+  }
+
+  .strength-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-archer.png"));
+  }
+
+  .will-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-archer.png"));
+  }
+}
+
+@include helpers.hero(pasco) using ($hero) {
+  .gear {
+    .helm {
+      top: 61px;
+      left: 99px;
+    }
+
+    .offhand {
+      top: 145px;
+      left: 171px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 287px;
+    }
+
+    .consumable-1 {
+      top: 50px;
+    }
+
+    .consumable-2 {
+      top: 162px;
+    }
+
+    .consumable-3 {
+      top: 275px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 167px;
+    left: 383px;
+  }
+
+  .will-stat-grid {
+    top: 220px;
+  }
+}
+
+@include helpers.hero(chada) using ($hero) {
+  .gear {
+    .helm {
+      top: 69px;
+      left: 102px;
+    }
+
+    .offhand {
+      top: 145px;
+      left: 155px;
+    }
+  }
+
+  .consumable {
+    .consumable-1,
+    .consumable-2,
+    .consumable-3 {
+      left: 289px;
+    }
+
+    .consumable-1 {
+      top: 50px;
+    }
+
+    .consumable-2 {
+      top: 162px;
+    }
+
+    .consumable-3 {
+      top: 275px;
+    }
+  }
+
+  .strength-stat-grid {
+    width: 542px;
+    top: 167px;
+    left: 386px;
+  }
+
+  .will-stat-grid {
+    top: 221px;
+    left: 507px;
+  }
+}

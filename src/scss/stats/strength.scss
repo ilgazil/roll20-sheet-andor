@@ -1,0 +1,30 @@
+@use "../helpers";
+
+.strength-stat-grid {
+  display: flex;
+  justify-content: space-between;
+  height: 37px;
+  width: 541px;
+  top: 169px;
+  left: 384px;
+
+  .stat-grid-value {
+    width: 36px;
+    height: 36px;
+
+    label {
+      background-size: 75%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    input:not(:checked) ~ label {
+      background-color: white;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.1;
+      }
+    }
+  }
+}

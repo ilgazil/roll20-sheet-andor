@@ -1,0 +1,152 @@
+@use "../helpers";
+
+@include helpers.hero(bragor, rhega) using ($hero) {
+  .hero-talent {
+    top: 86px;
+    left: 561px;
+    width: 368px;
+    height: 82px;
+    font-size: 0.73em;
+
+    &:hover .hero-talent-tarus {
+      display: inherit;
+    }
+  }
+
+  .strength-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-strength-tarus.png"));
+  }
+
+  .will-stat-grid .stat-grid-value input:checked ~ label {
+    background-image: url(helpers.asset("misc-will-tarus.png"));
+  }
+
+  .will-stat-grid {
+    height: 207px;
+    width: 325px;
+    top: 249px;
+    left: 625px;
+
+    .stat-grid-value {
+      @for $i from 5 through 9 {
+        &:nth-child(#{$i}) {
+          margin-top: 2px;
+        }
+      }
+
+      @for $i from 10 through 14 {
+        &:nth-child(#{$i}) {
+          margin-top: 4px;
+        }
+      }
+
+      @for $i from 15 through 20 {
+        &:nth-child(#{$i}) {
+          margin-top: 4px;
+        }
+      }
+
+      &:nth-child(21) {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        margin-left: 7px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 14px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 17px;
+      }
+
+      &:nth-child(6),
+      &:nth-child(11),
+      &:nth-child(16) {
+        margin-left: 0;
+      }
+
+      &:nth-child(8),
+      &:nth-child(13) {
+        margin-left: 17px;
+      }
+
+      &:nth-child(9) {
+        margin-left: 19px;
+      }
+
+      &:nth-child(10) {
+        margin-left: 19px;
+      }
+
+      &:nth-child(15),
+      &:nth-child(20) {
+        margin-left: 18px;
+      }
+
+      &:nth-child(17) {
+        margin-left: 21px;
+      }
+    }
+  }
+}
+
+@include helpers.hero(bragor, rhega) using ($hero) {
+  .gear {
+    .helm,
+    .offhand {
+      display: none;
+    }
+  }
+}
+
+@include helpers.hero(bragor) using ($hero) {
+  .consumable {
+    .consumable-1 {
+      top: 232px;
+      left: 337px;
+    }
+
+    .consumable-2 {
+      top: 232px;
+      left: 442px;
+    }
+
+    .consumable-3 {
+      top: 345px;
+      left: 336px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 178px;
+    left: 382px;
+  }
+}
+
+@include helpers.hero(rhega) using ($hero) {
+  .consumable {
+    .consumable-1 {
+      top: 231px;
+      left: 337px;
+    }
+
+    .consumable-2 {
+      top: 231px;
+      left: 442px;
+    }
+
+    .consumable-3 {
+      top: 343px;
+      left: 337px;
+    }
+  }
+
+  .strength-stat-grid {
+    top: 177px;
+    left: 382px;
+    width: 540px;
+  }
+}
