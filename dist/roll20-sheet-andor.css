@@ -1,1 +1,2645 @@
-body .sheetform{--dark-secondarytext:black}body .ui-dialog .charsheet{padding:0}body .ui-dialog .charsheet label{font-weight:400;font-size:unset;margin-bottom:0;padding-right:0}body .ui-dialog .charsheet .label:empty{display:unset}label{color:var(--dark-secondarytext)}.sheet{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);background-position:100%;background-repeat:no-repeat;background-size:cover;flex-direction:column;padding:8px;display:flex;position:relative}.sheet>input.hero{display:none}.sheet .background{background-repeat:no-repeat;background-size:contain;width:940px;height:357px}.sheet .hero-talent{position:absolute}.sheet .hero-talent div{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);border:1px solid orange;width:100%;height:100%;padding:3px;animation:.5s fadeIn;display:none}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}input.hero[value=thorn]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-thorn.png)}input.hero[value=mairen]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-mairen.png)}input.hero[value=pasco]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-pasco.png)}input.hero[value=chada]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-chada.png)}input.hero[value=liphardus]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-liphardus.png)}input.hero[value=eara]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-eara.png)}input.hero[value=kram]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kram.png)}input.hero[value=brigha]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-brigha.png)}input.hero[value=kheelan]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kheelan.png)}input.hero[value=kheela]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kheela.png)}input.hero[value=fenn]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-fenn.png)}input.hero[value=fennah]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-fennah.png)}input.hero[value=arbon]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-arbon.png)}input.hero[value=talvora]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-talvora.png)}input.hero[value=bragor]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-bragor.png)}input.hero[value=rhega]:checked~.background{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-rhega.png)}input.hero[value=bragor]:checked~.background,input.hero[value=rhega]:checked~.background{height:431px}.item-list{border:1px solid #0000;border-radius:2px;flex-direction:column;flex-grow:1;align-items:flex-start;height:24px;display:flex}.item-list:hover{z-index:1;background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);border-color:orange}.item-list:hover input:not(:checked)~label{display:block}.item-list:not(:hover) input:checked~label{font-weight:400}.item-list input,.item-list input:not(:checked)~label{display:none}.item-list input:checked~label{font-weight:700}.item-list>div{align-items:center;width:100%;height:24px;display:flex}.item-list label{width:100%;height:18px;padding:1px 2px}input:checked~.item{display:block}.item{pointer-events:none;display:none;position:absolute}.item.helm{width:66px;height:45px}.hero-selector{height:26px}.hero-selector .hero-list{width:320px;margin-top:8px;position:absolute;top:0}.hero-selector .hero-list:hover{height:320px}.hero-selector .hero-list:hover label{display:block}.hero-selector .hero-list label{text-overflow:ellipsis;white-space:nowrap;display:none;overflow:clip}input.hero[value=thorn]:checked~.hero-selector label[for=hero-thorn]{display:block}input.hero[value=thorn]:checked~.hero-selector .hero-list:hover label[for=hero-thorn]{font-weight:700;display:block}input.hero[value=mairen]:checked~.hero-selector label[for=hero-mairen]{display:block}input.hero[value=mairen]:checked~.hero-selector .hero-list:hover label[for=hero-mairen]{font-weight:700;display:block}input.hero[value=pasco]:checked~.hero-selector label[for=hero-pasco]{display:block}input.hero[value=pasco]:checked~.hero-selector .hero-list:hover label[for=hero-pasco]{font-weight:700;display:block}input.hero[value=chada]:checked~.hero-selector label[for=hero-chada]{display:block}input.hero[value=chada]:checked~.hero-selector .hero-list:hover label[for=hero-chada]{font-weight:700;display:block}input.hero[value=liphardus]:checked~.hero-selector label[for=hero-liphardus]{display:block}input.hero[value=liphardus]:checked~.hero-selector .hero-list:hover label[for=hero-liphardus]{font-weight:700;display:block}input.hero[value=eara]:checked~.hero-selector label[for=hero-eara]{display:block}input.hero[value=eara]:checked~.hero-selector .hero-list:hover label[for=hero-eara]{font-weight:700;display:block}input.hero[value=kram]:checked~.hero-selector label[for=hero-kram]{display:block}input.hero[value=kram]:checked~.hero-selector .hero-list:hover label[for=hero-kram]{font-weight:700;display:block}input.hero[value=brigha]:checked~.hero-selector label[for=hero-brigha]{display:block}input.hero[value=brigha]:checked~.hero-selector .hero-list:hover label[for=hero-brigha]{font-weight:700;display:block}input.hero[value=kheelan]:checked~.hero-selector label[for=hero-kheelan]{display:block}input.hero[value=kheelan]:checked~.hero-selector .hero-list:hover label[for=hero-kheelan]{font-weight:700;display:block}input.hero[value=kheela]:checked~.hero-selector label[for=hero-kheela]{display:block}input.hero[value=kheela]:checked~.hero-selector .hero-list:hover label[for=hero-kheela]{font-weight:700;display:block}input.hero[value=fenn]:checked~.hero-selector label[for=hero-fenn]{display:block}input.hero[value=fenn]:checked~.hero-selector .hero-list:hover label[for=hero-fenn]{font-weight:700;display:block}input.hero[value=fennah]:checked~.hero-selector label[for=hero-fennah]{display:block}input.hero[value=fennah]:checked~.hero-selector .hero-list:hover label[for=hero-fennah]{font-weight:700;display:block}input.hero[value=arbon]:checked~.hero-selector label[for=hero-arbon]{display:block}input.hero[value=arbon]:checked~.hero-selector .hero-list:hover label[for=hero-arbon]{font-weight:700;display:block}input.hero[value=talvora]:checked~.hero-selector label[for=hero-talvora]{display:block}input.hero[value=talvora]:checked~.hero-selector .hero-list:hover label[for=hero-talvora]{font-weight:700;display:block}input.hero[value=bragor]:checked~.hero-selector label[for=hero-bragor]{display:block}input.hero[value=bragor]:checked~.hero-selector .hero-list:hover label[for=hero-bragor]{font-weight:700;display:block}input.hero[value=rhega]:checked~.hero-selector label[for=hero-rhega]{display:block}input.hero[value=rhega]:checked~.hero-selector .hero-list:hover label[for=hero-rhega]{font-weight:700;display:block}input.hero[value=pasco]:checked~.hero-talent{width:368px;height:53px;font-size:.7em;top:101px;left:550px}input.hero[value=pasco]:checked~.hero-talent:hover .hero-talent-archer{display:inherit}input.hero[value=pasco]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png)}input.hero[value=pasco]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png)}input.hero[value=chada]:checked~.hero-talent{width:368px;height:53px;font-size:.7em;top:101px;left:550px}input.hero[value=chada]:checked~.hero-talent:hover .hero-talent-archer{display:inherit}input.hero[value=chada]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png)}input.hero[value=chada]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png)}input.hero[value=pasco]:checked~.gear .helm{top:61px;left:99px}input.hero[value=pasco]:checked~.gear .offhand{top:145px;left:171px}input.hero[value=pasco]:checked~.consumable .consumable-1,input.hero[value=pasco]:checked~.consumable .consumable-2,input.hero[value=pasco]:checked~.consumable .consumable-3{left:287px}input.hero[value=pasco]:checked~.consumable .consumable-1{top:50px}input.hero[value=pasco]:checked~.consumable .consumable-2{top:162px}input.hero[value=pasco]:checked~.consumable .consumable-3{top:275px}input.hero[value=pasco]:checked~.strength-stat-grid{top:167px;left:383px}input.hero[value=pasco]:checked~.will-stat-grid{top:220px}input.hero[value=chada]:checked~.gear .helm{top:69px;left:102px}input.hero[value=chada]:checked~.gear .offhand{top:145px;left:155px}input.hero[value=chada]:checked~.consumable .consumable-1,input.hero[value=chada]:checked~.consumable .consumable-2,input.hero[value=chada]:checked~.consumable .consumable-3{left:289px}input.hero[value=chada]:checked~.consumable .consumable-1{top:50px}input.hero[value=chada]:checked~.consumable .consumable-2{top:162px}input.hero[value=chada]:checked~.consumable .consumable-3{top:275px}input.hero[value=chada]:checked~.strength-stat-grid{width:542px;top:167px;left:386px}input.hero[value=chada]:checked~.will-stat-grid{top:221px;left:507px}input.hero[value=kram]:checked~.hero-talent{width:268px;height:53px;font-size:.9em;top:102px;left:600px}input.hero[value=kram]:checked~.hero-talent:hover .hero-talent-dwarf{display:inherit}input.hero[value=kram]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png)}input.hero[value=kram]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png)}input.hero[value=brigha]:checked~.hero-talent{width:268px;height:53px;font-size:.9em;top:102px;left:600px}input.hero[value=brigha]:checked~.hero-talent:hover .hero-talent-dwarf{display:inherit}input.hero[value=brigha]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png)}input.hero[value=brigha]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png)}input.hero[value=kram]:checked~.gear .helm{top:88px;left:102px}input.hero[value=kram]:checked~.gear .offhand{top:144px;left:179px}input.hero[value=kram]:checked~.consumable .consumable-1,input.hero[value=kram]:checked~.consumable .consumable-2,input.hero[value=kram]:checked~.consumable .consumable-3{left:288px}input.hero[value=kram]:checked~.consumable .consumable-1{top:51px}input.hero[value=kram]:checked~.consumable .consumable-2{top:165px}input.hero[value=kram]:checked~.consumable .consumable-3{top:276px}input.hero[value=kram]:checked~.strength-stat-grid{top:167px;left:384px}input.hero[value=kram]:checked~.will-stat-grid{top:222px}input.hero[value=brigha]:checked~.gear .helm{top:83px;left:104px}input.hero[value=brigha]:checked~.gear .offhand{top:144px;left:180px}input.hero[value=brigha]:checked~.consumable .consumable-1,input.hero[value=brigha]:checked~.consumable .consumable-2,input.hero[value=brigha]:checked~.consumable .consumable-3{left:288px}input.hero[value=brigha]:checked~.consumable .consumable-1{top:51px}input.hero[value=brigha]:checked~.consumable .consumable-2{top:165px}input.hero[value=brigha]:checked~.consumable .consumable-3{top:276px}input.hero[value=brigha]:checked~.strength-stat-grid{top:168px;left:385px}input.hero[value=brigha]:checked~.will-stat-grid{left:507px}input.hero[value=kheelan]:checked~.hero-talent{width:342px;height:72px;font-size:.8em;top:91px;left:576px}input.hero[value=kheelan]:checked~.hero-talent:hover .hero-talent-guardian{display:inherit}input.hero[value=kheelan]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png)}input.hero[value=kheelan]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png)}input.hero[value=kheela]:checked~.hero-talent{width:342px;height:72px;font-size:.8em;top:91px;left:576px}input.hero[value=kheela]:checked~.hero-talent:hover .hero-talent-guardian{display:inherit}input.hero[value=kheela]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png)}input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png)}input.hero[value=kheelan]:checked~.gear .helm{top:54px;left:105px}input.hero[value=kheelan]:checked~.gear .offhand{top:148px;left:178px}input.hero[value=kheelan]:checked~.consumable .consumable-1,input.hero[value=kheelan]:checked~.consumable .consumable-2,input.hero[value=kheelan]:checked~.consumable .consumable-3{left:288px}input.hero[value=kheelan]:checked~.consumable .consumable-1{top:54px}input.hero[value=kheelan]:checked~.consumable .consumable-2{top:166px}input.hero[value=kheelan]:checked~.consumable .consumable-3{top:279px}input.hero[value=kheelan]:checked~.strength-stat-grid{top:171px;left:383px}input.hero[value=kheela]:checked~.gear .helm{top:52px;left:109px}input.hero[value=kheela]:checked~.gear .offhand{top:148px;left:181px}input.hero[value=kheela]:checked~.consumable .consumable-1,input.hero[value=kheela]:checked~.consumable .consumable-2,input.hero[value=kheela]:checked~.consumable .consumable-3{left:289px}input.hero[value=kheela]:checked~.consumable .consumable-1{top:54px}input.hero[value=kheela]:checked~.consumable .consumable-2{top:166px}input.hero[value=kheela]:checked~.consumable .consumable-3{top:279px}input.hero[value=kheela]:checked~.strength-stat-grid{top:171px;left:386px}input.hero[value=kheela]:checked~.will-stat-grid{top:225px;left:507px}input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value:nth-child(2),input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value:nth-child(9),input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value:nth-child(16){margin-left:14px}.gear .ranger-gear{display:none}input.hero[value=fenn]:checked~.hero-sheet{width:460px}input.hero[value=fenn]:checked~.gear .ranger-gear{display:inherit}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item{width:151px;height:94px;position:absolute;left:367px}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item label{cursor:pointer;background-repeat:no-repeat;background-size:contain;width:100%;height:100%;display:block}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:first-child{top:21px}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:first-child input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow.png)}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:first-child input:not(:checked)+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow-used.png)}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(2){top:133px}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife.png)}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:not(:checked)+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife-used.png)}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(3){top:245px}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn.png)}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:not(:checked)+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn-used.png)}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item .ranger-item-detail{z-index:1;background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);border:1px solid orange;width:250px;padding:3px;display:none;position:absolute;top:0;left:160px}input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item label:hover+.ranger-item-detail{display:inherit;animation:.5s fadeIn}input.hero[value=fenn]:checked~.hero-talent{width:232px;height:72px;font-size:.7em;top:89px;left:696px}input.hero[value=fenn]:checked~.hero-talent:hover .hero-talent-ranger{display:inherit}input.hero[value=fenn]:checked~.pouch{left:565px}input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value:nth-child(11),input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value:nth-child(12),input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value:nth-child(13){display:none}input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png)}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png)}input.hero[value=fenn]:checked~.will-stat-grid{width:325px;height:157px;top:225px;left:636px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(16),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(17),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(18),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(19),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(20),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(21){display:none}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:first-child{margin-left:7px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(2){margin-left:14px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(3){margin-left:17px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(11){margin-left:0}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(8){margin-left:20px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(9){margin-left:17px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(10){margin-left:20px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(13),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(15){margin-left:19px}input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(7),input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(15){margin-top:9px}input.hero[value=fennah]:checked~.hero-sheet{width:460px}input.hero[value=fennah]:checked~.gear .ranger-gear{display:inherit}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item{width:151px;height:94px;position:absolute;left:367px}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item label{cursor:pointer;background-repeat:no-repeat;background-size:contain;width:100%;height:100%;display:block}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:first-child{top:21px}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:first-child input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow.png)}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:first-child input:not(:checked)+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow-used.png)}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(2){top:133px}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife.png)}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:not(:checked)+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife-used.png)}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(3){top:245px}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn.png)}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:not(:checked)+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn-used.png)}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item .ranger-item-detail{z-index:1;background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);border:1px solid orange;width:250px;padding:3px;display:none;position:absolute;top:0;left:160px}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item label:hover+.ranger-item-detail{display:inherit;animation:.5s fadeIn}input.hero[value=fennah]:checked~.hero-talent{width:232px;height:72px;font-size:.7em;top:89px;left:696px}input.hero[value=fennah]:checked~.hero-talent:hover .hero-talent-ranger{display:inherit}input.hero[value=fennah]:checked~.pouch{left:565px}input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value:nth-child(11),input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value:nth-child(12),input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value:nth-child(13){display:none}input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png)}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png)}input.hero[value=fennah]:checked~.will-stat-grid{width:325px;height:157px;top:225px;left:636px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(16),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(17),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(18),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(19),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(20),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(21){display:none}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:first-child{margin-left:7px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(2){margin-left:14px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(3){margin-left:17px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(11){margin-left:0}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(8){margin-left:20px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(9){margin-left:17px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(10){margin-left:20px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(13),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(15){margin-left:19px}input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(7),input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(15){margin-top:9px}input.hero[value=fenn]:checked~.gear .helm{top:59px;left:111px}input.hero[value=fenn]:checked~.gear .offhand{top:148px;left:176px}input.hero[value=fenn]:checked~.consumable .consumable-1,input.hero[value=fenn]:checked~.consumable .consumable-2,input.hero[value=fenn]:checked~.consumable .consumable-3{left:280px}input.hero[value=fenn]:checked~.consumable .consumable-1{top:54px}input.hero[value=fenn]:checked~.consumable .consumable-2{top:166px}input.hero[value=fenn]:checked~.consumable .consumable-3{top:279px}input.hero[value=fenn]:checked~.strength-stat-grid{width:388px;top:171px;left:536px}input.hero[value=fennah]:checked~.gear .helm{top:64px;left:114px}input.hero[value=fennah]:checked~.gear .offhand{top:147px;left:169px}input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item{left:370px}input.hero[value=fennah]:checked~.consumable .consumable-1,input.hero[value=fennah]:checked~.consumable .consumable-2,input.hero[value=fennah]:checked~.consumable .consumable-3{left:283px}input.hero[value=fennah]:checked~.consumable .consumable-1{top:54px}input.hero[value=fennah]:checked~.consumable .consumable-2{top:166px}input.hero[value=fennah]:checked~.consumable .consumable-3{top:279px}input.hero[value=fennah]:checked~.strength-stat-grid{width:387px;top:172px;left:540px}input.hero[value=fennah]:checked~.will-stat-grid{left:639px}input.hero[value=arbon]:checked~.hero-talent{width:368px;height:68px;font-size:.73em;top:90px;left:561px}input.hero[value=arbon]:checked~.hero-talent:hover .hero-talent-sentinel{display:inherit}input.hero[value=arbon]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png)}input.hero[value=arbon]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png)}input.hero[value=talvora]:checked~.hero-talent{width:368px;height:68px;font-size:.73em;top:90px;left:561px}input.hero[value=talvora]:checked~.hero-talent:hover .hero-talent-sentinel{display:inherit}input.hero[value=talvora]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png)}input.hero[value=talvora]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png)}input.hero[value=arbon]:checked~.gear .helm{top:51px;left:124px}input.hero[value=arbon]:checked~.gear .offhand{top:144px;left:179px}input.hero[value=arbon]:checked~.consumable .consumable-1,input.hero[value=arbon]:checked~.consumable .consumable-2,input.hero[value=arbon]:checked~.consumable .consumable-3{left:288px}input.hero[value=arbon]:checked~.consumable .consumable-1{top:52px}input.hero[value=arbon]:checked~.consumable .consumable-2{top:164px}input.hero[value=arbon]:checked~.consumable .consumable-3{top:277px}input.hero[value=arbon]:checked~.strength-stat-grid{top:167px;left:383px}input.hero[value=arbon]:checked~.will-stat-grid{top:221px}input.hero[value=talvora]:checked~.gear .helm{top:52px;left:129px}input.hero[value=talvora]:checked~.gear .offhand{top:145px;left:182px}input.hero[value=talvora]:checked~.consumable .consumable-1,input.hero[value=talvora]:checked~.consumable .consumable-2,input.hero[value=talvora]:checked~.consumable .consumable-3{left:292px}input.hero[value=talvora]:checked~.consumable .consumable-1{top:52px}input.hero[value=talvora]:checked~.consumable .consumable-2{top:164px}input.hero[value=talvora]:checked~.consumable .consumable-3{top:277px}input.hero[value=talvora]:checked~.strength-stat-grid{top:168px;left:388px}input.hero[value=talvora]:checked~.will-stat-grid{top:222px;left:509px}input.hero[value=bragor]:checked~.hero-talent{width:368px;height:82px;font-size:.73em;top:86px;left:561px}input.hero[value=bragor]:checked~.hero-talent:hover .hero-talent-tarus{display:inherit}input.hero[value=bragor]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-tarus.png)}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-tarus.png)}input.hero[value=bragor]:checked~.will-stat-grid{width:325px;height:207px;top:249px;left:625px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(5),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(7),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(8),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(9){margin-top:2px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(10),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(11),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(12),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(13),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(14),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(15),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(16),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(17),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(18),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(19),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(20){margin-top:4px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(21){display:none}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:first-child{margin-left:7px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(2){margin-left:14px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(3){margin-left:17px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(11),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(16){margin-left:0}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(8),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(13){margin-left:17px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(9),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(10){margin-left:19px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(15),input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(20){margin-left:18px}input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(17){margin-left:21px}input.hero[value=rhega]:checked~.hero-talent{width:368px;height:82px;font-size:.73em;top:86px;left:561px}input.hero[value=rhega]:checked~.hero-talent:hover .hero-talent-tarus{display:inherit}input.hero[value=rhega]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-tarus.png)}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-tarus.png)}input.hero[value=rhega]:checked~.will-stat-grid{width:325px;height:207px;top:249px;left:625px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(5),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(7),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(8),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(9){margin-top:2px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(10),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(11),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(12),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(13),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(14),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(15),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(16),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(17),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(18),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(19),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(20){margin-top:4px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(21){display:none}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:first-child{margin-left:7px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(2){margin-left:14px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(3){margin-left:17px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(6),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(11),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(16){margin-left:0}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(8),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(13){margin-left:17px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(9),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(10){margin-left:19px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(15),input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(20){margin-left:18px}input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(17){margin-left:21px}input.hero[value=bragor]:checked~.gear .helm,input.hero[value=bragor]:checked~.gear .offhand,input.hero[value=rhega]:checked~.gear .helm,input.hero[value=rhega]:checked~.gear .offhand{display:none}input.hero[value=bragor]:checked~.consumable .consumable-1{top:232px;left:337px}input.hero[value=bragor]:checked~.consumable .consumable-2{top:232px;left:442px}input.hero[value=bragor]:checked~.consumable .consumable-3{top:345px;left:336px}input.hero[value=bragor]:checked~.strength-stat-grid{top:178px;left:382px}input.hero[value=rhega]:checked~.consumable .consumable-1{top:231px;left:337px}input.hero[value=rhega]:checked~.consumable .consumable-2{top:231px;left:442px}input.hero[value=rhega]:checked~.consumable .consumable-3{top:343px;left:337px}input.hero[value=rhega]:checked~.strength-stat-grid{width:540px;top:177px;left:382px}input.hero[value=thorn]:checked~.hero-talent{width:330px;height:53px;top:104px;left:590px}input.hero[value=thorn]:checked~.hero-talent:hover .hero-talent-warrior{display:inherit}input.hero[value=thorn]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png)}input.hero[value=thorn]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png)}input.hero[value=mairen]:checked~.hero-talent{width:330px;height:53px;top:104px;left:590px}input.hero[value=mairen]:checked~.hero-talent:hover .hero-talent-warrior{display:inherit}input.hero[value=mairen]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png)}input.hero[value=mairen]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png)}input.hero[value=thorn]:checked~.gear .helm{top:53px;left:108px}input.hero[value=thorn]:checked~.gear .offhand{top:145px;left:178px}input.hero[value=thorn]:checked~.consumable .consumable-1,input.hero[value=thorn]:checked~.consumable .consumable-2,input.hero[value=thorn]:checked~.consumable .consumable-3{left:288px}input.hero[value=thorn]:checked~.consumable .consumable-1{top:52px}input.hero[value=thorn]:checked~.consumable .consumable-2{top:164px}input.hero[value=thorn]:checked~.consumable .consumable-3{top:277px}input.hero[value=thorn]:checked~.will-stat-grid .stat-grid-value:nth-child(21){margin-left:22px}input.hero[value=mairen]:checked~.gear .helm{top:62px;left:108px}input.hero[value=mairen]:checked~.gear .offhand{top:145px;left:171px}input.hero[value=mairen]:checked~.consumable .consumable-1,input.hero[value=mairen]:checked~.consumable .consumable-2,input.hero[value=mairen]:checked~.consumable .consumable-3{left:289px}input.hero[value=mairen]:checked~.consumable .consumable-1{top:52px}input.hero[value=mairen]:checked~.consumable .consumable-2{top:164px}input.hero[value=mairen]:checked~.consumable .consumable-3{top:277px}input.hero[value=mairen]:checked~.strength-stat-grid{left:385px}input.hero[value=mairen]:checked~.will-stat-grid{top:223px;left:507px}input.hero[value=liphardus]:checked~.hero-talent{width:339px;height:53px;font-size:.7em;top:102px;left:575px}input.hero[value=liphardus]:checked~.hero-talent .hero-talent-archer{display:inherit}input.hero[value=liphardus]:checked~.strength-stat-grid{top:168px}input.hero[value=liphardus]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png)}input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png)}input.hero[value=eara]:checked~.hero-talent{width:339px;height:53px;font-size:.7em;top:102px;left:575px}input.hero[value=eara]:checked~.hero-talent .hero-talent-archer{display:inherit}input.hero[value=eara]:checked~.strength-stat-grid{top:168px}input.hero[value=eara]:checked~.strength-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png)}input.hero[value=eara]:checked~.will-stat-grid .stat-grid-value input:checked~label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png)}input.hero[value=liphardus]:checked~.gear .helm{top:59px;left:113px}input.hero[value=liphardus]:checked~.gear .offhand{top:144px;left:179px}input.hero[value=liphardus]:checked~.consumable .consumable-1,input.hero[value=liphardus]:checked~.consumable .consumable-2,input.hero[value=liphardus]:checked~.consumable .consumable-3{left:288px}input.hero[value=liphardus]:checked~.consumable .consumable-1{top:51px}input.hero[value=liphardus]:checked~.consumable .consumable-2{top:163px}input.hero[value=liphardus]:checked~.consumable .consumable-3{top:276px}input.hero[value=liphardus]:checked~.will-stat-grid{top:220px}input.hero[value=liphardus]:checked~.will-stat-grid:nth-child(7){margin-left:23px}input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(8),input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(9),input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(10),input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(11),input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(12),input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(13),input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(14){margin-top:10px}input.hero[value=eara]:checked~.gear .helm{top:73px;left:102px}input.hero[value=eara]:checked~.gear .offhand{top:146px;left:166px}input.hero[value=eara]:checked~.consumable .consumable-1,input.hero[value=eara]:checked~.consumable .consumable-2,input.hero[value=eara]:checked~.consumable .consumable-3{left:288px}input.hero[value=eara]:checked~.consumable .consumable-1{top:51px}input.hero[value=eara]:checked~.consumable .consumable-2{top:163px}input.hero[value=eara]:checked~.consumable .consumable-3{top:276px}input.hero[value=eara]:checked~.will-stat-grid{top:222px;left:506px}.equipment{cursor:pointer;background-repeat:no-repeat;width:100%;height:100%}.equipment:focus{cursor:default}.equipment:focus .shop{z-index:1;flex-wrap:wrap;align-items:center;display:flex;position:relative}.equipment:focus .shop label{cursor:pointer;background-color:#0000;background-position:50%;background-repeat:no-repeat;background-size:contain;border:none;display:block}.gear input{display:none}.gear>*{position:absolute}.gear .helm{width:67px;height:45px}.gear .helm label{cursor:pointer;background-position:50%;background-repeat:no-repeat;background-size:contain;width:100%;height:100%;display:block}.gear .helm input:not(:checked)+label{opacity:0;background-color:#fff}.gear .helm input:not(:checked)+label:hover{opacity:.1}.gear .helm input:checked+label{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-helm.png);border-top-left-radius:45px;border-top-right-radius:45px}.gear .offhand{width:93px;height:223px}.gear .offhand>.equipment{background-size:93px 223px;border-radius:43px/103px}.gear .offhand>.equipment:focus{width:180px}.gear .offhand>.equipment:focus .shop{left:86px}.gear .offhand>.equipment:focus .shop .offhand-empty{width:40px;height:80px;padding:10px}.gear .offhand>.equipment:focus .shop .offhand-empty label{width:40px;height:80px;display:block}.gear .offhand>.equipment:focus .shop>label{width:60px;height:100px}.gear #offhand-empty:checked~.equipment:not(:focus){opacity:0;background-color:#fff}.gear #offhand-empty:checked~.equipment:not(:focus):hover{opacity:.1}.gear #offhand-shield:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield.png)}.gear #offhand-shield-broken:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield-broken.png)}.gear #offhand-brotherly-shield:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-brotherly-shield.png)}.gear #offhand-bow:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-bow.png)}.gear #offhand-falcon:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon.png)}.gear #offhand-falcon-gone:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon-gone.png)}.gear label[for=offhand-empty]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)}.gear label[for=offhand-shield]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield.png)}.gear label[for=offhand-shield-broken]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield-broken.png)}.gear label[for=offhand-brotherly-shield]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-brotherly-shield.png)}.gear label[for=offhand-bow]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-bow.png)}.gear label[for=offhand-falcon]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon.png)}.gear label[for=offhand-falcon-gone]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon-gone.png)}.consumable input{display:none}.consumable>*{position:absolute}.consumable .consumable-1,.consumable .consumable-2,.consumable .consumable-3{width:83px;height:93px}.consumable .consumable-1>.equipment,.consumable .consumable-2>.equipment,.consumable .consumable-3>.equipment{background-size:83px 93px;border-radius:7px}.consumable .consumable-1>.equipment:focus,.consumable .consumable-2>.equipment:focus,.consumable .consumable-3>.equipment:focus{width:340px}.consumable .consumable-1>.equipment:focus .shop,.consumable .consumable-2>.equipment:focus .shop,.consumable .consumable-3>.equipment:focus .shop{gap:8px;left:94px}.consumable .consumable-1>.equipment:focus .shop>label,.consumable .consumable-2>.equipment:focus .shop>label,.consumable .consumable-3>.equipment:focus .shop>label{width:40px;height:46px}.consumable .consumable-2 .shop{top:-33px}.consumable .consumable-3 .shop{top:-66px}.consumable #consumable-1-empty:checked~.equipment:not(:focus){opacity:0;background-color:#fff}.consumable #consumable-1-empty:checked~.equipment:not(:focus):hover{opacity:.1}.consumable #consumable-1-gourd:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)}.consumable #consumable-1-gourd-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)}.consumable #consumable-1-spyglass:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)}.consumable #consumable-1-witch-potion:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)}.consumable #consumable-1-witch-potion-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)}.consumable #consumable-1-poison:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)}.consumable #consumable-1-poison-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)}.consumable #consumable-1-rune-yellow:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)}.consumable #consumable-1-rune-blue:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)}.consumable #consumable-1-rune-green:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)}.consumable #consumable-1-token-herb-3:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)}.consumable #consumable-1-token-herb-4:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)}.consumable #consumable-1-token-scroll-7:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)}.consumable #consumable-1-token-scroll-8:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)}.consumable #consumable-1-token-scroll-10:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)}.consumable #consumable-1-token-scroll-11:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)}.consumable #consumable-1-token-scroll-14:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)}.consumable #consumable-1-token-scroll-17:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)}.consumable label[for=consumable-1-empty]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)}.consumable label[for=consumable-1-gourd]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)}.consumable label[for=consumable-1-gourd-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)}.consumable label[for=consumable-1-spyglass]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)}.consumable label[for=consumable-1-witch-potion]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)}.consumable label[for=consumable-1-witch-potion-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)}.consumable label[for=consumable-1-poison]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)}.consumable label[for=consumable-1-poison-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)}.consumable label[for=consumable-1-rune-yellow]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)}.consumable label[for=consumable-1-rune-blue]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)}.consumable label[for=consumable-1-rune-green]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)}.consumable label[for=consumable-1-token-herb-3]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)}.consumable label[for=consumable-1-token-herb-4]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)}.consumable label[for=consumable-1-token-scroll-7]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)}.consumable label[for=consumable-1-token-scroll-8]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)}.consumable label[for=consumable-1-token-scroll-10]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)}.consumable label[for=consumable-1-token-scroll-11]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)}.consumable label[for=consumable-1-token-scroll-14]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)}.consumable label[for=consumable-1-token-scroll-17]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)}.consumable #consumable-2-empty:checked~.equipment:not(:focus){opacity:0;background-color:#fff}.consumable #consumable-2-empty:checked~.equipment:not(:focus):hover{opacity:.1}.consumable #consumable-2-gourd:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)}.consumable #consumable-2-gourd-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)}.consumable #consumable-2-spyglass:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)}.consumable #consumable-2-witch-potion:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)}.consumable #consumable-2-witch-potion-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)}.consumable #consumable-2-poison:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)}.consumable #consumable-2-poison-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)}.consumable #consumable-2-rune-yellow:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)}.consumable #consumable-2-rune-blue:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)}.consumable #consumable-2-rune-green:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)}.consumable #consumable-2-token-herb-3:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)}.consumable #consumable-2-token-herb-4:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)}.consumable #consumable-2-token-scroll-7:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)}.consumable #consumable-2-token-scroll-8:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)}.consumable #consumable-2-token-scroll-10:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)}.consumable #consumable-2-token-scroll-11:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)}.consumable #consumable-2-token-scroll-14:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)}.consumable #consumable-2-token-scroll-17:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)}.consumable label[for=consumable-2-empty]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)}.consumable label[for=consumable-2-gourd]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)}.consumable label[for=consumable-2-gourd-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)}.consumable label[for=consumable-2-spyglass]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)}.consumable label[for=consumable-2-witch-potion]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)}.consumable label[for=consumable-2-witch-potion-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)}.consumable label[for=consumable-2-poison]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)}.consumable label[for=consumable-2-poison-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)}.consumable label[for=consumable-2-rune-yellow]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)}.consumable label[for=consumable-2-rune-blue]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)}.consumable label[for=consumable-2-rune-green]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)}.consumable label[for=consumable-2-token-herb-3]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)}.consumable label[for=consumable-2-token-herb-4]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)}.consumable label[for=consumable-2-token-scroll-7]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)}.consumable label[for=consumable-2-token-scroll-8]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)}.consumable label[for=consumable-2-token-scroll-10]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)}.consumable label[for=consumable-2-token-scroll-11]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)}.consumable label[for=consumable-2-token-scroll-14]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)}.consumable label[for=consumable-2-token-scroll-17]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)}.consumable #consumable-3-empty:checked~.equipment:not(:focus){opacity:0;background-color:#fff}.consumable #consumable-3-empty:checked~.equipment:not(:focus):hover{opacity:.1}.consumable #consumable-3-gourd:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)}.consumable #consumable-3-gourd-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)}.consumable #consumable-3-spyglass:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)}.consumable #consumable-3-witch-potion:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)}.consumable #consumable-3-witch-potion-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)}.consumable #consumable-3-poison:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)}.consumable #consumable-3-poison-used:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)}.consumable #consumable-3-rune-yellow:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)}.consumable #consumable-3-rune-blue:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)}.consumable #consumable-3-rune-green:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)}.consumable #consumable-3-token-herb-3:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)}.consumable #consumable-3-token-herb-4:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)}.consumable #consumable-3-token-scroll-7:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)}.consumable #consumable-3-token-scroll-8:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)}.consumable #consumable-3-token-scroll-10:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)}.consumable #consumable-3-token-scroll-11:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)}.consumable #consumable-3-token-scroll-14:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)}.consumable #consumable-3-token-scroll-17:checked~.equipment{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)}.consumable label[for=consumable-3-empty]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)}.consumable label[for=consumable-3-gourd]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)}.consumable label[for=consumable-3-gourd-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)}.consumable label[for=consumable-3-spyglass]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)}.consumable label[for=consumable-3-witch-potion]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)}.consumable label[for=consumable-3-witch-potion-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)}.consumable label[for=consumable-3-poison]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)}.consumable label[for=consumable-3-poison-used]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)}.consumable label[for=consumable-3-rune-yellow]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)}.consumable label[for=consumable-3-rune-blue]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)}.consumable label[for=consumable-3-rune-green]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)}.consumable label[for=consumable-3-token-herb-3]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)}.consumable label[for=consumable-3-token-herb-4]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)}.consumable label[for=consumable-3-token-scroll-7]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)}.consumable label[for=consumable-3-token-scroll-8]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)}.consumable label[for=consumable-3-token-scroll-10]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)}.consumable label[for=consumable-3-token-scroll-11]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)}.consumable label[for=consumable-3-token-scroll-14]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)}.consumable label[for=consumable-3-token-scroll-17]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)}.pouch{position:absolute;top:60px;left:425px}.pouch input{text-align:center;background-color:#0000;background-repeat:no-repeat;background-size:contain;border:0;outline:0;width:60px;height:60px;font-size:2em}.pouch input[name=attr_gold]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-gold-blank.png)}.pouch input[name=attr_diamond]{background-image:url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-diamond-blank.png)}.stat-grid{position:absolute}.stat-grid .stat-grid-value{z-index:0}.stat-grid .stat-grid-value input{background-color:#0000;margin:0;display:none}.stat-grid .stat-grid-value input:not([type=checkbox]){height:20px}.stat-grid .stat-grid-value input[type=number]{width:45px}.stat-grid .stat-grid-value label{cursor:pointer;justify-content:center;align-items:center;width:100%;height:100%;display:flex}.strength-stat-grid{justify-content:space-between;width:541px;height:37px;display:flex;top:169px;left:384px}.strength-stat-grid .stat-grid-value{width:36px;height:36px}.strength-stat-grid .stat-grid-value label{background-position:50%;background-repeat:no-repeat;background-size:75%}.strength-stat-grid .stat-grid-value input:not(:checked)~label{opacity:0;background-color:#fff}.strength-stat-grid .stat-grid-value input:not(:checked)~label:hover{opacity:.1}.will-stat-grid{flex-wrap:wrap;width:425px;display:flex;top:224px;left:505px}.will-stat-grid .stat-grid-value{border-radius:50%;flex:none;width:43px;height:43px}.will-stat-grid .stat-grid-value:first-child{margin-left:3px}.will-stat-grid .stat-grid-value:nth-child(2),.will-stat-grid .stat-grid-value:nth-child(16){margin-left:12px}.will-stat-grid .stat-grid-value:nth-child(9){margin-left:14px}.will-stat-grid .stat-grid-value:nth-child(3),.will-stat-grid .stat-grid-value:nth-child(17),.will-stat-grid .stat-grid-value:nth-child(10){margin-left:17px}.will-stat-grid .stat-grid-value:nth-child(4){margin-left:19px}.will-stat-grid .stat-grid-value:nth-child(11),.will-stat-grid .stat-grid-value:nth-child(18),.will-stat-grid .stat-grid-value:nth-child(5){margin-left:21px}.will-stat-grid .stat-grid-value:nth-child(12),.will-stat-grid .stat-grid-value:nth-child(19){margin-left:20px}.will-stat-grid .stat-grid-value:nth-child(6),.will-stat-grid .stat-grid-value:nth-child(13),.will-stat-grid .stat-grid-value:nth-child(20){margin-left:27px}.will-stat-grid .stat-grid-value:nth-child(7),.will-stat-grid .stat-grid-value:nth-child(14),.will-stat-grid .stat-grid-value:nth-child(21){margin-left:21px}.will-stat-grid .stat-grid-value:nth-child(15){margin-left:3px}.will-stat-grid .stat-grid-value:nth-child(8),.will-stat-grid .stat-grid-value:nth-child(9),.will-stat-grid .stat-grid-value:nth-child(10),.will-stat-grid .stat-grid-value:nth-child(11),.will-stat-grid .stat-grid-value:nth-child(12),.will-stat-grid .stat-grid-value:nth-child(13),.will-stat-grid .stat-grid-value:nth-child(14){margin-top:9px}.will-stat-grid .stat-grid-value:nth-child(15),.will-stat-grid .stat-grid-value:nth-child(16),.will-stat-grid .stat-grid-value:nth-child(17),.will-stat-grid .stat-grid-value:nth-child(18),.will-stat-grid .stat-grid-value:nth-child(19),.will-stat-grid .stat-grid-value:nth-child(20),.will-stat-grid .stat-grid-value:nth-child(21){margin-top:15px}.will-stat-grid .stat-grid-value label{background-position:50%;background-repeat:no-repeat;background-size:85%}.will-stat-grid .stat-grid-value input:not(:checked)~label{opacity:0;background-color:#fff;border-radius:50%}.will-stat-grid .stat-grid-value input:not(:checked)~label:hover{opacity:.1}
+body .sheetform {
+  --dark-secondarytext: black
+}
+
+body .ui-dialog .charsheet {
+  padding: 0
+}
+
+body .ui-dialog .charsheet label {
+  font-weight: 400;
+  font-size: unset;
+  margin-bottom: 0;
+  padding-right: 0
+}
+
+body .ui-dialog .charsheet .label:empty {
+  display: unset
+}
+
+label {
+  color: var(--dark-secondarytext)
+}
+
+.sheet {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  padding: 8px;
+  display: flex;
+  position: relative
+}
+
+.sheet>input.hero {
+  display: none
+}
+
+.sheet .background {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 940px;
+  height: 357px
+}
+
+.sheet .hero-talent {
+  position: absolute
+}
+
+.sheet .hero-talent div {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);
+  border: 1px solid orange;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  animation: .5s fadeIn;
+  display: none
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+input.hero[value=thorn]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-thorn.png)
+}
+
+input.hero[value=mairen]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-mairen.png)
+}
+
+input.hero[value=pasco]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-pasco.png)
+}
+
+input.hero[value=chada]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-chada.png)
+}
+
+input.hero[value=liphardus]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-liphardus.png)
+}
+
+input.hero[value=eara]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-eara.png)
+}
+
+input.hero[value=kram]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kram.png)
+}
+
+input.hero[value=brigha]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-brigha.png)
+}
+
+input.hero[value=kheelan]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kheelan.png)
+}
+
+input.hero[value=kheela]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-kheela.png)
+}
+
+input.hero[value=fenn]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-fenn.png)
+}
+
+input.hero[value=fennah]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-fennah.png)
+}
+
+input.hero[value=arbon]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-arbon.png)
+}
+
+input.hero[value=talvora]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-talvora.png)
+}
+
+input.hero[value=bragor]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-bragor.png)
+}
+
+input.hero[value=rhega]:checked~.background {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/character-rhega.png)
+}
+
+input.hero[value=bragor]:checked~.background,
+input.hero[value=rhega]:checked~.background {
+  height: 431px
+}
+
+.item-list {
+  border: 1px solid #0000;
+  border-radius: 2px;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  height: 24px;
+  display: flex
+}
+
+.item-list:hover {
+  z-index: 1;
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);
+  border-color: orange
+}
+
+.item-list:hover input:not(:checked)~label {
+  display: block
+}
+
+.item-list:not(:hover) input:checked~label {
+  font-weight: 400
+}
+
+.item-list input,
+.item-list input:not(:checked)~label {
+  display: none
+}
+
+.item-list input:checked~label {
+  font-weight: 700
+}
+
+.item-list>div {
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  display: flex
+}
+
+.item-list label {
+  width: 100%;
+  height: 18px;
+  padding: 1px 2px
+}
+
+input:checked~.item {
+  display: block
+}
+
+.item {
+  pointer-events: none;
+  display: none;
+  position: absolute
+}
+
+.item.helm {
+  width: 66px;
+  height: 45px
+}
+
+.hero-selector {
+  height: 26px
+}
+
+.hero-selector .hero-list {
+  width: 320px;
+  margin-top: 8px;
+  position: absolute;
+  top: 0
+}
+
+.hero-selector .hero-list:hover {
+  height: 320px
+}
+
+.hero-selector .hero-list:hover label {
+  display: block
+}
+
+.hero-selector .hero-list label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: none;
+  overflow: clip
+}
+
+input.hero[value=thorn]:checked~.hero-selector label[for=hero-thorn] {
+  display: block
+}
+
+input.hero[value=thorn]:checked~.hero-selector .hero-list:hover label[for=hero-thorn] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=mairen]:checked~.hero-selector label[for=hero-mairen] {
+  display: block
+}
+
+input.hero[value=mairen]:checked~.hero-selector .hero-list:hover label[for=hero-mairen] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=pasco]:checked~.hero-selector label[for=hero-pasco] {
+  display: block
+}
+
+input.hero[value=pasco]:checked~.hero-selector .hero-list:hover label[for=hero-pasco] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=chada]:checked~.hero-selector label[for=hero-chada] {
+  display: block
+}
+
+input.hero[value=chada]:checked~.hero-selector .hero-list:hover label[for=hero-chada] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=liphardus]:checked~.hero-selector label[for=hero-liphardus] {
+  display: block
+}
+
+input.hero[value=liphardus]:checked~.hero-selector .hero-list:hover label[for=hero-liphardus] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=eara]:checked~.hero-selector label[for=hero-eara] {
+  display: block
+}
+
+input.hero[value=eara]:checked~.hero-selector .hero-list:hover label[for=hero-eara] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=kram]:checked~.hero-selector label[for=hero-kram] {
+  display: block
+}
+
+input.hero[value=kram]:checked~.hero-selector .hero-list:hover label[for=hero-kram] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=brigha]:checked~.hero-selector label[for=hero-brigha] {
+  display: block
+}
+
+input.hero[value=brigha]:checked~.hero-selector .hero-list:hover label[for=hero-brigha] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=kheelan]:checked~.hero-selector label[for=hero-kheelan] {
+  display: block
+}
+
+input.hero[value=kheelan]:checked~.hero-selector .hero-list:hover label[for=hero-kheelan] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=kheela]:checked~.hero-selector label[for=hero-kheela] {
+  display: block
+}
+
+input.hero[value=kheela]:checked~.hero-selector .hero-list:hover label[for=hero-kheela] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=fenn]:checked~.hero-selector label[for=hero-fenn] {
+  display: block
+}
+
+input.hero[value=fenn]:checked~.hero-selector .hero-list:hover label[for=hero-fenn] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=fennah]:checked~.hero-selector label[for=hero-fennah] {
+  display: block
+}
+
+input.hero[value=fennah]:checked~.hero-selector .hero-list:hover label[for=hero-fennah] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=arbon]:checked~.hero-selector label[for=hero-arbon] {
+  display: block
+}
+
+input.hero[value=arbon]:checked~.hero-selector .hero-list:hover label[for=hero-arbon] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=talvora]:checked~.hero-selector label[for=hero-talvora] {
+  display: block
+}
+
+input.hero[value=talvora]:checked~.hero-selector .hero-list:hover label[for=hero-talvora] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=bragor]:checked~.hero-selector label[for=hero-bragor] {
+  display: block
+}
+
+input.hero[value=bragor]:checked~.hero-selector .hero-list:hover label[for=hero-bragor] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=rhega]:checked~.hero-selector label[for=hero-rhega] {
+  display: block
+}
+
+input.hero[value=rhega]:checked~.hero-selector .hero-list:hover label[for=hero-rhega] {
+  font-weight: 700;
+  display: block
+}
+
+input.hero[value=pasco]:checked~.hero-talent {
+  width: 368px;
+  height: 53px;
+  font-size: .7em;
+  top: 101px;
+  left: 550px
+}
+
+input.hero[value=pasco]:checked~.hero-talent:hover .hero-talent-archer {
+  display: inherit
+}
+
+input.hero[value=pasco]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png)
+}
+
+input.hero[value=pasco]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png)
+}
+
+input.hero[value=chada]:checked~.hero-talent {
+  width: 368px;
+  height: 53px;
+  font-size: .7em;
+  top: 101px;
+  left: 550px
+}
+
+input.hero[value=chada]:checked~.hero-talent:hover .hero-talent-archer {
+  display: inherit
+}
+
+input.hero[value=chada]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-archer.png)
+}
+
+input.hero[value=chada]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-archer.png)
+}
+
+input.hero[value=pasco]:checked~.gear .helm {
+  top: 61px;
+  left: 99px
+}
+
+input.hero[value=pasco]:checked~.gear .offhand {
+  top: 145px;
+  left: 171px
+}
+
+input.hero[value=pasco]:checked~.consumable .consumable-1,
+input.hero[value=pasco]:checked~.consumable .consumable-2,
+input.hero[value=pasco]:checked~.consumable .consumable-3 {
+  left: 287px
+}
+
+input.hero[value=pasco]:checked~.consumable .consumable-1 {
+  top: 50px
+}
+
+input.hero[value=pasco]:checked~.consumable .consumable-2 {
+  top: 162px
+}
+
+input.hero[value=pasco]:checked~.consumable .consumable-3 {
+  top: 275px
+}
+
+input.hero[value=pasco]:checked~.strength-stat-grid {
+  top: 167px;
+  left: 383px
+}
+
+input.hero[value=pasco]:checked~.will-stat-grid {
+  top: 220px
+}
+
+input.hero[value=chada]:checked~.gear .helm {
+  top: 69px;
+  left: 102px
+}
+
+input.hero[value=chada]:checked~.gear .offhand {
+  top: 145px;
+  left: 155px
+}
+
+input.hero[value=chada]:checked~.consumable .consumable-1,
+input.hero[value=chada]:checked~.consumable .consumable-2,
+input.hero[value=chada]:checked~.consumable .consumable-3 {
+  left: 289px
+}
+
+input.hero[value=chada]:checked~.consumable .consumable-1 {
+  top: 50px
+}
+
+input.hero[value=chada]:checked~.consumable .consumable-2 {
+  top: 162px
+}
+
+input.hero[value=chada]:checked~.consumable .consumable-3 {
+  top: 275px
+}
+
+input.hero[value=chada]:checked~.strength-stat-grid {
+  width: 542px;
+  top: 167px;
+  left: 386px
+}
+
+input.hero[value=chada]:checked~.will-stat-grid {
+  top: 221px;
+  left: 507px
+}
+
+input.hero[value=kram]:checked~.hero-talent {
+  width: 268px;
+  height: 53px;
+  font-size: .9em;
+  top: 102px;
+  left: 600px
+}
+
+input.hero[value=kram]:checked~.hero-talent:hover .hero-talent-dwarf {
+  display: inherit
+}
+
+input.hero[value=kram]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png)
+}
+
+input.hero[value=kram]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png)
+}
+
+input.hero[value=brigha]:checked~.hero-talent {
+  width: 268px;
+  height: 53px;
+  font-size: .9em;
+  top: 102px;
+  left: 600px
+}
+
+input.hero[value=brigha]:checked~.hero-talent:hover .hero-talent-dwarf {
+  display: inherit
+}
+
+input.hero[value=brigha]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-dwarf.png)
+}
+
+input.hero[value=brigha]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-dwarf.png)
+}
+
+input.hero[value=kram]:checked~.gear .helm {
+  top: 88px;
+  left: 102px
+}
+
+input.hero[value=kram]:checked~.gear .offhand {
+  top: 144px;
+  left: 179px
+}
+
+input.hero[value=kram]:checked~.consumable .consumable-1,
+input.hero[value=kram]:checked~.consumable .consumable-2,
+input.hero[value=kram]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=kram]:checked~.consumable .consumable-1 {
+  top: 51px
+}
+
+input.hero[value=kram]:checked~.consumable .consumable-2 {
+  top: 165px
+}
+
+input.hero[value=kram]:checked~.consumable .consumable-3 {
+  top: 276px
+}
+
+input.hero[value=kram]:checked~.strength-stat-grid {
+  top: 167px;
+  left: 384px
+}
+
+input.hero[value=kram]:checked~.will-stat-grid {
+  top: 222px
+}
+
+input.hero[value=brigha]:checked~.gear .helm {
+  top: 83px;
+  left: 104px
+}
+
+input.hero[value=brigha]:checked~.gear .offhand {
+  top: 144px;
+  left: 180px
+}
+
+input.hero[value=brigha]:checked~.consumable .consumable-1,
+input.hero[value=brigha]:checked~.consumable .consumable-2,
+input.hero[value=brigha]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=brigha]:checked~.consumable .consumable-1 {
+  top: 51px
+}
+
+input.hero[value=brigha]:checked~.consumable .consumable-2 {
+  top: 165px
+}
+
+input.hero[value=brigha]:checked~.consumable .consumable-3 {
+  top: 276px
+}
+
+input.hero[value=brigha]:checked~.strength-stat-grid {
+  top: 168px;
+  left: 385px
+}
+
+input.hero[value=brigha]:checked~.will-stat-grid {
+  left: 507px
+}
+
+input.hero[value=kheelan]:checked~.hero-talent {
+  width: 342px;
+  height: 72px;
+  font-size: .8em;
+  top: 91px;
+  left: 576px
+}
+
+input.hero[value=kheelan]:checked~.hero-talent:hover .hero-talent-guardian {
+  display: inherit
+}
+
+input.hero[value=kheelan]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png)
+}
+
+input.hero[value=kheelan]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png)
+}
+
+input.hero[value=kheela]:checked~.hero-talent {
+  width: 342px;
+  height: 72px;
+  font-size: .8em;
+  top: 91px;
+  left: 576px
+}
+
+input.hero[value=kheela]:checked~.hero-talent:hover .hero-talent-guardian {
+  display: inherit
+}
+
+input.hero[value=kheela]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-guardian.png)
+}
+
+input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-guardian.png)
+}
+
+input.hero[value=kheelan]:checked~.gear .helm {
+  top: 54px;
+  left: 105px
+}
+
+input.hero[value=kheelan]:checked~.gear .offhand {
+  top: 148px;
+  left: 178px
+}
+
+input.hero[value=kheelan]:checked~.consumable .consumable-1,
+input.hero[value=kheelan]:checked~.consumable .consumable-2,
+input.hero[value=kheelan]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=kheelan]:checked~.consumable .consumable-1 {
+  top: 54px
+}
+
+input.hero[value=kheelan]:checked~.consumable .consumable-2 {
+  top: 166px
+}
+
+input.hero[value=kheelan]:checked~.consumable .consumable-3 {
+  top: 279px
+}
+
+input.hero[value=kheelan]:checked~.strength-stat-grid {
+  top: 171px;
+  left: 383px
+}
+
+input.hero[value=kheela]:checked~.gear .helm {
+  top: 52px;
+  left: 109px
+}
+
+input.hero[value=kheela]:checked~.gear .offhand {
+  top: 148px;
+  left: 181px
+}
+
+input.hero[value=kheela]:checked~.consumable .consumable-1,
+input.hero[value=kheela]:checked~.consumable .consumable-2,
+input.hero[value=kheela]:checked~.consumable .consumable-3 {
+  left: 289px
+}
+
+input.hero[value=kheela]:checked~.consumable .consumable-1 {
+  top: 54px
+}
+
+input.hero[value=kheela]:checked~.consumable .consumable-2 {
+  top: 166px
+}
+
+input.hero[value=kheela]:checked~.consumable .consumable-3 {
+  top: 279px
+}
+
+input.hero[value=kheela]:checked~.strength-stat-grid {
+  top: 171px;
+  left: 386px
+}
+
+input.hero[value=kheela]:checked~.will-stat-grid {
+  top: 225px;
+  left: 507px
+}
+
+input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value:nth-child(2),
+input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value:nth-child(9),
+input.hero[value=kheela]:checked~.will-stat-grid .stat-grid-value:nth-child(16) {
+  margin-left: 14px
+}
+
+.gear .ranger-gear {
+  display: none
+}
+
+input.hero[value=fenn]:checked~.hero-sheet {
+  width: 460px
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear {
+  display: inherit
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item {
+  width: 151px;
+  height: 94px;
+  position: absolute;
+  left: 367px
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item label {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: block
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:first-child {
+  top: 21px
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:first-child input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow.png)
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:first-child input:not(:checked)+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow-used.png)
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(2) {
+  top: 133px
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife.png)
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:not(:checked)+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife-used.png)
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(3) {
+  top: 245px
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn.png)
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:not(:checked)+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn-used.png)
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item .ranger-item-detail {
+  z-index: 1;
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);
+  border: 1px solid orange;
+  width: 250px;
+  padding: 3px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px
+}
+
+input.hero[value=fenn]:checked~.gear .ranger-gear .ranger-item label:hover+.ranger-item-detail {
+  display: inherit;
+  animation: .5s fadeIn
+}
+
+input.hero[value=fenn]:checked~.hero-talent {
+  width: 232px;
+  height: 72px;
+  font-size: .7em;
+  top: 89px;
+  left: 696px
+}
+
+input.hero[value=fenn]:checked~.hero-talent:hover .hero-talent-ranger {
+  display: inherit
+}
+
+input.hero[value=fenn]:checked~.pouch {
+  left: 565px
+}
+
+input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value:nth-child(12),
+input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value:nth-child(13) {
+  display: none
+}
+
+input.hero[value=fenn]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png)
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png)
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid {
+  width: 325px;
+  height: 157px;
+  top: 225px;
+  left: 636px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(16),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(17),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(18),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(19),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(20),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(21) {
+  display: none
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:first-child {
+  margin-left: 7px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(2) {
+  margin-left: 14px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(3) {
+  margin-left: 17px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(11) {
+  margin-left: 0
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(8) {
+  margin-left: 20px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(9) {
+  margin-left: 17px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(10) {
+  margin-left: 20px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(13),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(15) {
+  margin-left: 19px
+}
+
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(7),
+input.hero[value=fenn]:checked~.will-stat-grid .stat-grid-value:nth-child(15) {
+  margin-top: 9px
+}
+
+input.hero[value=fennah]:checked~.hero-sheet {
+  width: 460px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear {
+  display: inherit
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item {
+  width: 151px;
+  height: 94px;
+  position: absolute;
+  left: 367px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item label {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: block
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:first-child {
+  top: 21px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:first-child input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow.png)
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:first-child input:not(:checked)+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-crow-used.png)
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(2) {
+  top: 133px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife.png)
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(2) input:not(:checked)+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-knife-used.png)
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(3) {
+  top: 245px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn.png)
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item:nth-child(3) input:not(:checked)+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-horn-used.png)
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item .ranger-item-detail {
+  z-index: 1;
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);
+  border: 1px solid orange;
+  width: 250px;
+  padding: 3px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item label:hover+.ranger-item-detail {
+  display: inherit;
+  animation: .5s fadeIn
+}
+
+input.hero[value=fennah]:checked~.hero-talent {
+  width: 232px;
+  height: 72px;
+  font-size: .7em;
+  top: 89px;
+  left: 696px
+}
+
+input.hero[value=fennah]:checked~.hero-talent:hover .hero-talent-ranger {
+  display: inherit
+}
+
+input.hero[value=fennah]:checked~.pouch {
+  left: 565px
+}
+
+input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value:nth-child(12),
+input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value:nth-child(13) {
+  display: none
+}
+
+input.hero[value=fennah]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-ranger.png)
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-ranger.png)
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid {
+  width: 325px;
+  height: 157px;
+  top: 225px;
+  left: 636px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(16),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(17),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(18),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(19),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(20),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(21) {
+  display: none
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:first-child {
+  margin-left: 7px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(2) {
+  margin-left: 14px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(3) {
+  margin-left: 17px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(11) {
+  margin-left: 0
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(8) {
+  margin-left: 20px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(9) {
+  margin-left: 17px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(10) {
+  margin-left: 20px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(13),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(15) {
+  margin-left: 19px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(7),
+input.hero[value=fennah]:checked~.will-stat-grid .stat-grid-value:nth-child(15) {
+  margin-top: 9px
+}
+
+input.hero[value=fenn]:checked~.gear .helm {
+  top: 59px;
+  left: 111px
+}
+
+input.hero[value=fenn]:checked~.gear .offhand {
+  top: 148px;
+  left: 176px
+}
+
+input.hero[value=fenn]:checked~.consumable .consumable-1,
+input.hero[value=fenn]:checked~.consumable .consumable-2,
+input.hero[value=fenn]:checked~.consumable .consumable-3 {
+  left: 280px
+}
+
+input.hero[value=fenn]:checked~.consumable .consumable-1 {
+  top: 54px
+}
+
+input.hero[value=fenn]:checked~.consumable .consumable-2 {
+  top: 166px
+}
+
+input.hero[value=fenn]:checked~.consumable .consumable-3 {
+  top: 279px
+}
+
+input.hero[value=fenn]:checked~.strength-stat-grid {
+  width: 388px;
+  top: 171px;
+  left: 536px
+}
+
+input.hero[value=fennah]:checked~.gear .helm {
+  top: 64px;
+  left: 114px
+}
+
+input.hero[value=fennah]:checked~.gear .offhand {
+  top: 147px;
+  left: 169px
+}
+
+input.hero[value=fennah]:checked~.gear .ranger-gear .ranger-item {
+  left: 370px
+}
+
+input.hero[value=fennah]:checked~.consumable .consumable-1,
+input.hero[value=fennah]:checked~.consumable .consumable-2,
+input.hero[value=fennah]:checked~.consumable .consumable-3 {
+  left: 283px
+}
+
+input.hero[value=fennah]:checked~.consumable .consumable-1 {
+  top: 54px
+}
+
+input.hero[value=fennah]:checked~.consumable .consumable-2 {
+  top: 166px
+}
+
+input.hero[value=fennah]:checked~.consumable .consumable-3 {
+  top: 279px
+}
+
+input.hero[value=fennah]:checked~.strength-stat-grid {
+  width: 387px;
+  top: 172px;
+  left: 540px
+}
+
+input.hero[value=fennah]:checked~.will-stat-grid {
+  left: 639px
+}
+
+input.hero[value=arbon]:checked~.hero-talent {
+  width: 368px;
+  height: 68px;
+  font-size: .73em;
+  top: 90px;
+  left: 561px
+}
+
+input.hero[value=arbon]:checked~.hero-talent:hover .hero-talent-sentinel {
+  display: inherit
+}
+
+input.hero[value=arbon]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png)
+}
+
+input.hero[value=arbon]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png)
+}
+
+input.hero[value=talvora]:checked~.hero-talent {
+  width: 368px;
+  height: 68px;
+  font-size: .73em;
+  top: 90px;
+  left: 561px
+}
+
+input.hero[value=talvora]:checked~.hero-talent:hover .hero-talent-sentinel {
+  display: inherit
+}
+
+input.hero[value=talvora]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-sentinel.png)
+}
+
+input.hero[value=talvora]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-sentinel.png)
+}
+
+input.hero[value=arbon]:checked~.gear .helm {
+  top: 51px;
+  left: 124px
+}
+
+input.hero[value=arbon]:checked~.gear .offhand {
+  top: 144px;
+  left: 179px
+}
+
+input.hero[value=arbon]:checked~.consumable .consumable-1,
+input.hero[value=arbon]:checked~.consumable .consumable-2,
+input.hero[value=arbon]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=arbon]:checked~.consumable .consumable-1 {
+  top: 52px
+}
+
+input.hero[value=arbon]:checked~.consumable .consumable-2 {
+  top: 164px
+}
+
+input.hero[value=arbon]:checked~.consumable .consumable-3 {
+  top: 277px
+}
+
+input.hero[value=arbon]:checked~.strength-stat-grid {
+  top: 167px;
+  left: 383px
+}
+
+input.hero[value=arbon]:checked~.will-stat-grid {
+  top: 221px
+}
+
+input.hero[value=talvora]:checked~.gear .helm {
+  top: 52px;
+  left: 129px
+}
+
+input.hero[value=talvora]:checked~.gear .offhand {
+  top: 145px;
+  left: 182px
+}
+
+input.hero[value=talvora]:checked~.consumable .consumable-1,
+input.hero[value=talvora]:checked~.consumable .consumable-2,
+input.hero[value=talvora]:checked~.consumable .consumable-3 {
+  left: 292px
+}
+
+input.hero[value=talvora]:checked~.consumable .consumable-1 {
+  top: 52px
+}
+
+input.hero[value=talvora]:checked~.consumable .consumable-2 {
+  top: 164px
+}
+
+input.hero[value=talvora]:checked~.consumable .consumable-3 {
+  top: 277px
+}
+
+input.hero[value=talvora]:checked~.strength-stat-grid {
+  top: 168px;
+  left: 388px
+}
+
+input.hero[value=talvora]:checked~.will-stat-grid {
+  top: 222px;
+  left: 509px
+}
+
+input.hero[value=bragor]:checked~.hero-talent {
+  width: 368px;
+  height: 82px;
+  font-size: .73em;
+  top: 86px;
+  left: 561px
+}
+
+input.hero[value=bragor]:checked~.hero-talent:hover .hero-talent-tarus {
+  display: inherit
+}
+
+input.hero[value=bragor]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-tarus.png)
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-tarus.png)
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid {
+  width: 325px;
+  height: 207px;
+  top: 249px;
+  left: 625px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(5),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(7),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(8),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(9) {
+  margin-top: 2px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(10),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(12),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(13),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(14),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(15),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(16),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(17),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(18),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(19),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(20) {
+  margin-top: 4px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(21) {
+  display: none
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:first-child {
+  margin-left: 7px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(2) {
+  margin-left: 14px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(3) {
+  margin-left: 17px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(16) {
+  margin-left: 0
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(8),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(13) {
+  margin-left: 17px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(9),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(10) {
+  margin-left: 19px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(15),
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(20) {
+  margin-left: 18px
+}
+
+input.hero[value=bragor]:checked~.will-stat-grid .stat-grid-value:nth-child(17) {
+  margin-left: 21px
+}
+
+input.hero[value=rhega]:checked~.hero-talent {
+  width: 368px;
+  height: 82px;
+  font-size: .73em;
+  top: 86px;
+  left: 561px
+}
+
+input.hero[value=rhega]:checked~.hero-talent:hover .hero-talent-tarus {
+  display: inherit
+}
+
+input.hero[value=rhega]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-tarus.png)
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-tarus.png)
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid {
+  width: 325px;
+  height: 207px;
+  top: 249px;
+  left: 625px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(5),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(7),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(8),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(9) {
+  margin-top: 2px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(10),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(12),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(13),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(14),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(15),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(16),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(17),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(18),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(19),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(20) {
+  margin-top: 4px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(21) {
+  display: none
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:first-child {
+  margin-left: 7px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(2) {
+  margin-left: 14px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(3) {
+  margin-left: 17px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(6),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(16) {
+  margin-left: 0
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(8),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(13) {
+  margin-left: 17px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(9),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(10) {
+  margin-left: 19px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(15),
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(20) {
+  margin-left: 18px
+}
+
+input.hero[value=rhega]:checked~.will-stat-grid .stat-grid-value:nth-child(17) {
+  margin-left: 21px
+}
+
+input.hero[value=bragor]:checked~.gear .helm,
+input.hero[value=bragor]:checked~.gear .offhand,
+input.hero[value=rhega]:checked~.gear .helm,
+input.hero[value=rhega]:checked~.gear .offhand {
+  display: none
+}
+
+input.hero[value=bragor]:checked~.consumable .consumable-1 {
+  top: 232px;
+  left: 337px
+}
+
+input.hero[value=bragor]:checked~.consumable .consumable-2 {
+  top: 232px;
+  left: 442px
+}
+
+input.hero[value=bragor]:checked~.consumable .consumable-3 {
+  top: 345px;
+  left: 336px
+}
+
+input.hero[value=bragor]:checked~.strength-stat-grid {
+  top: 178px;
+  left: 382px
+}
+
+input.hero[value=rhega]:checked~.consumable .consumable-1 {
+  top: 231px;
+  left: 337px
+}
+
+input.hero[value=rhega]:checked~.consumable .consumable-2 {
+  top: 231px;
+  left: 442px
+}
+
+input.hero[value=rhega]:checked~.consumable .consumable-3 {
+  top: 343px;
+  left: 337px
+}
+
+input.hero[value=rhega]:checked~.strength-stat-grid {
+  width: 540px;
+  top: 177px;
+  left: 382px
+}
+
+input.hero[value=thorn]:checked~.hero-talent {
+  width: 330px;
+  height: 53px;
+  top: 104px;
+  left: 590px
+}
+
+input.hero[value=thorn]:checked~.hero-talent:hover .hero-talent-warrior {
+  display: inherit
+}
+
+input.hero[value=thorn]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png)
+}
+
+input.hero[value=thorn]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png)
+}
+
+input.hero[value=mairen]:checked~.hero-talent {
+  width: 330px;
+  height: 53px;
+  top: 104px;
+  left: 590px
+}
+
+input.hero[value=mairen]:checked~.hero-talent:hover .hero-talent-warrior {
+  display: inherit
+}
+
+input.hero[value=mairen]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-warrior.png)
+}
+
+input.hero[value=mairen]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-warrior.png)
+}
+
+input.hero[value=thorn]:checked~.gear .helm {
+  top: 53px;
+  left: 108px
+}
+
+input.hero[value=thorn]:checked~.gear .offhand {
+  top: 145px;
+  left: 178px
+}
+
+input.hero[value=thorn]:checked~.consumable .consumable-1,
+input.hero[value=thorn]:checked~.consumable .consumable-2,
+input.hero[value=thorn]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=thorn]:checked~.consumable .consumable-1 {
+  top: 52px
+}
+
+input.hero[value=thorn]:checked~.consumable .consumable-2 {
+  top: 164px
+}
+
+input.hero[value=thorn]:checked~.consumable .consumable-3 {
+  top: 277px
+}
+
+input.hero[value=thorn]:checked~.will-stat-grid .stat-grid-value:nth-child(21) {
+  margin-left: 22px
+}
+
+input.hero[value=mairen]:checked~.gear .helm {
+  top: 62px;
+  left: 108px
+}
+
+input.hero[value=mairen]:checked~.gear .offhand {
+  top: 145px;
+  left: 171px
+}
+
+input.hero[value=mairen]:checked~.consumable .consumable-1,
+input.hero[value=mairen]:checked~.consumable .consumable-2,
+input.hero[value=mairen]:checked~.consumable .consumable-3 {
+  left: 289px
+}
+
+input.hero[value=mairen]:checked~.consumable .consumable-1 {
+  top: 52px
+}
+
+input.hero[value=mairen]:checked~.consumable .consumable-2 {
+  top: 164px
+}
+
+input.hero[value=mairen]:checked~.consumable .consumable-3 {
+  top: 277px
+}
+
+input.hero[value=mairen]:checked~.strength-stat-grid {
+  left: 385px
+}
+
+input.hero[value=mairen]:checked~.will-stat-grid {
+  top: 223px;
+  left: 507px
+}
+
+input.hero[value=liphardus]:checked~.hero-talent {
+  width: 339px;
+  height: 53px;
+  font-size: .7em;
+  top: 102px;
+  left: 575px
+}
+
+input.hero[value=liphardus]:checked~.hero-talent .hero-talent-wizard {
+  display: inherit
+}
+
+input.hero[value=liphardus]:checked~.strength-stat-grid {
+  top: 168px
+}
+
+input.hero[value=liphardus]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png)
+}
+
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png)
+}
+
+input.hero[value=eara]:checked~.hero-talent {
+  width: 339px;
+  height: 53px;
+  font-size: .7em;
+  top: 102px;
+  left: 575px
+}
+
+input.hero[value=eara]:checked~.hero-talent .hero-talent-wizard {
+  display: inherit
+}
+
+input.hero[value=eara]:checked~.strength-stat-grid {
+  top: 168px
+}
+
+input.hero[value=eara]:checked~.strength-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-strength-wizard.png)
+}
+
+input.hero[value=eara]:checked~.will-stat-grid .stat-grid-value input:checked~label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/misc-will-wizard.png)
+}
+
+input.hero[value=liphardus]:checked~.gear .helm {
+  top: 59px;
+  left: 113px
+}
+
+input.hero[value=liphardus]:checked~.gear .offhand {
+  top: 144px;
+  left: 179px
+}
+
+input.hero[value=liphardus]:checked~.consumable .consumable-1,
+input.hero[value=liphardus]:checked~.consumable .consumable-2,
+input.hero[value=liphardus]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=liphardus]:checked~.consumable .consumable-1 {
+  top: 51px
+}
+
+input.hero[value=liphardus]:checked~.consumable .consumable-2 {
+  top: 163px
+}
+
+input.hero[value=liphardus]:checked~.consumable .consumable-3 {
+  top: 276px
+}
+
+input.hero[value=liphardus]:checked~.will-stat-grid {
+  top: 220px
+}
+
+input.hero[value=liphardus]:checked~.will-stat-grid:nth-child(7) {
+  margin-left: 23px
+}
+
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(8),
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(9),
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(10),
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(11),
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(12),
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(13),
+input.hero[value=liphardus]:checked~.will-stat-grid .stat-grid-value:nth-child(14) {
+  margin-top: 10px
+}
+
+input.hero[value=eara]:checked~.gear .helm {
+  top: 73px;
+  left: 102px
+}
+
+input.hero[value=eara]:checked~.gear .offhand {
+  top: 146px;
+  left: 166px
+}
+
+input.hero[value=eara]:checked~.consumable .consumable-1,
+input.hero[value=eara]:checked~.consumable .consumable-2,
+input.hero[value=eara]:checked~.consumable .consumable-3 {
+  left: 288px
+}
+
+input.hero[value=eara]:checked~.consumable .consumable-1 {
+  top: 51px
+}
+
+input.hero[value=eara]:checked~.consumable .consumable-2 {
+  top: 163px
+}
+
+input.hero[value=eara]:checked~.consumable .consumable-3 {
+  top: 276px
+}
+
+input.hero[value=eara]:checked~.will-stat-grid {
+  top: 222px;
+  left: 506px
+}
+
+.equipment {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%
+}
+
+.equipment:focus {
+  cursor: default
+}
+
+.equipment:focus .shop {
+  z-index: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  display: flex;
+  position: relative
+}
+
+.equipment:focus .shop label {
+  cursor: pointer;
+  background-color: #0000;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  display: block
+}
+
+.gear input {
+  display: none
+}
+
+.gear>* {
+  position: absolute
+}
+
+.gear .helm {
+  width: 67px;
+  height: 45px
+}
+
+.gear .helm label {
+  cursor: pointer;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: block
+}
+
+.gear .helm input:not(:checked)+label {
+  opacity: 0;
+  background-color: #fff
+}
+
+.gear .helm input:not(:checked)+label:hover {
+  opacity: .1
+}
+
+.gear .helm input:checked+label {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-helm.png);
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px
+}
+
+.gear .offhand {
+  width: 93px;
+  height: 223px
+}
+
+.gear .offhand>.equipment {
+  background-size: 93px 223px;
+  border-radius: 43px/103px
+}
+
+.gear .offhand>.equipment:focus {
+  width: 180px
+}
+
+.gear .offhand>.equipment:focus .shop {
+  left: 86px
+}
+
+.gear .offhand>.equipment:focus .shop .offhand-empty {
+  width: 40px;
+  height: 80px;
+  padding: 10px
+}
+
+.gear .offhand>.equipment:focus .shop .offhand-empty label {
+  width: 40px;
+  height: 80px;
+  display: block
+}
+
+.gear .offhand>.equipment:focus .shop>label {
+  width: 60px;
+  height: 100px
+}
+
+.gear #offhand-empty:checked~.equipment:not(:focus) {
+  opacity: 0;
+  background-color: #fff
+}
+
+.gear #offhand-empty:checked~.equipment:not(:focus):hover {
+  opacity: .1
+}
+
+.gear #offhand-shield:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield.png)
+}
+
+.gear #offhand-shield-broken:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield-broken.png)
+}
+
+.gear #offhand-brotherly-shield:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-brotherly-shield.png)
+}
+
+.gear #offhand-bow:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-bow.png)
+}
+
+.gear #offhand-falcon:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon.png)
+}
+
+.gear #offhand-falcon-gone:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon-gone.png)
+}
+
+.gear label[for=offhand-empty] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)
+}
+
+.gear label[for=offhand-shield] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield.png)
+}
+
+.gear label[for=offhand-shield-broken] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-shield-broken.png)
+}
+
+.gear label[for=offhand-brotherly-shield] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-brotherly-shield.png)
+}
+
+.gear label[for=offhand-bow] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-bow.png)
+}
+
+.gear label[for=offhand-falcon] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon.png)
+}
+
+.gear label[for=offhand-falcon-gone] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-falcon-gone.png)
+}
+
+.consumable input {
+  display: none
+}
+
+.consumable>* {
+  position: absolute
+}
+
+.consumable .consumable-1,
+.consumable .consumable-2,
+.consumable .consumable-3 {
+  width: 83px;
+  height: 93px
+}
+
+.consumable .consumable-1>.equipment,
+.consumable .consumable-2>.equipment,
+.consumable .consumable-3>.equipment {
+  background-size: 83px 93px;
+  border-radius: 7px
+}
+
+.consumable .consumable-1>.equipment:focus,
+.consumable .consumable-2>.equipment:focus,
+.consumable .consumable-3>.equipment:focus {
+  width: 340px
+}
+
+.consumable .consumable-1>.equipment:focus .shop,
+.consumable .consumable-2>.equipment:focus .shop,
+.consumable .consumable-3>.equipment:focus .shop {
+  gap: 8px;
+  left: 94px
+}
+
+.consumable .consumable-1>.equipment:focus .shop>label,
+.consumable .consumable-2>.equipment:focus .shop>label,
+.consumable .consumable-3>.equipment:focus .shop>label {
+  width: 40px;
+  height: 46px
+}
+
+.consumable .consumable-2 .shop {
+  top: -33px
+}
+
+.consumable .consumable-3 .shop {
+  top: -66px
+}
+
+.consumable #consumable-1-empty:checked~.equipment:not(:focus) {
+  opacity: 0;
+  background-color: #fff
+}
+
+.consumable #consumable-1-empty:checked~.equipment:not(:focus):hover {
+  opacity: .1
+}
+
+.consumable #consumable-1-gourd:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)
+}
+
+.consumable #consumable-1-gourd-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)
+}
+
+.consumable #consumable-1-spyglass:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)
+}
+
+.consumable #consumable-1-witch-potion:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)
+}
+
+.consumable #consumable-1-witch-potion-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)
+}
+
+.consumable #consumable-1-poison:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)
+}
+
+.consumable #consumable-1-poison-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)
+}
+
+.consumable #consumable-1-rune-yellow:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)
+}
+
+.consumable #consumable-1-rune-blue:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)
+}
+
+.consumable #consumable-1-rune-green:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)
+}
+
+.consumable #consumable-1-token-herb-3:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)
+}
+
+.consumable #consumable-1-token-herb-4:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)
+}
+
+.consumable #consumable-1-token-scroll-7:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)
+}
+
+.consumable #consumable-1-token-scroll-8:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)
+}
+
+.consumable #consumable-1-token-scroll-10:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)
+}
+
+.consumable #consumable-1-token-scroll-11:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)
+}
+
+.consumable #consumable-1-token-scroll-14:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)
+}
+
+.consumable #consumable-1-token-scroll-17:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)
+}
+
+.consumable label[for=consumable-1-empty] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)
+}
+
+.consumable label[for=consumable-1-gourd] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)
+}
+
+.consumable label[for=consumable-1-gourd-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)
+}
+
+.consumable label[for=consumable-1-spyglass] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)
+}
+
+.consumable label[for=consumable-1-witch-potion] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)
+}
+
+.consumable label[for=consumable-1-witch-potion-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)
+}
+
+.consumable label[for=consumable-1-poison] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)
+}
+
+.consumable label[for=consumable-1-poison-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)
+}
+
+.consumable label[for=consumable-1-rune-yellow] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)
+}
+
+.consumable label[for=consumable-1-rune-blue] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)
+}
+
+.consumable label[for=consumable-1-rune-green] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)
+}
+
+.consumable label[for=consumable-1-token-herb-3] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)
+}
+
+.consumable label[for=consumable-1-token-herb-4] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)
+}
+
+.consumable label[for=consumable-1-token-scroll-7] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)
+}
+
+.consumable label[for=consumable-1-token-scroll-8] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)
+}
+
+.consumable label[for=consumable-1-token-scroll-10] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)
+}
+
+.consumable label[for=consumable-1-token-scroll-11] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)
+}
+
+.consumable label[for=consumable-1-token-scroll-14] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)
+}
+
+.consumable label[for=consumable-1-token-scroll-17] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)
+}
+
+.consumable #consumable-2-empty:checked~.equipment:not(:focus) {
+  opacity: 0;
+  background-color: #fff
+}
+
+.consumable #consumable-2-empty:checked~.equipment:not(:focus):hover {
+  opacity: .1
+}
+
+.consumable #consumable-2-gourd:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)
+}
+
+.consumable #consumable-2-gourd-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)
+}
+
+.consumable #consumable-2-spyglass:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)
+}
+
+.consumable #consumable-2-witch-potion:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)
+}
+
+.consumable #consumable-2-witch-potion-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)
+}
+
+.consumable #consumable-2-poison:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)
+}
+
+.consumable #consumable-2-poison-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)
+}
+
+.consumable #consumable-2-rune-yellow:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)
+}
+
+.consumable #consumable-2-rune-blue:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)
+}
+
+.consumable #consumable-2-rune-green:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)
+}
+
+.consumable #consumable-2-token-herb-3:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)
+}
+
+.consumable #consumable-2-token-herb-4:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)
+}
+
+.consumable #consumable-2-token-scroll-7:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)
+}
+
+.consumable #consumable-2-token-scroll-8:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)
+}
+
+.consumable #consumable-2-token-scroll-10:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)
+}
+
+.consumable #consumable-2-token-scroll-11:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)
+}
+
+.consumable #consumable-2-token-scroll-14:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)
+}
+
+.consumable #consumable-2-token-scroll-17:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)
+}
+
+.consumable label[for=consumable-2-empty] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)
+}
+
+.consumable label[for=consumable-2-gourd] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)
+}
+
+.consumable label[for=consumable-2-gourd-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)
+}
+
+.consumable label[for=consumable-2-spyglass] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)
+}
+
+.consumable label[for=consumable-2-witch-potion] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)
+}
+
+.consumable label[for=consumable-2-witch-potion-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)
+}
+
+.consumable label[for=consumable-2-poison] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)
+}
+
+.consumable label[for=consumable-2-poison-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)
+}
+
+.consumable label[for=consumable-2-rune-yellow] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)
+}
+
+.consumable label[for=consumable-2-rune-blue] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)
+}
+
+.consumable label[for=consumable-2-rune-green] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)
+}
+
+.consumable label[for=consumable-2-token-herb-3] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)
+}
+
+.consumable label[for=consumable-2-token-herb-4] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)
+}
+
+.consumable label[for=consumable-2-token-scroll-7] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)
+}
+
+.consumable label[for=consumable-2-token-scroll-8] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)
+}
+
+.consumable label[for=consumable-2-token-scroll-10] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)
+}
+
+.consumable label[for=consumable-2-token-scroll-11] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)
+}
+
+.consumable label[for=consumable-2-token-scroll-14] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)
+}
+
+.consumable label[for=consumable-2-token-scroll-17] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)
+}
+
+.consumable #consumable-3-empty:checked~.equipment:not(:focus) {
+  opacity: 0;
+  background-color: #fff
+}
+
+.consumable #consumable-3-empty:checked~.equipment:not(:focus):hover {
+  opacity: .1
+}
+
+.consumable #consumable-3-gourd:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)
+}
+
+.consumable #consumable-3-gourd-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)
+}
+
+.consumable #consumable-3-spyglass:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)
+}
+
+.consumable #consumable-3-witch-potion:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)
+}
+
+.consumable #consumable-3-witch-potion-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)
+}
+
+.consumable #consumable-3-poison:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)
+}
+
+.consumable #consumable-3-poison-used:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)
+}
+
+.consumable #consumable-3-rune-yellow:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)
+}
+
+.consumable #consumable-3-rune-blue:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)
+}
+
+.consumable #consumable-3-rune-green:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)
+}
+
+.consumable #consumable-3-token-herb-3:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)
+}
+
+.consumable #consumable-3-token-herb-4:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)
+}
+
+.consumable #consumable-3-token-scroll-7:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)
+}
+
+.consumable #consumable-3-token-scroll-8:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)
+}
+
+.consumable #consumable-3-token-scroll-10:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)
+}
+
+.consumable #consumable-3-token-scroll-11:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)
+}
+
+.consumable #consumable-3-token-scroll-14:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)
+}
+
+.consumable #consumable-3-token-scroll-17:checked~.equipment {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)
+}
+
+.consumable label[for=consumable-3-empty] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-cancel.png)
+}
+
+.consumable label[for=consumable-3-gourd] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd.png)
+}
+
+.consumable label[for=consumable-3-gourd-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-gourd-used.png)
+}
+
+.consumable label[for=consumable-3-spyglass] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-spyglass.png)
+}
+
+.consumable label[for=consumable-3-witch-potion] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion.png)
+}
+
+.consumable label[for=consumable-3-witch-potion-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-witch-potion-used.png)
+}
+
+.consumable label[for=consumable-3-poison] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison.png)
+}
+
+.consumable label[for=consumable-3-poison-used] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-poison-used.png)
+}
+
+.consumable label[for=consumable-3-rune-yellow] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-yellow.png)
+}
+
+.consumable label[for=consumable-3-rune-blue] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-blue.png)
+}
+
+.consumable label[for=consumable-3-rune-green] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/inventory-rune-green.png)
+}
+
+.consumable label[for=consumable-3-token-herb-3] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-3.png)
+}
+
+.consumable label[for=consumable-3-token-herb-4] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-herb-4.png)
+}
+
+.consumable label[for=consumable-3-token-scroll-7] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-7.png)
+}
+
+.consumable label[for=consumable-3-token-scroll-8] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-8.png)
+}
+
+.consumable label[for=consumable-3-token-scroll-10] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-10.png)
+}
+
+.consumable label[for=consumable-3-token-scroll-11] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-11.png)
+}
+
+.consumable label[for=consumable-3-token-scroll-14] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-14.png)
+}
+
+.consumable label[for=consumable-3-token-scroll-17] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-scroll-17.png)
+}
+
+.sheet .pouch {
+  position: absolute;
+  top: 60px;
+  left: 425px
+}
+
+.sheet .pouch input {
+  text-align: center;
+  background-color: #0000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 2em
+}
+
+.sheet .pouch input[name=attr_gold] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-gold-blank.png)
+}
+
+.sheet .pouch input[name=attr_diamond] {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/token-diamond-blank.png)
+}
+
+.stat-grid {
+  position: absolute
+}
+
+.stat-grid .stat-grid-value {
+  z-index: 0
+}
+
+.stat-grid .stat-grid-value input {
+  background-color: #0000;
+  margin: 0;
+  display: none
+}
+
+.stat-grid .stat-grid-value input:not([type=checkbox]) {
+  height: 20px
+}
+
+.stat-grid .stat-grid-value input[type=number] {
+  width: 45px
+}
+
+.stat-grid .stat-grid-value label {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex
+}
+
+.strength-stat-grid {
+  justify-content: space-between;
+  width: 541px;
+  height: 37px;
+  display: flex;
+  top: 169px;
+  left: 384px
+}
+
+.strength-stat-grid .stat-grid-value {
+  width: 36px;
+  height: 36px
+}
+
+.strength-stat-grid .stat-grid-value label {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 75%
+}
+
+.strength-stat-grid .stat-grid-value input:not(:checked)~label {
+  opacity: 0;
+  background-color: #fff
+}
+
+.strength-stat-grid .stat-grid-value input:not(:checked)~label:hover {
+  opacity: .1
+}
+
+.will-stat-grid {
+  flex-wrap: wrap;
+  width: 425px;
+  display: flex;
+  top: 224px;
+  left: 505px
+}
+
+.will-stat-grid .stat-grid-value {
+  border-radius: 50%;
+  flex: none;
+  width: 43px;
+  height: 43px
+}
+
+.will-stat-grid .stat-grid-value:first-child {
+  margin-left: 3px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(2),
+.will-stat-grid .stat-grid-value:nth-child(16) {
+  margin-left: 12px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(9) {
+  margin-left: 14px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(3),
+.will-stat-grid .stat-grid-value:nth-child(17),
+.will-stat-grid .stat-grid-value:nth-child(10) {
+  margin-left: 17px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(4) {
+  margin-left: 19px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(11),
+.will-stat-grid .stat-grid-value:nth-child(18),
+.will-stat-grid .stat-grid-value:nth-child(5) {
+  margin-left: 21px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(12),
+.will-stat-grid .stat-grid-value:nth-child(19) {
+  margin-left: 20px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(6),
+.will-stat-grid .stat-grid-value:nth-child(13),
+.will-stat-grid .stat-grid-value:nth-child(20) {
+  margin-left: 27px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(7),
+.will-stat-grid .stat-grid-value:nth-child(14),
+.will-stat-grid .stat-grid-value:nth-child(21) {
+  margin-left: 21px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(15) {
+  margin-left: 3px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(8),
+.will-stat-grid .stat-grid-value:nth-child(9),
+.will-stat-grid .stat-grid-value:nth-child(10),
+.will-stat-grid .stat-grid-value:nth-child(11),
+.will-stat-grid .stat-grid-value:nth-child(12),
+.will-stat-grid .stat-grid-value:nth-child(13),
+.will-stat-grid .stat-grid-value:nth-child(14) {
+  margin-top: 9px
+}
+
+.will-stat-grid .stat-grid-value:nth-child(15),
+.will-stat-grid .stat-grid-value:nth-child(16),
+.will-stat-grid .stat-grid-value:nth-child(17),
+.will-stat-grid .stat-grid-value:nth-child(18),
+.will-stat-grid .stat-grid-value:nth-child(19),
+.will-stat-grid .stat-grid-value:nth-child(20),
+.will-stat-grid .stat-grid-value:nth-child(21) {
+  margin-top: 15px
+}
+
+.will-stat-grid .stat-grid-value label {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 85%
+}
+
+.will-stat-grid .stat-grid-value input:not(:checked)~label {
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 50%
+}
+
+.will-stat-grid .stat-grid-value input:not(:checked)~label:hover {
+  opacity: .1
+}
+
+.sheet-rolltemplate-hero-attack .sheet-container {
+  --target: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/enemy-gor.png);
+  border: 3px solid #000;
+  border-radius: 3px
+}
+
+.sheet-rolltemplate-hero-attack .sheet-container-against-gor {
+  --target: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/enemy-gor.png)
+}
+
+.sheet-rolltemplate-hero-attack .sheet-container-against-skral {
+  --target: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/enemy-skral.png)
+}
+
+.sheet-rolltemplate-hero-attack .sheet-container-against-troll {
+  --target: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/enemy-troll.png)
+}
+
+.sheet-rolltemplate-hero-attack .sheet-container-against-wardrak {
+  --target: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/enemy-wardrak.png)
+}
+
+.sheet-rolltemplate-hero-attack .sheet-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: left;
+  border-bottom: 2px solid #000;
+  padding: 5px
+}
+
+.sheet-rolltemplate-hero-attack .sheet-title {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/logo.png);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  font-size: 1.2em;
+  font-weight: 700
+}
+
+.sheet-rolltemplate-hero-attack .sheet-title img.sheet-phoenix {
+  float: right;
+  width: 33px;
+  height: 33px
+}
+
+.sheet-rolltemplate-hero-attack .sheet-container {
+  --header-bg-color: #a83521;
+  --header-text-color: #fff
+}
+
+.sheet-rolltemplate-hero-attack .sheet-body {
+  align-items: stretch;
+  display: flex
+}
+
+.sheet-rolltemplate-hero-attack .sheet-body .sheet-content {
+  flex-grow: 1
+}
+
+.sheet-rolltemplate-hero-attack .sheet-body .sheet-content button {
+  background-image: url(https://raw.githubusercontent.com/ilgazil/roll20-sheet-andor/main/img/background-sheet.png);
+  border: 1px solid orange;
+  margin: 3px;
+  padding: 3px;
+  text-decoration: none;
+  display: block
+}
+
+.sheet-rolltemplate-hero-attack .sheet-body .sheet-portrait {
+  background-image: var(--target);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 85px
+}
